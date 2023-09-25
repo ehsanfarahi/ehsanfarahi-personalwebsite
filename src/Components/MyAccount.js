@@ -44,13 +44,20 @@ const MyAccount = () => {
         className="fa-solid fa-circle-xmark cv-close-btn"
       ></i>
       <div className="my-account-header">
-        <img
+        {/* <img
           className="profile-img"
           src={
             getUserData.photo
               ? require(`../../../server/uploads/usersPhotos/${getUserData.photo}`)
               : require("../images/profile2.jpeg")
           }
+          alt={getUserData.fullname}
+          width={160}
+          height={160}
+        /> */}
+        <img
+          className="profile-img"
+          src={require("../images/profile2.jpeg")}
           alt={getUserData.fullname}
           width={160}
           height={160}
