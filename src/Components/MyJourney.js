@@ -42,7 +42,7 @@ const MyJourney = () => {
         <p className="second-p">
           As a result, in early 2021 I started Computer Science at Kardan
           University. I completed the first semester, but immigrated to Europe.
-          Leter on, for supporting my web development and designing skills I
+          Later on, for supporting my web development and designing skills I
           have pursued some online courses from web development to web designing
           to web & mobile application development. The major part of my learning
           comes from Udemy courses. I learned full-stack development and have

@@ -15,6 +15,11 @@ const MyWorkAndProjects = () => {
             Second Hand Shopping
           </h5>
           <div className="my-work-card-template card">
+            <div className="my-work-card-template-canvas">
+              <p className="my-work-card-template-canvas-text">
+                Coming soon...
+              </p>
+            </div>
             <img
               src={secondHandMarketPhoto}
               className="my-work-img card-img-top"
@@ -27,9 +32,9 @@ const MyWorkAndProjects = () => {
                 longer.
               </p>
             </div>
-            <div className="card-footer">
+            {/* <div className="card-footer">
               <small className="text-muted">Last updated 3 mins ago</small>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="col">
@@ -37,6 +42,11 @@ const MyWorkAndProjects = () => {
             Asset Management System
           </h5>
           <div className="my-work-card-template card">
+            <div className="my-work-card-template-canvas">
+              <p className="my-work-card-template-canvas-text">
+                Coming soon...
+              </p>
+            </div>
             <img
               src={AssetMgtSysPhoto}
               className="my-work-img card-img-top"
@@ -56,6 +66,11 @@ const MyWorkAndProjects = () => {
             Vehicles' Cards Printing System
           </h5>
           <div className="my-work-card-template card">
+            <div className="my-work-card-template-canvas">
+              <p className="my-work-card-template-canvas-text">
+                Coming soon...
+              </p>
+            </div>
             <img
               src={vehicleCardSysPhoto}
               className="my-work-img card-img-top"
@@ -64,7 +79,7 @@ const MyWorkAndProjects = () => {
             <div className="card-body">
               <p className="card-text">
                 This is a longer card with supporting text below as a natural
-                lead-in to additional content.
+                lead-in to additional content. This content is a big longer.
               </p>
             </div>
           </div>
@@ -79,9 +94,9 @@ const MyWorkAndProjects = () => {
             />
             <div className="card-body">
               <p className="card-text">
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
+                This is my personal website, where you can find out about my
+                educational background, studies, work experience, projects and
+                many more...
               </p>
             </div>
           </div>

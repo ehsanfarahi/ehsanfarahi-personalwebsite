@@ -1,15 +1,21 @@
 import { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 import { Button } from "@mui/material";
 
+// Import components
+import UpdateUser from "./UpdateUser";
+import DeleteUser from "./DeleteUser";
+
 const MyAccount = () => {
   const { id } = useParams();
-  console.log("ID from my account: " + id);
 
   const [getUserData, setGetUserData] = useState([]);
 
   useEffect(() => {
+    document.querySelector(".userUpdateForm").classList.add("displayNone");
+    document.querySelector(".userDelete").classList.add("displayNone");
+
     fetch("http://127.0.0.1:3001/api/userReg?id=" + id).then((response) => {
       response.json().then((result) => {
         setGetUserData(result);
@@ -22,7 +28,13 @@ const MyAccount = () => {
   }
 
   function openUpdateForm() {
-    document.querySelector(".userUpdateForm").classList.toggle("displayNone");
+    document.querySelector(".userUpdateForm").classList.remove("displayNone");
+    document.querySelector(".userDelete").classList.add("displayNone");
+  }
+
+  function openDelete() {
+    document.querySelector(".userDelete").classList.remove("displayNone");
+    document.querySelector(".userUpdateForm").classList.add("displayNone");
   }
 
   return (
@@ -34,9 +46,14 @@ const MyAccount = () => {
       <div className="my-account-header">
         <img
           className="profile-img"
-          src={require("../images/profile2.jpeg")}
+          src={
+            getUserData.photo
+              ? require(`../../../server/uploads/usersPhotos/${getUserData.photo}`)
+              : require("../images/profile2.jpeg")
+          }
           alt={getUserData.fullname}
           width={160}
+          height={160}
         />
       </div>
       <div className="my-account-body">
@@ -48,14 +65,19 @@ const MyAccount = () => {
           </div>
           <div className="my-account-action">
             <Button onClick={openUpdateForm} variant="contained">
-              <Link to={"/update-user/" + getUserData._id}>Edit</Link>
+              {/* <Link to={"/update-user/" + getUserData._id}>Edit</Link> */}
+              Edit
             </Button>
-            <Button variant="outlined" color="error">
-              <Link to={"/delete-user/" + getUserData._id}>Delete</Link>
+            <Button onClick={openDelete} variant="outlined" color="error">
+              {/* <Link to={"/delete-user/" + getUserData._id}>Delete</Link> */}
+              Delete
             </Button>
           </div>
         </div>
-        <div className="my-account-body-right"></div>
+        <div className="my-account-body-right">
+          <UpdateUser />
+          <DeleteUser />
+        </div>
       </div>
     </div>
   );

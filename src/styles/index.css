@@ -20,6 +20,10 @@ body {
   background-color: #eeeeee;
 }
 
+.display-none {
+  display: none;
+}
+/* Ehsan Farahi Rotating Name Start */
 .fade-out {
   text-align: center;
   width: 100%;
@@ -91,6 +95,8 @@ body {
   }
 }
 
+/* Ehsan Farahi Rotating Name End */
+
 :root {
   --ehsanPhoto: url("../images/ehsan-farahi.JPG");
 }
@@ -103,6 +109,7 @@ body {
   display: none;
 }
 
+/* User Sign up form start */
 .userSignupForm {
   position: absolute;
   left: 50%;
@@ -119,7 +126,7 @@ body {
 }
 .userSignupForm .signupForm {
   background-color: #fff;
-  border-radius: 0.8rem;
+  border-radius: 0.2rem;
   border: none;
   outline: none;
 }
@@ -128,18 +135,32 @@ body {
   border-bottom: 1px solid black;
 }
 .userSignupForm .signupForm .form-controll {
-  margin: 1rem;
+  margin: 1.5rem;
+  position: relative;
 }
 .userSignupForm .signupForm .form-controll label {
   display: block;
   padding-bottom: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 0.06rem;
 }
 .userSignupForm .signupForm .form-controll input {
   width: 100%;
   height: 2.5rem;
   padding: 0.7rem;
   outline: none;
+  border: none;
+  border-radius: 0.2rem;
+  color: rgb(182, 179, 179);
+  box-shadow: 0.01rem 0.01rem 0.1rem 0.1rem rgb(182, 179, 179);
 }
+
+.userSignupForm .signupForm .form-controll input:focus {
+  border: 0.15rem solid rgb(75, 192, 238);
+  color: #000;
+  box-shadow: none;
+}
+
 .userSignupForm .signupForm .signup-btn {
   text-align: center;
   border: none;
@@ -158,12 +179,104 @@ body {
   color: #000;
 }
 
+.userSignupForm .signupForm .form-controll .showHidePasswordIcon {
+  position: absolute;
+  right: 1rem;
+  top: 2.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.userSignupForm .signupForm .signup-form-bottom--btn {
+  margin: 0 1.5rem;
+}
+
+.userSignupForm .signupForm .signup-form-bottom--btn .signup-btn {
+  text-align: center;
+  border: none;
+  background: none;
+  color: #fff;
+  padding: 0.4rem 1rem;
+  font-weight: 700;
+  font-size: 1rem;
+  background-color: #527fe0;
+  border-radius: 0.2rem;
+}
+
+.userSignupForm .signupForm .signup-form-bottom--btn .signup-btn:hover {
+  cursor: pointer;
+  background-color: #3259af;
+}
+
+.userSignupForm .signupForm .signup-with-google {
+  margin: 0.2rem 1.5rem 0 1.5rem;
+}
+
+.userSignupForm .signupForm .signup-with-google .signup-with-google--or {
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.userSignupForm .signupForm .signup-with-google button {
+  width: 100%;
+  background-color: rgb(240, 78, 78);
+  border: none;
+  border-radius: 0.2rem;
+  color: #fff;
+  padding: 0.4rem 1rem;
+  font-weight: 700;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.userSignupForm .signupForm .signup-with-google .google-icon {
+  font-size: 1.1rem;
+  background: #fff;
+  border-radius: 100%;
+  margin-right: 0.3rem;
+}
+
+.userSignupForm .signupForm .signup-with-google p:last-child {
+  padding: 0.5rem 0 1rem;
+}
+
+.userSignupForm .signupForm .signup-with-google p:last-child span {
+  text-decoration: underline;
+  cursor: pointer;
+  color: rgb(35, 152, 199);
+}
+
+.userSignupForm .signupForm .form-controll .user-signup-fullname-error {
+  color: rgb(238, 75, 75);
+  display: none;
+}
+
+.userSignupForm .signupForm .form-controll .user-signup-email-error {
+  color: rgb(238, 75, 75);
+  display: none;
+}
+
+.userSignupForm .signupForm .form-controll .user-signup-password-error {
+  color: rgb(238, 75, 75);
+  display: none;
+}
+
+.userSignupForm .signupForm .form-controll .user-signup-password2-error {
+  color: rgb(238, 75, 75);
+  display: none;
+}
+
+/* User sign up form End */
+
 /* User Log in form start */
 .userLoginForm {
   position: absolute;
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  top: 40%;
+  transform: translate(-50%, -60%);
   z-index: 1;
 }
 .userLoginForm .login-close-btn {
@@ -175,44 +288,241 @@ body {
 }
 .userLoginForm .loginForm {
   background-color: #fff;
-  border-radius: 0.8rem;
+  border-radius: 0.2rem;
   border: none;
   outline: none;
 }
 .userLoginForm .loginForm h2 {
-  padding: 1rem 1.5rem;
+  padding: 1rem 2.5rem;
   border-bottom: 1px solid black;
 }
 .userLoginForm .loginForm .form-controll {
-  margin: 1rem;
+  margin: 1.5rem;
+  position: relative;
 }
 .userLoginForm .loginForm .form-controll label {
   display: block;
   padding-bottom: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 0.06rem;
 }
 .userLoginForm .loginForm .form-controll input {
   width: 100%;
   height: 2.5rem;
   padding: 0.7rem;
   outline: none;
+  border: none;
+  border-radius: 0.2rem;
+  color: rgb(182, 179, 179);
+  box-shadow: 0.01rem 0.01rem 0.1rem 0.1rem rgb(182, 179, 179);
 }
-.userLoginForm .loginForm .login-btn {
+
+.userLoginForm .loginForm .form-controll input:focus {
+  border: 0.15rem solid rgb(75, 192, 238);
+  color: #000;
+  box-shadow: none;
+}
+
+.userLoginForm .loginForm .form-controll .user-login-email.error {
+  border: 0.1rem solid rgb(238, 75, 75);
+  box-shadow: none;
+}
+
+.userLoginForm .loginForm .form-controll .user-login-password.error {
+  border: 0.1rem solid rgb(238, 75, 75);
+  box-shadow: none;
+}
+
+.userLoginForm .loginForm .form-controll .user-login-error {
+  color: rgb(238, 75, 75);
+  display: none;
+}
+
+.userLoginForm .loginForm .form-controll .user-password-error {
+  color: rgb(238, 75, 75);
+  display: none;
+}
+
+.userLoginForm .loginForm .form-controll .showHidePasswordIcon {
+  position: absolute;
+  right: 1rem;
+  top: 2.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.display-block {
+  display: block;
+}
+
+.userLoginForm .loginForm .login-form-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.userLoginForm .loginForm .login-form-bottom--btn {
+  margin-left: 1.5rem;
+}
+
+.userLoginForm .loginForm .login-form-bottom--btn .login-btn {
   text-align: center;
   border: none;
   background: none;
   color: #fff;
-  border-top: 1px solid black;
-  width: 100%;
-  padding: 0.7rem 0;
+  padding: 0.4rem 1rem;
   font-weight: 700;
-  font-size: 1.2rem;
-  background-color: #1b4fbe;
+  font-size: 1rem;
+  background-color: #527fe0;
+  border-radius: 0.2rem;
 }
-.userLoginForm .loginForm .login-btn:hover {
+
+.userLoginForm .loginForm .login-form-bottom--btn .login-btn:hover {
   cursor: pointer;
-  background-color: #2bcf1c;
-  color: #000;
+  background-color: #3259af;
 }
+
+.userLoginForm .loginForm .login-form-bottom--forgot-password {
+  margin-right: 1.5rem;
+  font-weight: 700;
+  color: #608be9;
+  cursor: pointer;
+}
+
+.userLoginForm .loginForm .login-form-bottom--forgot-password:hover {
+  color: #3259af;
+}
+
+.userLoginForm .loginForm .login-with-google {
+  margin: 0.2rem 1.5rem 0 1.5rem;
+}
+
+.userLoginForm .loginForm .login-with-google .login-with-google--or {
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.userLoginForm .loginForm .login-with-google button {
+  width: 100%;
+  background-color: rgb(240, 78, 78);
+  border: none;
+  border-radius: 0.2rem;
+  color: #fff;
+  padding: 0.4rem 1rem;
+  font-weight: 700;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.userLoginForm .loginForm .login-with-google .google-icon {
+  font-size: 1.1rem;
+  background: #fff;
+  border-radius: 100%;
+  margin-right: 0.3rem;
+}
+
+.userLoginForm .loginForm .login-with-google p:last-child {
+  padding: 0.5rem 0 1rem;
+}
+
+.userLoginForm .loginForm .login-with-google p:last-child span {
+  text-decoration: underline;
+  cursor: pointer;
+  color: rgb(35, 152, 199);
+}
+
+/* User Forgot Password Form Start */
+.userForgotpasswordForm {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -60%);
+  z-index: 1;
+}
+.userForgotpasswordForm .forgotpassword-close-btn {
+  position: relative;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  margin-left: 45%;
+}
+.userForgotpasswordForm .forgotpasswordForm {
+  background-color: #fff;
+  border-radius: 0.2rem;
+  border: none;
+  outline: none;
+}
+.userForgotpasswordForm .forgotpasswordForm h2 {
+  padding: 1rem 2.5rem;
+  border-bottom: 1px solid black;
+}
+.userForgotpasswordForm .forgotpasswordForm .form-controll {
+  margin: 1.5rem;
+  position: relative;
+}
+.userForgotpasswordForm .forgotpasswordForm .form-controll label {
+  display: block;
+  padding-bottom: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 0.06rem;
+}
+.userForgotpasswordForm .forgotpasswordForm .form-controll input {
+  width: 100%;
+  height: 2.5rem;
+  padding: 0.7rem;
+  outline: none;
+  border: none;
+  border-radius: 0.2rem;
+  color: rgb(182, 179, 179);
+  box-shadow: 0.01rem 0.01rem 0.1rem 0.1rem rgb(182, 179, 179);
+}
+
+.userForgotpasswordForm .forgotpasswordForm .form-controll input:focus {
+  border: 0.15rem solid rgb(75, 192, 238);
+  color: #000;
+  box-shadow: none;
+}
+
+.userForgotpasswordForm
+  .forgotpasswordForm
+  .form-controll
+  .user-login-email.error {
+  border: 0.1rem solid rgb(238, 75, 75);
+  box-shadow: none;
+}
+
+.userForgotpasswordForm .forgotpasswordForm .forgotpassword-form-bottom {
+  margin: 2rem 1.5rem 1.5rem 1.5rem;
+}
+
+.userForgotpasswordForm
+  .forgotpasswordForm
+  .forgotpassword-form-bottom
+  .forgotpassword-btn {
+  text-align: center;
+  border: none;
+  background: none;
+  color: #fff;
+  padding: 0.4rem 1rem;
+  font-weight: 700;
+  font-size: 1rem;
+  background-color: #527fe0;
+  border-radius: 0.2rem;
+  width: 100%;
+}
+
+.userForgotpasswordForm
+  .forgotpasswordForm
+  .forgotpassword-form-bottom--btn
+  .forgotpassword-btn:hover {
+  cursor: pointer;
+  background-color: #3259af;
+}
+
+/* User Forgot Password Form End */
+
 /* User Log in form end */
 
 .header {
@@ -339,12 +649,12 @@ body {
 }
 
 .menu-li:nth-child(1) ~ li:last-child a {
-  right: 24.5em;
+  right: 25.06em;
   width: 4em;
 }
 
 .menu-li:nth-child(2):hover ~ li:last-child a {
-  right: 19.8em;
+  right: 20.1em;
   width: 4.5em;
 }
 
@@ -422,11 +732,11 @@ body {
 
 .my-account .my-account-body {
   margin: 80px 50px 50px 50px;
+  display: flex;
 }
 
 .my-account .my-account-body .my-account-body-left {
-  width: 50%;
-  float: left;
+  width: 35%;
   margin-bottom: 50px;
 }
 
@@ -465,69 +775,67 @@ body {
 }
 
 .my-account .my-account-body .my-account-body-right {
-  width: 50%;
-  border-left: 2px solid rgb(161, 160, 160);
-  float: right;
+  width: 65%;
 }
 
 /* My Account Page End */
 
 /* User Update Page Start */
 .userUpdateForm {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
   z-index: 1;
+  border-left: 2px solid rgb(161, 160, 160);
 }
-.userUpdateForm .update-close-btn {
-  position: relative;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  cursor: pointer;
-  margin-left: 45%;
-}
+
 .userUpdateForm .updateForm {
   background-color: #fff;
-  border-radius: 0.8rem;
   border: none;
   outline: none;
 }
-.userUpdateForm .updateForm h2 {
-  padding: 1rem 1.5rem;
-  border-bottom: 1px solid black;
+
+.userUpdateForm .updateForm .form-control-double {
+  display: flex;
 }
-.userUpdateForm .updateForm .form-controll {
-  margin: 1rem;
+
+.userUpdateForm .updateForm .form-control-double .form-control {
+  margin: 0.5rem 1rem;
 }
-.userUpdateForm .updateForm .form-controll label {
+.userUpdateForm .updateForm .form-control-double .form-control label {
   display: block;
   padding-bottom: 0.5rem;
 }
-.userUpdateForm .updateForm .form-controll input {
-  width: 100%;
+.userUpdateForm .updateForm .form-control-double .form-control input {
   height: 2.5rem;
   padding: 0.7rem;
   outline: none;
 }
-.userUpdateForm .updateForm .update-btn {
-  text-align: center;
-  border: none;
-  background: none;
-  color: #fff;
-  border-top: 1px solid black;
-  width: 100%;
-  padding: 0.7rem 0;
-  font-weight: 700;
-  font-size: 1.2rem;
-  background-color: #1b4fbe;
+.userUpdateForm .updateForm .form-control-double .update-btn {
+  margin: 0.5rem 1rem;
+  width: 50%;
 }
-.userUpdateForm .updateForm .update-btn:hover {
-  cursor: pointer;
-  background-color: #2bcf1c;
-  color: #000;
+
+.userUpdateForm .updateForm .form-control-double .cancel-btn {
+  margin: 0.5rem 1rem;
+  width: 50%;
 }
 /* User Update Page End */
+
+/* User Delete Page Start */
+.userDelete {
+  z-index: 1;
+  margin-left: 5rem;
+  margin-top: 3rem;
+}
+
+.userDelete p {
+  font-size: 1.1rem;
+}
+
+.userDelete p span {
+  color: rgb(24, 142, 189);
+  text-decoration: underline;
+  cursor: pointer;
+}
+/* User Delete Page End */
 
 /* Update User Start */
 .update-user {
@@ -702,7 +1010,7 @@ hr {
   z-index: 1;
   left: 50%;
   transform: translate(-50%);
-  top: 15%;
+  top: 12%;
   background-color: #fff;
   width: 60%;
 }
@@ -757,9 +1065,239 @@ hr {
 }
 
 .my-cv-container .cv-container-right-side .content {
-  margin-top: 18rem;
+  margin: 18rem 0.5rem 1rem 0.5rem;
+}
+
+.my-cv-container
+  .cv-container-right-side
+  .content
+  .content-data
+  .content-data-wrapper {
+  margin-bottom: 0.5rem;
+}
+
+.my-cv-container
+  .cv-container-right-side
+  .content
+  .content-data
+  .content-data-wrapper
+  .content-data-wrapper-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(100, 100, 100);
+  color: #fff;
+  height: 3rem;
+  padding: 0 0.5rem;
+}
+
+.my-cv-container
+  .cv-container-right-side
+  .content
+  .content-data
+  .content-data-wrapper
+  .content-data-wrapper-header
+  .headline {
+  font-weight: 700;
+  position: relative;
+  padding-top: 1rem;
+}
+
+.my-cv-container
+  .cv-container-right-side
+  .content
+  .content-data
+  .content-data-wrapper
+  .content-data-wrapper-header
+  .action
+  .plus,
+.minus,
+.plus-education,
+.minus-education,
+.plus-skills,
+.minus-skills {
+  cursor: pointer;
+}
+
+.my-cv-container
+  .cv-container-right-side
+  .content
+  .content-data
+  .content-data-wrapper
+  .content-data-wrapper-body,
+.content-data-wrapper-body-education,
+.content-data-wrapper-body-skills {
+  background-color: rgb(158, 155, 155);
+  color: #fff;
+  padding: 1rem 0.5rem;
+  height: auto;
 }
 /* My CV End */
+
+/* Contact Start */
+.contact-close-btn {
+  font-size: 2rem;
+  cursor: pointer;
+  position: absolute;
+  top: -2rem;
+}
+
+.contact-container {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  transform: translate(-50%);
+  top: 15%;
+  background-color: #fff;
+  width: 550px;
+  border-radius: 8px;
+  font-family: "Inter", sans-serif;
+}
+
+.formbold-mb-5 {
+  margin-bottom: 20px;
+}
+.formbold-pt-3 {
+  padding-top: 12px;
+}
+.formbold-main-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.formbold-form-wrapper {
+  margin: 0 auto;
+  width: 100%;
+  background: white;
+  border-radius: 8px;
+}
+
+.formbold-form-label {
+  display: block;
+  font-weight: 500;
+  font-size: 16px;
+  color: #07074d;
+  margin-bottom: 12px;
+}
+.formbold-form-label-2 {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.formbold-form-input {
+  width: 100%;
+  padding: 12px 24px;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  background: white;
+  font-weight: 500;
+  font-size: 16px;
+  color: #6b7280;
+  outline: none;
+  resize: none;
+}
+.formbold-form-input:focus {
+  border-color: #6a64f1;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.formbold-btn {
+  text-align: center;
+  font-size: 16px;
+  border-radius: 6px;
+  padding: 14px 32px;
+  border: none;
+  font-weight: 600;
+  background-color: #6a64f1;
+  color: white;
+  cursor: pointer;
+}
+.formbold-btn:hover {
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.formbold--mx-3 {
+  margin-left: -12px;
+  margin-right: -12px;
+}
+.formbold-px-3 {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.flex {
+  display: flex;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.w-full {
+  width: 100%;
+}
+.formbold-form-header {
+  background: #6a64f1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 36px;
+  border-radius: 8px 8px 0px 0px;
+}
+.formbold-form-header h3 {
+  font-weight: 700;
+  font-size: 20px;
+  color: white;
+}
+.formbold-form-header button {
+  color: white;
+  background: transparent;
+  border: none;
+}
+.formbold-chatbox-form {
+  padding: 32px 36px;
+}
+.formbold-action-buttons {
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 48px;
+}
+.formbold-action-btn {
+  width: 70px;
+  height: 70px;
+  background: #6a64f1;
+  color: white;
+  border-radius: 50%;
+  margin-left: 20px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Contact End */
+
+/* Create CV Start */
+.create-cv-close-btn {
+  font-size: 2rem;
+  cursor: pointer;
+  position: absolute;
+  top: -2rem;
+}
+
+.create-cv-container {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  transform: translate(-50%);
+  top: 15%;
+  background-color: #fff;
+  width: 50%;
+}
+/* Create CV End */
 
 .my-journey {
   background-color: #eeeeee;
@@ -883,31 +1421,55 @@ hr {
   background-color: #eeeeee;
 }
 
+.my-work-card-template-canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #302f2fd5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.my-work-card-template-canvas-text {
+  font-size: 25px;
+  font-weight: 600;
+  color: #fff;
+  font-family: "Playfair Display", serif;
+  letter-spacing: 1px;
+}
+
 .project-card-title {
   padding-bottom: 2%;
   font-weight: 800;
 }
 
 .my-work-img {
-  box-shadow: 1px 1px 4px 5px white;
+  /* box-shadow: 1px 1px 4px 5px white;
   -webkit-box-shadow: 1px 1px 4px 5px white;
-  -moz-box-shadow: 1px 1px 4px 5px white;
+  -moz-box-shadow: 1px 1px 4px 5px white; */
   border-radius: 0%;
+  border-bottom: 1px solid rgb(214, 212, 212);
 }
 
 .general-info {
   background-color: #fff;
   text-align: center;
-  padding: 1% 3% 4%;
+  padding: 4% 3% 4%;
+}
+
+.general-info h3 {
+  margin-top: 3%;
+  padding-bottom: 1%;
 }
 
 .my-expertise-card {
   border: none;
 }
 
-.my-expertise-image {
+/* .my-expertise-image {
   border-radius: 8px;
-}
+} */
 
 .my-expertise-title {
   text-align: left;
@@ -917,44 +1479,50 @@ hr {
 .my-skills-title {
   text-align: left;
   padding-top: 7%;
+  padding-bottom: 1%;
 }
 
+/* Footer Start */
 .footer {
   text-align: center;
   background-color: #eeeeee;
+  margin-top: 3rem;
 }
 
-.newsletter {
-  padding-top: 5%;
+.footer-container {
+  display: flex;
+  justify-content: space-between;
 }
 
-.subs-text {
-  padding-bottom: 2%;
+.footer-container-left {
+  text-align: left;
+  margin-left: 1rem;
 }
 
-.subs-email {
-  height: 45px;
-  width: 25rem;
-  border: none;
-  border-radius: 0;
+.footer-container-left p:nth-child(1) {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.5rem;
 }
 
-.subs-email:hover {
-  border-radius: 0;
-  border: 1px solid skyblue;
+.footer-container-left p:nth-child(2) {
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
-.subs-submit {
-  height: 45px;
-  width: 10rem;
-  border: none;
-  background-color: #06283d;
-  color: #fff;
-  border-radius: 0;
+.footer-container-right {
+  text-align: left;
+}
+
+.footer-container-right span {
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+  font-size: 1.2rem;
 }
 
 .social-media {
-  padding-top: 5%;
+  padding-top: 1.5rem;
 }
 
 .social-media-menu {
@@ -963,17 +1531,191 @@ hr {
 
 .social {
   font-size: 2.2rem;
-  padding-right: 15px;
-  color: black;
+  padding-right: 3rem;
+  color: #06283d;
+}
+
+.social-media .facebook:hover {
+  color: #4267b2;
+}
+
+.social-media .instagram:hover {
+  color: rgb(241, 81, 7);
+}
+
+.social-media .x:hover {
+  color: #005288;
+}
+
+.social-media .linkedin:hover {
+  color: #0a66c2;
 }
 
 .social:visited {
-  color: black;
+  color: #06283d;
 }
 
-.email {
-  padding: 4% 0 2%;
-  font-size: 1.8rem;
+.footer-container-right .contact-num {
+  margin-top: 5rem;
+}
+
+.footer-container-right .contact-num p:nth-child(1) {
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+  font-size: 1.2rem;
+}
+
+.footer-container-right .contact-num p:nth-child(2) {
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+  font-size: 1rem;
+}
+
+.footer-container-right .contact-icons {
+  font-size: 1.4rem;
+}
+
+.footer-container-right .contact-icons:nth-child(1):hover {
+  color: #59267c;
+  cursor: pointer;
+}
+
+.footer-container-right .contact-icons:nth-child(2):hover {
+  color: #128c7e;
+  cursor: pointer;
+}
+
+.footer-container-middle {
+  text-align: left;
+}
+
+.footer-container-middle .newsletter .subs-text span:nth-child(1) {
+  display: block;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.footer-container-middle .newsletter .subs-text span:nth-child(2) {
+  font-weight: 600;
+  font-size: 1.5rem;
+  padding-bottom: 2%;
+}
+
+.footer-container-middle .newsletter {
+  border-bottom: 0.2rem solid #06283d;
+  width: 25rem;
+  padding-top: 5%;
+}
+
+.footer-container-middle .newsletter .form {
+  width: 25rem;
+  position: relative;
+  margin-top: 2rem;
+}
+
+.footer-container-middle .newsletter .form .subs-email {
+  height: 2.8rem;
+  border: none;
+  border-radius: 0;
+  background: none;
+  outline: none;
+  padding: 0.5rem;
+  text-align: center;
+  width: 100%;
+  font-size: 1.2rem;
+  letter-spacing: 0.05rem;
+}
+
+.footer-container-middle .newsletter .form .sub-btn {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.footer-container-middle .newsletter .subs-submit {
+  height: 2.8rem;
+  border: none;
+  border-radius: 0;
+  background: none;
+  outline: none;
+  padding: 0.5rem;
+}
+
+.subs-email:hover {
+  border-radius: 0;
+  border: 1px solid skyblue;
+}
+
+.footer-logo-img {
+  width: 4.5rem;
+  height: 5rem;
+  margin: 5rem 0 2rem;
+}
+
+.rights-reserved {
+  border-top: 0.2rem solid #06283d;
+  margin: 0 1rem;
+  display: flex;
+  padding-top: 1rem;
+}
+
+.rights-reserved .current-year {
+  width: 50%;
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.rights-reserved .terms-and-conditions {
+  width: 50%;
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.rights-reserved .terms-and-conditions span:nth-child(1) {
+  padding-right: 2rem;
+}
+
+.subscription-message {
+  position: fixed;
+  left: 50%;
+  bottom: 3rem;
+  transform: translate(-50%);
+  line-height: 0;
+  border-left: 0.3rem solid rgb(19, 204, 19);
+  height: 2.5rem;
+  box-shadow: 0.005rem 0.005rem 0.1rem 0.1rem rgb(211, 207, 207);
+  border-radius: 0.2rem;
+  background-color: #fff;
+  animation: subs-msg 0.7s ease-in-out;
+}
+
+@keyframes subs-msg {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.subscription-message p {
+  line-height: 2.5rem;
+  padding: 0 1.2rem;
+  font-size: 1.1rem;
+}
+
+.subscription-message .check-circle {
+  font-size: 1.5rem;
+  color: rgb(19, 204, 19);
 }
 
 .top-arrow {
@@ -996,6 +1738,8 @@ hr {
 .light-mode {
   display: none;
 }
+
+/* Footer End */
 
 @media (max-width: 1270px) and (min-width: 767px) {
   .header .top-menu {
@@ -1097,6 +1841,10 @@ hr {
   }
 }
 
+.menu-account-mobile {
+  display: none;
+}
+
 /* .arrowUp {
   position: fixed;
   font-size: 40px;
@@ -1114,6 +1862,15 @@ hr {
   body {
     background-color: #eeeeee;
   }
+
+  /* Ehsan Farahi Rotating Name Start */
+
+  .fade-out .ehsan-farahi {
+    position: relative;
+  }
+
+  /* Ehsan Farahi Rotating Name End */
+
   .header {
     height: 85vh;
     position: relative;
@@ -1137,7 +1894,6 @@ hr {
     position: absolute;
     right: 20px;
     top: 17px;
-
     display: block;
     order: -1;
     cursor: pointer;
@@ -1250,6 +2006,27 @@ hr {
   .header .top-menu .menu-navigation .menu-list .menu-account {
     display: inline-block;
   }
+
+  .header .top-menu .menu-navigation .menu-list .menu-account-mobile {
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    bottom: 20px;
+    font-size: 17px;
+    font-weight: 600;
+  }
+
+  .header .top-menu .menu-navigation .menu-list .menu-account-mobile--login {
+    padding-right: 12px;
+    text-decoration: underline;
+    color: rgb(5, 90, 218);
+    cursor: pointer;
+  }
+
+  .header .top-menu .menu-navigation .menu-list .menu-account-mobile--signup {
+    cursor: pointer;
+  }
+
   .header .top-menu .menu-navigation .menu-list-display-on {
     left: 50%;
     animation: menu-list-display-on-animation 0.4s linear;
@@ -1305,6 +2082,15 @@ hr {
     letter-spacing: 0.15rem;
     font-family: "Alumni Sans Inline One", cursive;
   }
+
+  .login {
+    display: none;
+  }
+
+  .signup {
+    display: none;
+  }
+
   .bio {
     color: #000;
     position: absolute;
@@ -1376,6 +2162,195 @@ hr {
     position: fixed;
     top: 5px;
   }
+
+  /* My CV Start */
+
+  /* .cv-close-btn {
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    top: -2rem;
+  } */
+
+  .my-cv-container {
+    left: 0;
+    transform: translate(0);
+    top: 0;
+    background-color: rgb(230, 226, 226);
+    width: 100%;
+    height: 100vh;
+  }
+
+  .display-flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .my-cv-container .cv-container-header {
+    padding-bottom: 1rem;
+  }
+
+  .my-cv-container .cv-container-header p:nth-child(1) {
+    padding-top: 1rem;
+    font-size: 1.8rem;
+  }
+
+  .my-cv-container .cv-container-header p:nth-child(2) {
+    font-size: 1.2rem;
+    line-height: 0;
+  }
+
+  .my-cv-container .cv-container-header hr {
+    width: 2.5rem;
+    border: 0.2rem solid hsl(24, 98%, 50%);
+    border-radius: 2rem;
+  }
+
+  .my-cv-container .cv-container-left-side {
+    width: 100%;
+    float: none;
+  }
+
+  .my-cv-container .cv-container-left-side .content {
+    margin-top: 13rem;
+    /* text-align: center; */
+  }
+
+  .my-cv-container .cv-container-left-side .content h3 {
+    padding: 1rem 0.5rem 0;
+  }
+
+  .my-cv-container .cv-container-right-side {
+    width: 100%;
+    float: none;
+    border-bottom: 0.2rem solid gray;
+  }
+
+  .my-cv-container .cv-container-right-side .content {
+    margin: 3rem 0.5rem 1rem 0.5rem;
+  }
+
+  .my-cv-container .cv-container-right-side .content .head {
+    font-weight: 600;
+    line-height: 0;
+    font-size: 1.2rem;
+  }
+
+  .my-cv-container .cv-container-right-side .content .content-data {
+    font-size: 1.2rem;
+    text-align: justify;
+  }
+
+  /* .my-cv-container
+    .cv-container-right-side
+    .content
+    .content-data
+    .content-data-wrapper {
+    margin-bottom: 0.5rem;
+  } */
+
+  /* .my-cv-container
+    .cv-container-right-side
+    .content
+    .content-data
+    .content-data-wrapper
+    .content-data-wrapper-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(100, 100, 100);
+    color: #fff;
+    height: 3rem;
+    padding: 0 0.5rem;
+  } */
+
+  /* .my-cv-container
+    .cv-container-right-side
+    .content
+    .content-data
+    .content-data-wrapper
+    .content-data-wrapper-header
+    .headline {
+    font-weight: 700;
+    position: relative;
+    padding-top: 1rem;
+  } */
+
+  /* .my-cv-container
+    .cv-container-right-side
+    .content
+    .content-data
+    .content-data-wrapper
+    .content-data-wrapper-header
+    .action
+    .plus,
+  .minus,
+  .plus-education,
+  .minus-education,
+  .plus-skills,
+  .minus-skills {
+    cursor: pointer;
+  } */
+
+  /* .my-cv-container
+    .cv-container-right-side
+    .content
+    .content-data
+    .content-data-wrapper
+    .content-data-wrapper-body,
+  .content-data-wrapper-body-education,
+  .content-data-wrapper-body-skills {
+    background-color: rgb(158, 155, 155);
+    color: #fff;
+    padding: 1rem 0.5rem;
+    height: auto;
+  } */
+  /* My CV End */
+
+  /* Contact Start */
+  .contact-close-btn {
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    top: -2rem;
+  }
+
+  .contact-container {
+    top: 6rem;
+    width: 97%;
+    border: 0.1rem solid #6a64f1;
+  }
+
+  .formbold-mb-5 {
+    margin-bottom: 15px;
+  }
+
+  .formbold-form-wrapper {
+    max-width: 100%;
+  }
+
+  .formbold-form-label {
+    margin-bottom: 10px;
+  }
+
+  .formbold-form-input {
+    padding: 12px;
+  }
+
+  .formbold-btn {
+    padding: 14px 32px;
+  }
+
+  .formbold-form-header {
+    padding: 12px 36px;
+  }
+
+  .formbold-chatbox-form {
+    padding: 32px 36px;
+  }
+  /* Contact End */
+
+  /* My Journey Start */
   .my-journey {
     width: 95%;
     margin: auto;
@@ -1516,41 +2491,99 @@ hr {
     color: #fff;
     font-weight: 600;
   }
-  .newsletter {
-    padding-top: 12%;
+
+  /* Footer Start */
+  .footer-container {
+    display: block;
   }
-  .subs-text {
-    padding-bottom: 3%;
+
+  .footer-container-left {
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .footer-container-left p:nth-child(1) {
     font-size: 1.3rem;
-    font-weight: bold;
   }
-  .subs-email {
-    height: 35px;
-    width: 15rem;
+
+  .footer-container-left p:nth-child(2) {
+    font-size: 1rem;
   }
-  .subs-submit {
-    height: 35px;
-    width: 8rem;
+
+  .footer-container-right {
+    text-align: center;
+    margin-top: 3rem;
   }
-  .social-media {
+
+  .footer-container-right span {
+    font-size: 1.1rem;
+  }
+
+  .social {
+    font-size: 1.8rem;
+    padding: 0 1.5rem;
+  }
+
+  .footer-container-right .contact-num {
+    margin-top: 3.5rem;
+  }
+
+  .footer-container-right .contact-num p:nth-child(1) {
+    font-size: 1.1rem;
+  }
+
+  .footer-container-middle {
+    text-align: center;
+  }
+
+  .footer-container-middle .newsletter .subs-text span:nth-child(1) {
+    font-size: 1.4rem;
+  }
+
+  .footer-container-middle .newsletter .subs-text span:nth-child(2) {
+    font-size: 1.2rem;
+    padding-bottom: 1.5%;
+  }
+
+  .footer-container-middle .newsletter {
+    border-bottom: 0.15rem solid #06283d;
+    width: 25rem;
     padding-top: 10%;
   }
 
-  .social-media-menu {
+  .footer-container-middle .newsletter .form .subs-email {
+    height: 2.5rem;
+    font-size: 1.1rem;
+  }
+
+  .footer-container-middle .newsletter .subs-submit {
+    height: 2.5rem;
+  }
+
+  .footer-logo-img {
+    width: 3rem;
+    height: 3.36rem;
+    margin: 3rem 0 2rem;
+  }
+
+  .rights-reserved {
+    border-top: 0.15rem solid #06283d;
     display: block;
-    padding: 25px 0px 15px 10px;
-    display: inline-block;
   }
-  .menu-account {
-    display: inline-block;
+
+  .rights-reserved .current-year {
+    width: 100%;
+    text-align: center;
+    font-size: 1.1rem;
   }
-  .social {
-    font-size: 1.8rem;
+
+  .rights-reserved .terms-and-conditions {
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    padding-bottom: 1rem;
   }
-  .email {
-    padding: 8% 0 2%;
-    font-size: 1.4rem;
-  }
+
   .dark-mode {
     display: block;
     position: fixed;

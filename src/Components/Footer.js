@@ -1,44 +1,97 @@
 import "../styles/index.css";
 
+import logoImg from "../images/logo-black.png";
+
+import { IoIosArrowForward } from "react-icons/io";
+import { FaViber } from "react-icons/fa";
+import { BsWhatsapp } from "react-icons/bs";
+import { useEffect } from "react";
+
 const Footer = () => {
+  useEffect(() => {
+    document
+      .querySelector(".subscription-message")
+      .classList.add("display-none");
+  });
+
+  const handleSubmit = () => {
+    document
+      .querySelector(".subscription-message")
+      .classList.remove("display-none");
+    setInterval(() => {
+      document
+        .querySelector(".subscription-message")
+        .classList.add("display-none");
+    }, 4000);
+  };
+
   return (
     <div className="footer">
-      <div className="newsletter">
-        <h3 className="subs-text">SUBSCRIBE TO OUR NEWSLETTER</h3>
-        <form>
-          <input
-            className="subs-email"
-            type="text"
-            placeholder="Enter your email"
-          />
-          <input className="subs-submit" type="submit" value="Subscribe Now" />
-        </form>
-      </div>
-      <div className="social-media">
-        <a href="http://www.facebook.com">
-          <i className="fa-brands social fa-facebook-f"></i>
-        </a>
+      <div className="footer-container">
+        <div className="footer-container-left">
+          <div className="name">
+            <p>Ehsan Farahi</p>
+            <p>Self-taught Full Stack Web Developer.</p>
+          </div>
+        </div>
+        <div className="footer-container-middle">
+          <div className="newsletter">
+            <p className="subs-text">
+              <span>Subscribe For New Stories</span>{" "}
+              <span>And Personal Offers</span>
+            </p>
+            <div className="form">
+              <input
+                className="subs-email"
+                type="text"
+                placeholder="Enter your email"
+              />
+              <IoIosArrowForward onClick={handleSubmit} className="sub-btn" />
+            </div>
+          </div>
+        </div>
+        <div className="footer-container-right">
+          <span>Follow us</span>
+          <div className="social-media">
+            <a href="http://www.facebook.com">
+              <i className="fa-brands social fa-facebook-f facebook"></i>
+            </a>
 
-        <a href="http://www.instagram.com">
-          <i className="fa-brands social fa-instagram"></i>
-        </a>
-        <a href="http://www.twitter.com">
-          <i className="fa-brands social fa-twitter"></i>
-        </a>
-        <a href="http://www.linkedin.com">
-          <i className="fa-brands social fa-linkedin-in"></i>
-        </a>
+            <a href="http://www.instagram.com">
+              <i className="fa-brands social fa-instagram instagram"></i>
+            </a>
+            <a href="http://www.twitter.com">
+              <i className="fa-brands social fa-x-twitter x"></i>
+            </a>
+            <a href="http://www.linkedin.com">
+              <i className="fa-brands social fa-linkedin-in linkedin"></i>
+            </a>
+          </div>
+          <div className="contact-num">
+            <p>Get in touch</p>
+            <p>
+              +49 176 46294780 - <FaViber className="contact-icons" />{" "}
+              <BsWhatsapp className="contact-icons" />
+            </p>
+          </div>
+        </div>
       </div>
-      <div className="email">
-        <p>www.ehsanfarahi.com</p>
-        <p>
-          +49 176 46294780 - <i className="fa-brands fa-whatsapp"></i>
-          <i className="fa-brands fa-viber"></i>
-        </p>
-        <p className="current-year">
-          Copyright reserved &copy; {new Date().getFullYear()}
-        </p>
-        {/* <button className="top-arrow" type="button">
+
+      <span>
+        <img className="footer-logo-img" src={logoImg} alt="logo" />
+      </span>
+      <div className="rights-reserved">
+        <div className="current-year">
+          <p>
+            All Rights Reserved. &copy; {new Date().getFullYear()}{" "}
+            www.ehsanfarahi.com
+          </p>
+        </div>
+        <div className="terms-and-conditions">
+          <span>Privacy Policy</span> <span>Terms and Conditions</span>
+        </div>
+      </div>
+      {/* <button className="top-arrow" type="button">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="43"
@@ -53,8 +106,8 @@ const Footer = () => {
             />
           </svg>
         </button> */}
-        <button className="dark-mode">
-          {/* <svg
+      <button className="dark-mode">
+        {/* <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
             height="16"
@@ -69,10 +122,9 @@ const Footer = () => {
               d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"
             />
           </svg>   */}
-          DARK MODE
-        </button>
-        <button className="light-mode">LIGHT MODE</button>
-      </div>
+        DARK MODE
+      </button>
+      <button className="light-mode">LIGHT MODE</button>
     </div>
   );
 };

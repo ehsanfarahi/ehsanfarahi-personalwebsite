@@ -19,11 +19,12 @@ const GeneralInfo = () => {
                 Full Stack Development
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="25"
+                  width="35"
                   height="25"
                   fill="currentColor"
                   className="bi bi-arrow-right"
                   viewBox="0 0 16 16"
+                  style={{ paddingLeft: "10px" }}
                 >
                   <path
                     fillRule="evenodd"
@@ -46,11 +47,12 @@ const GeneralInfo = () => {
                 Web Applications
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="25"
+                  width="35"
                   height="25"
                   fill="currentColor"
                   className="bi bi-arrow-right"
                   viewBox="0 0 16 16"
+                  style={{ paddingLeft: "10px" }}
                 >
                   <path
                     fillRule="evenodd"
@@ -73,11 +75,12 @@ const GeneralInfo = () => {
                 Mobile Applications
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="25"
+                  width="35"
                   height="25"
                   fill="currentColor"
                   className="bi bi-arrow-right"
                   viewBox="0 0 16 16"
+                  style={{ paddingLeft: "10px" }}
                 >
                   <path
                     fillRule="evenodd"
@@ -91,7 +94,7 @@ const GeneralInfo = () => {
       </div>
       <h3 className="my-skills-title">My Skills</h3>
 
-      <div className="row row-cols-1 justify-content-left row-cols-lg-6 row-cols-md-4 row-cols-sm-2 g-4">
+      <div className="row row-cols-2 justify-content-left row-cols-lg-6 row-cols-md-4 row-cols-sm-2 g-4">
         <div className="col">
           <div className="card">
             <h5 className="card-title">HTML 5</h5>

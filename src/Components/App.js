@@ -9,8 +9,12 @@ import MyWorkAndProjects from "./MyWorkAndProjects";
 import GeneralInfo from "./GeneralInfo";
 import Footer from "./Footer";
 
+import { IoIosCheckmarkCircle } from "react-icons/io";
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
+
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [arrowUp, setArrowUp] = useState(false);
@@ -38,6 +42,7 @@ function App() {
       behavior: "smooth",
     });
   };
+
   return (
     <div>
       <EhsanFarahiStarterName />
@@ -78,6 +83,13 @@ function App() {
       ) : (
         false
       )}
+
+      <div className="subscription-message">
+        <p>
+          <IoIosCheckmarkCircle className="check-circle" /> Subscribed
+          successfully!
+        </p>
+      </div>
     </div>
   );
 }
