@@ -12,7 +12,7 @@ const MyJourney = () => {
         <span className="ups-downs">the ups and downs</span>
       </h1>
       <p className="profession">
-        From an asset management specialist to a full stack web developer!
+        From an asset management specialist to a front end web developer!
       </p>
       <div className="journey-one">
         <img
@@ -24,12 +24,13 @@ const MyJourney = () => {
         <p className="first-p">
           I don't hold a Computer Science or IT degree, rather I'm a Business
           Administration's (BBA) graduate with specialization in finance. My
-          journey started in the world of technologies in 2016, when I first
-          started learning some somputer science basics. I learned on youtube
-          how to develop and design websites, which resulted in developing my
-          first ever project the
-          <em>second hand online shopping</em> website in 2017. Ever since,
-          programming has become my passion and number one learning priority.
+          journey, to the world of technologies, started in 2016, when I first
+          started learning some somputer science basics. I learned on youtube,
+          how to design and develop websites, which resulted in developing my
+          first ever project the <em>second hand online shopping</em> website in
+          2017. Since then, programming and web development have become my
+          passion and number one learning priority. So far, I have built varies
+          website. Scroll down to know more about my work and projects.
         </p>
       </div>
       <div className="journey-two">
@@ -40,13 +41,16 @@ const MyJourney = () => {
           alt="Web Delopment"
         />
         <p className="second-p">
-          As a result, in early 2021 I started Computer Science at Kardan
-          University. I completed the first semester, but immigrated to Europe.
-          Later on, for supporting my web development and designing skills I
-          have pursued some online courses from web development to web designing
-          to web & mobile application development. The major part of my learning
-          comes from Udemy courses. I learned full-stack development and have
-          built various projects.
+          In continuation, to further enhance my skills & knowledge of
+          programming, and to learn web development in a professional manner, I
+          started Computer Science at Kardan University in early 2021. I
+          completed the first semester, however after starting the second
+          semester, I immigrated to Europe. Later on, as a substitute to the
+          University, for supporting my programming and web development skills,
+          I pursued some online courses from web development to web designing to
+          web & mobile application development. The major part of my learning
+          comes from Udemy courses. I have learned front end development and
+          have built various projects.
         </p>
       </div>
 

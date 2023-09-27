@@ -62,6 +62,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  line-height: 2.5rem;
 }
 
 .l1,
@@ -583,8 +584,11 @@ body {
 }
 .header .top-menu .menu-navigation .menu-account .login {
   letter-spacing: 0.1rem;
-  margin-right: 1rem;
+  margin-right: 0.5rem;
   cursor: pointer;
+}
+.header .top-menu .menu-navigation .menu-account .login-icon {
+  font-size: 1.6rem;
 }
 .header .top-menu .menu-navigation .menu-account .signup {
   letter-spacing: 0.1rem;
@@ -927,24 +931,25 @@ body {
   font-family: "Inconsolata", monospace;
 }
 
+.ehsan-script {
+  border-top: 0.5px dotted #fff;
+  border-bottom: 0.5px dotted #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+}
+
 .script-first-part {
-  display: inline;
   font-weight: 300;
   font-size: 25px;
 }
 
 .script-second-part {
-  display: inline;
-  padding-left: 38%;
   color: skyblue;
   font-weight: 300;
   font-size: 25px;
-}
-
-.ehsan-script {
-  border-top: 0.5px dotted #fff;
-  border-bottom: 0.5px dotted #fff;
-  padding-bottom: 8px;
+  border-bottom: 1px solid skyblue;
 }
 
 .fa-solid {
@@ -980,6 +985,7 @@ hr {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: textclip 3s linear infinite reverse;
+  text-transform: uppercase;
 }
 
 @keyframes textclip {
@@ -1871,6 +1877,108 @@ hr {
 
   /* Ehsan Farahi Rotating Name End */
 
+  /* User Log in form start */
+  .userLoginForm {
+    position: absolute;
+    top: 13%;
+    transform: translate(-50%, 0);
+    background-color: #fff;
+    width: 100%;
+    height: 100vh;
+  }
+  .userLoginForm .login-close-btn {
+    display: none;
+  }
+  .userLoginForm .loginForm {
+    border-radius: 0.6rem;
+    border: 0.1rem solid rgb(63, 106, 247);
+    width: 90%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  .userLoginForm .loginForm h2 {
+    padding: 0.7rem 0;
+    border-bottom: 1px solid rgb(63, 106, 247);
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  /* User Log in form end */
+
+  /* User Sign up form start */
+  .userSignupForm {
+    position: absolute;
+    top: 11%;
+    transform: translate(-50%, 0);
+    background-color: #fff;
+    width: 100%;
+    height: 100vh;
+  }
+  .userSignupForm .signup-close-btn {
+    display: none;
+  }
+  .userSignupForm .signupForm {
+    border-radius: 0.6rem;
+    border: 0.1rem solid rgb(63, 106, 247);
+    width: 90%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  .userSignupForm .signupForm h2 {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgb(63, 106, 247);
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  .userSignupForm .signupForm .form-controll {
+    margin: 0.8rem 1.5rem;
+  }
+  .userSignupForm .signupForm .form-controll label {
+    padding-bottom: 0.3rem;
+  }
+  .userSignupForm .signupForm .form-controll input {
+    height: 2.2rem;
+  }
+
+  .userSignupForm .signupForm .form-controll input:focus {
+    border: 0.15rem solid rgb(63, 106, 247);
+  }
+
+  .userSignupForm .signupForm .form-controll .showHidePasswordIcon {
+    top: 2.2rem;
+  }
+
+  /* User sign up form End */
+
+  /* User Forgot Password Form Start */
+  .userForgotpasswordForm {
+    position: absolute;
+    top: 13%;
+    transform: translate(-50%, 0);
+    background-color: #fff;
+    width: 100%;
+    height: 100vh;
+  }
+  .userForgotpasswordForm .forgotpassword-close-btn {
+    display: none;
+  }
+  .userForgotpasswordForm .forgotpasswordForm {
+    border-radius: 0.6rem;
+    border: 0.1rem solid rgb(63, 106, 247);
+    width: 90%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  .userForgotpasswordForm .forgotpasswordForm h2 {
+    padding: 0.7rem 0;
+    border-bottom: 1px solid rgb(63, 106, 247);
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  /* User Forgot Password Form End */
+
   .header {
     height: 85vh;
     position: relative;
@@ -1978,7 +2086,7 @@ hr {
     position: fixed;
     width: 100%;
     top: 50px;
-    left: -50%;
+    left: -52%;
     background-color: #fff;
     border-top: 2px solid #000;
     box-shadow: 2px 5px 10px #ccc;
@@ -1987,6 +2095,7 @@ hr {
 
   .header .top-menu .menu-navigation .menu-list.is-active {
     left: 50%;
+    padding-bottom: 3rem;
   }
   .header .top-menu .menu-navigation .menu-list ul {
     font-size: 18px;
@@ -2017,14 +2126,22 @@ hr {
   }
 
   .header .top-menu .menu-navigation .menu-list .menu-account-mobile--login {
-    padding-right: 12px;
-    text-decoration: underline;
-    color: rgb(5, 90, 218);
+    padding-right: 8px;
+    /* text-decoration: underline;
+    color: rgb(5, 90, 218); */
     cursor: pointer;
+  }
+
+  .header .top-menu .menu-navigation .menu-list .login-icon {
+    font-size: 1.3rem;
   }
 
   .header .top-menu .menu-navigation .menu-list .menu-account-mobile--signup {
     cursor: pointer;
+  }
+
+  .header .top-menu .menu-navigation .menu-account .login-icon {
+    display: none;
   }
 
   .header .top-menu .menu-navigation .menu-list-display-on {
@@ -2120,23 +2237,21 @@ hr {
     font-size: 25px;
     font-family: "Inconsolata", monospace;
   }
-  .script-first-part {
-    display: inline;
-    font-weight: 300;
-    font-size: 25px;
-  }
-  .script-second-part {
-    display: inline;
-    padding-left: 30%;
-    color: skyblue;
-    font-weight: 300;
-    font-size: 25px;
-  }
   .ehsan-script {
     border-top: 0.5px dotted #000;
     border-bottom: 0.5px dotted #000;
     padding-bottom: 8px;
   }
+  .script-first-part {
+    font-weight: 300;
+    font-size: 25px;
+  }
+  .script-second-part {
+    color: skyblue;
+    font-weight: 300;
+    font-size: 25px;
+  }
+
   .fa-solid {
     color: skyblue;
     position: absolute;
@@ -2309,44 +2424,25 @@ hr {
 
   /* Contact Start */
   .contact-close-btn {
-    font-size: 2rem;
-    cursor: pointer;
-    position: absolute;
-    top: -2rem;
+    position: relative;
+    color: transparent;
+    display: none;
   }
 
   .contact-container {
-    top: 6rem;
-    width: 97%;
+    z-index: 1;
+    top: 12%;
+    width: 100%;
+    background-color: transparent;
+  }
+
+  .contact-container .contact-container-content {
+    width: 90%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
     border: 0.1rem solid #6a64f1;
-  }
-
-  .formbold-mb-5 {
-    margin-bottom: 15px;
-  }
-
-  .formbold-form-wrapper {
-    max-width: 100%;
-  }
-
-  .formbold-form-label {
-    margin-bottom: 10px;
-  }
-
-  .formbold-form-input {
-    padding: 12px;
-  }
-
-  .formbold-btn {
-    padding: 14px 32px;
-  }
-
-  .formbold-form-header {
-    padding: 12px 36px;
-  }
-
-  .formbold-chatbox-form {
-    padding: 32px 36px;
+    border-radius: 0.55rem;
   }
   /* Contact End */
 

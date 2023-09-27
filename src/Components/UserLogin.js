@@ -61,7 +61,7 @@ const UserLogin = () => {
         <i className="fa-solid fa-circle-xmark cv-close-btn"></i>
       </p>
       <div className="loginForm">
-        <h2>User Log In Form</h2>
+        <h2>User Sign In Form</h2>
         <div className="form-controll">
           <label htmlFor="email">Email</label>
           <input
@@ -97,7 +97,7 @@ const UserLogin = () => {
         <div className="login-form-bottom">
           <div className="login-form-bottom--btn">
             <button onClick={handleSubmit} className="login-btn">
-              Log in
+              Sign in
             </button>
           </div>
           <div className="login-form-bottom--forgot-password">
