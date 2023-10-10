@@ -13,34 +13,12 @@ import Contact from "./Contact";
 import ehsanCartoon from "../images/ehsan-farahi-img1.png";
 import ehsanCartoon2 from "../images/ehsan-farahi-img2.png";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 // React-icons
 import { BiUser } from "react-icons/bi";
 
 export default function Header() {
-  useEffect(() => {
-    const menuIcon = document.getElementById("menu-icon");
-    const hideShowMenu = document.getElementById("menu-list");
-
-    // Toggle Navbar Menu on Menu-icon Click
-    menuIcon.addEventListener("click", () => {
-      menuIcon.classList.toggle("is-active");
-      hideShowMenu.classList.toggle("is-active");
-      setCartoon(false);
-
-      if (window.scrollY > 50) {
-      }
-    });
-  }, []);
-
-  // function openSignupForm() {
-  //   document.querySelector(".userSignupForm").classList.remove("displayNone");
-
-  //   document.querySelector(".menu-icon").classList.toggle("is-active");
-  //   document.querySelector(".menu-list").classList.toggle("is-active");
-  // }
-
   function openLoginForm() {
     document.querySelector(".userLoginForm").classList.remove("displayNone");
 
@@ -196,7 +174,20 @@ export default function Header() {
   function showHideMenu() {
     document.querySelector(".menu-icon").classList.toggle("is-active");
     document.querySelector(".menu-list").classList.toggle("is-active");
+    setCartoon(false);
   }
+
+  // useEffect(() => {
+  //   const menuIcon = document.getElementById("menu-icon");
+  //   const hideShowMenu = document.getElementById("menu-list");
+
+  //   // Toggle Navbar Menu on Menu-icon Click
+  //   menuIcon.addEventListener("click", () => {
+  //     menuIcon.classList.toggle("is-active");
+  //     hideShowMenu.classList.toggle("is-active");
+  //     setCartoon(false);
+  //   });
+  // }, []);
 
   const [cartoon, setCartoon] = useState(true);
 
