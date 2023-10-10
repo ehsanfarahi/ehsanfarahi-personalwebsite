@@ -2101,7 +2101,7 @@ hr {
   .header .top-menu .menu-navigation .menu-list {
     position: fixed;
     width: 100%;
-    top: 50px;
+    top: 53px;
     left: -52%;
     background-color: #fff;
     border-top: 2px solid #000;
@@ -2281,9 +2281,8 @@ hr {
   } */
   .full-stack {
     padding-top: 100px;
-    font-size: 1.2rem;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
   .ehsan-farahi-cartoon {
     width: 110px;
@@ -2702,7 +2701,7 @@ hr {
 
   .footer-container-middle .newsletter {
     border-bottom: 0.15rem solid #06283d;
-    width: 25rem;
+    width: 90%;
     padding-top: 10%;
   }
 

@@ -57,7 +57,7 @@ const MyCv = () => {
       ></i>
       <div className="cv-container-header">
         <p>Ehsan Farahi</p>
-        <p>Full Stack Web Developer</p>
+        <p>Front End Web Developer</p>
         <hr />
       </div>
       <div className="cv-container-left-side">
@@ -65,8 +65,8 @@ const MyCv = () => {
           <h3>Contacts</h3>
           <div className="content-data">
             <FcHome />
-            <p>First Street Str. 5</p>
-            <p>80001 Munich, Germany</p>
+            <p>Burgauerstr. 41</p>
+            <p>81929 Munich, Germany</p>
           </div>
           <div className="content-data">
             <FcCellPhone />
