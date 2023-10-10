@@ -1761,7 +1761,7 @@ hr {
 /* Footer End */
 
 /* iPad Size Start */
-@media (max-width: 1270px) and (min-width: 767px) {
+@media (max-width: 1270px) and (min-width: 600px) {
   .header .top-menu {
     background-color: #fff;
     background-image: linear-gradient(white, white);
@@ -1880,7 +1880,7 @@ hr {
 } */
 
 /* Mobile Size Start */
-@media (max-width: 767px) {
+@media (max-width: 600px) {
   body {
     background-color: #eeeeee;
   }
@@ -2007,8 +2007,8 @@ hr {
     background-image: linear-gradient(white, white);
     position: fixed;
     width: 100%;
-    height: 50px;
-    line-height: 50px;
+    height: 55px;
+    line-height: 55px;
     z-index: 1;
   }
   .header .top-menu .menu-navigation {
@@ -2017,7 +2017,7 @@ hr {
   .header .top-menu .menu-navigation .menu-icon {
     position: absolute;
     right: 20px;
-    top: 17px;
+    top: 20px;
     display: block;
     order: -1;
     cursor: pointer;
@@ -2198,7 +2198,7 @@ hr {
     transform: translate(50%);
     color: #000;
     font-weight: 200;
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     letter-spacing: 0.15rem;
     font-family: "Alumni Sans Inline One", cursive;
   }
@@ -2286,7 +2286,7 @@ hr {
     font-size: 1.5rem;
   }
   .ehsan-farahi-cartoon {
-    width: 100px;
+    width: 110px;
     display: block;
     position: fixed;
     top: 5px;
