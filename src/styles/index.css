@@ -1759,6 +1759,7 @@ hr {
 
 /* Footer End */
 
+/* iPad Size Start */
 @media (max-width: 1270px) and (min-width: 767px) {
   .header .top-menu {
     background-color: #fff;
@@ -1862,6 +1863,8 @@ hr {
 .menu-account-mobile {
   display: none;
 }
+
+/* iPad Size End */
 
 /* .arrowUp {
   position: fixed;
@@ -2139,8 +2142,6 @@ hr {
 
   .header .top-menu .menu-navigation .menu-list .menu-account-mobile--login {
     padding-right: 8px;
-    /* text-decoration: underline;
-    color: rgb(5, 90, 218); */
     cursor: pointer;
   }
 
