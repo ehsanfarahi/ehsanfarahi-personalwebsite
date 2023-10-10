@@ -1649,8 +1649,7 @@ hr {
 .footer-container-middle .newsletter .form .sub-btn {
   position: absolute;
   right: 0;
-  top: 50%;
-  transform: translate(0, -50%);
+  top: 0.7rem;
   font-size: 1.2rem;
   cursor: pointer;
 }
@@ -2280,9 +2279,8 @@ hr {
     border: 0.5px dotted #fff;
   } */
   .full-stack {
-    padding-top: 100px;
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
   .ehsan-farahi-cartoon {
     width: 110px;
@@ -2682,12 +2680,13 @@ hr {
   }
 
   .footer-container-middle {
+    width: 90%;
     text-align: center;
+    margin: auto;
   }
 
   .footer-container-middle .newsletter {
     width: 100%;
-    margin: auto;
   }
 
   .footer-container-middle .newsletter .subs-text span:nth-child(1) {
@@ -2701,13 +2700,14 @@ hr {
 
   .footer-container-middle .newsletter {
     border-bottom: 0.15rem solid #06283d;
-    width: 90%;
     padding-top: 10%;
   }
 
   .footer-container-middle .newsletter .form .subs-email {
     height: 2.5rem;
     font-size: 1.1rem;
+    width: 100%;
+    margin: 0 auto;
   }
 
   .footer-container-middle .newsletter .subs-submit {

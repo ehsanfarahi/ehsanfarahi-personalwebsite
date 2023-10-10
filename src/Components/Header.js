@@ -361,8 +361,6 @@ export default function Header() {
           </h2>
           <i className="fa-solid fa-angle-right"></i>
           <h2 className="full-stack">Front End Web Developer.</h2>
-
-          {/* <p class="know-more">Want to know more about me...?</p>  */}
         </div>
       </header>
     </div>
