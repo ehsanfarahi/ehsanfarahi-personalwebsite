@@ -49,7 +49,6 @@ const Footer = () => {
                 type="text"
                 placeholder="Enter your email"
               />
-              <IoIosArrowForward onClick={handleSubmit} className="sub-btn" />
             </div>
           </div>
         </div>

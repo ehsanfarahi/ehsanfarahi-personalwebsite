@@ -2710,6 +2710,10 @@ hr {
     margin: 0 auto;
   }
 
+  .footer-container-middle .newsletter .sub-btn {
+    position: relative;
+  }
+
   .footer-container-middle .newsletter .subs-submit {
     height: 2.5rem;
   }
