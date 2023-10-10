@@ -31,7 +31,10 @@ const Footer = () => {
         <div className="footer-container-left">
           <div className="name">
             <p>Ehsan Farahi</p>
-            <p>Self-taught Full Stack Web Developer.</p>
+            <p>Self-taught Front End Web Developer.</p>
+          </div>
+          <div className="hire-me">
+            <button>Hire me</button>
           </div>
         </div>
         <div className="footer-container-middle">

@@ -601,14 +601,6 @@ body {
   left: 0;
   right: 25em;
   bottom: 0;
-  /* display: inline-block; */
-  /* -moz-box-sizing: border-box;
-  box-sizing: border-box; */
-  /* padding: 0.4em 0.2em; */
-  /* color: #09c; */
-  /* text-decoration: none;
-  text-shadow: 0 1px 0 white; */
-  /*transition*/
   -webkit-transition: width 0.3s, right 0.3s;
   -moz-transition: width 0.3s, right 0.3s;
   -o-transition: width 0.3s, right 0.3s;
@@ -644,12 +636,10 @@ body {
   height: 3px;
   background: #fff;
   pointer-events: none;
-  /*transition*/
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  /* background-image: linear-gradient(to right, green, red, yellow, white); */
 }
 
 .menu-li:nth-child(1) ~ li:last-child a {
@@ -862,18 +852,7 @@ body {
   transform: rotate(5deg);
 }
 
-/* .menu-li a:hover,
 .menu-li a:focus {
-  color: #c351fa;
-  background-color: rgba(255, 255, 255, 0.6);
-
-  -webkit-transition: width 0.3s, right 0.3s, background-color 0.3s;
-  -moz-transition: width 0.3s, right 0.3s, background-color 0.3s;
-  -o-transition: width 0.3s, right 0.3s, background-color 0.3s;
-  transition: width 0.3s, right 0.3s, background-color 0.3s;
-} */
-.menu-li a:focus {
-  /* border-bottom: 3px solid #c351fa; */
   color: #fff;
 }
 
@@ -994,16 +973,12 @@ hr {
   }
 }
 
-/* .know-more {
-  padding-top: 200px;
-} */
 .ehsan-farahi-cartoon {
   width: 150px;
   display: none;
 }
 
 /* My CV Start */
-
 .cv-close-btn {
   font-size: 2rem;
   cursor: pointer;
@@ -1451,9 +1426,6 @@ hr {
 }
 
 .my-work-img {
-  /* box-shadow: 1px 1px 4px 5px white;
-  -webkit-box-shadow: 1px 1px 4px 5px white;
-  -moz-box-shadow: 1px 1px 4px 5px white; */
   border-radius: 0%;
   border-bottom: 1px solid rgb(214, 212, 212);
 }
@@ -1472,10 +1444,6 @@ hr {
 .my-expertise-card {
   border: none;
 }
-
-/* .my-expertise-image {
-  border-radius: 8px;
-} */
 
 .my-expertise-title {
   text-align: left;
@@ -1503,6 +1471,50 @@ hr {
 .footer-container-left {
   text-align: left;
   margin-left: 1rem;
+}
+
+.footer-container-left .hire-me {
+  margin: 8rem 0 0 3rem;
+}
+
+.footer-container-left .hire-me button {
+  text-transform: uppercase;
+  padding: 0.3rem 1.5rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  animation: hire-me-anim infinite 1s linear;
+}
+
+@keyframes hire-me-anim {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.footer-container-left .hire-me button:hover {
+  animation: none;
+  color: #eeeeee;
+  background-color: rgb(46, 42, 65);
+}
+
+.footer-container-left .hire-me button::before {
+  content: "";
+  box-shadow: 0.01rem 0.2rem 2.2rem 0.9rem rgb(99, 97, 97);
+}
+
+.footer-container-left .hire-me button::after {
+  content: "";
+  box-shadow: 0.01rem 0.2rem 2.2rem 0.9rem rgb(99, 97, 97);
 }
 
 .footer-container-left p:nth-child(1) {
@@ -2606,6 +2618,46 @@ hr {
     font-size: 1rem;
   }
 
+  .footer-container-left .hire-me {
+    margin: 3rem auto 0;
+  }
+
+  .footer-container-left .hire-me button {
+    padding: 0.2rem 1rem;
+    font-size: 1.1rem;
+    animation: hire-me-anim infinite 1s linear;
+  }
+
+  @keyframes hire-me-anim {
+    0% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(0.9);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .footer-container-left .hire-me button:hover {
+    animation: none;
+    color: #eeeeee;
+    background-color: rgb(46, 42, 65);
+  }
+
+  .footer-container-left .hire-me button::before {
+    content: "";
+    box-shadow: 0.01rem 0.2rem 2.2rem 0.9rem rgb(99, 97, 97);
+  }
+
+  .footer-container-left .hire-me button::after {
+    content: "";
+    box-shadow: 0.01rem 0.2rem 2.2rem 0.9rem rgb(99, 97, 97);
+  }
+
   .footer-container-right {
     text-align: center;
     margin-top: 3rem;
@@ -2630,6 +2682,11 @@ hr {
 
   .footer-container-middle {
     text-align: center;
+  }
+
+  .footer-container-middle .newsletter {
+    width: 100%;
+    margin: auto;
   }
 
   .footer-container-middle .newsletter .subs-text span:nth-child(1) {
