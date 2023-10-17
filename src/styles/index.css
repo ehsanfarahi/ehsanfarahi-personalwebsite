@@ -2488,13 +2488,13 @@ hr {
   }
   .first-p {
     float: none;
-    font-size: 1.6rem;
-    text-align: left;
+    font-size: 1.5rem;
+    text-align: justify;
   }
   .second-p {
     float: none;
-    font-size: 1.6rem;
-    text-align: right;
+    font-size: 1.5rem;
+    text-align: justify;
   }
   .know-more {
     padding: 8% 0 5%;
@@ -2504,8 +2504,8 @@ hr {
     margin-left: 2%;
   }
   .finance-img {
-    width: 135px;
-    height: 135px;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
     float: right;
   }
