@@ -5,7 +5,7 @@ const GeneralInfo = () => {
     <div className="general-info">
       <h1>About Programming World</h1>
       <p>For me, programming is what makes me feel proud.</p>
-      <h3>My Expertise</h3>
+      <h3 className="my-expertise-heading">My Expertise</h3>
       <div className="row row-cols-1 justify-content-center row-cols-lg-6 row-cols-md-3 g-4">
         <div className="col">
           <div className="my-expertise-card card">
@@ -107,7 +107,7 @@ const GeneralInfo = () => {
         </div>
         <div className="col">
           <div className="card">
-            <h5 className="card-title">Modern Javascript</h5>
+            <h5 className="card-title">Javascript</h5>
             <img
               src={require("../images/css.png")}
               className="card-img-top"

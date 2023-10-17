@@ -45,7 +45,7 @@ const EducationalBackground = () => {
             </div>
           </div>
         </div>
-        <div className="col">
+        {/* <div className="col">
           <div className="card h-100">
             <img src={udemyImg} className="card-img-top" alt="..." />
             <div className="card-body">
@@ -59,7 +59,7 @@ const EducationalBackground = () => {
               <small className="text-muted">2018 - 2022</small>
             </div>
           </div>
-        </div>
+        </div> */}
         <div className="col">
           <div className="card h-100">
             <img
@@ -78,6 +78,25 @@ const EducationalBackground = () => {
             </div>
             <div className="card-footer">
               <small className="text-muted">2013 - 2018</small>
+            </div>
+          </div>
+        </div>
+        <div className="col">
+          <div className="card h-100">
+            <img
+              src={require("../images/kardan.jpg")}
+              className="card-img-top"
+              alt="..."
+            />
+            <div className="card-body">
+              <h5 className="card-title">Bachelor of Computer Science</h5>
+              <p className="card-text">
+                I studied two semesters of Computer Science (BCS) before I
+                migrated and discontinued my studies.
+              </p>
+            </div>
+            <div className="card-footer">
+              <small className="text-muted">2021 - 2021</small>
             </div>
           </div>
         </div>

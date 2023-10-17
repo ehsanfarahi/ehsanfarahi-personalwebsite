@@ -2459,40 +2459,42 @@ hr {
 
   /* My Journey Start */
   .my-journey {
-    width: 95%;
+    width: 90%;
     margin: auto;
   }
   .journey-started {
     display: block;
     padding-top: 7%;
-    font-size: 2rem;
+    font-size: 1.8rem;
     text-align: center;
   }
   .ups-downs {
-    font-size: 1.9rem;
+    font-size: 1.7rem;
     display: block;
     text-align: center;
     padding-top: 2%;
   }
   .journey-one {
     padding-top: 6%;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     text-align: center;
     margin: 0 2%;
   }
   .journey-two {
     padding-top: 10%;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     text-align: center;
     margin: 0 2%;
   }
   .first-p {
     float: none;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
+    text-align: left;
   }
   .second-p {
     float: none;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
+    text-align: right;
   }
   .know-more {
     padding: 8% 0 5%;
@@ -2502,43 +2504,53 @@ hr {
     margin-left: 2%;
   }
   .finance-img {
-    width: 140px;
-    height: 140px;
-    float: right;
+    width: 135px;
+    height: 135px;
     border-radius: 50%;
     float: right;
   }
   .programming-img {
-    width: 140px;
-    height: 140px;
-    float: right;
+    width: 135px;
+    height: 135px;
     border-radius: 50%;
     float: left;
   }
+  /* My Journey End */
+
+  /* Educational Background Start */
   .educational-background {
     background-color: #fff;
     text-align: center;
     background-image: none;
-    /* padding: 2% 2.5% 4% 2.5%; */
-    height: 150vh;
     position: relative;
+    height: auto;
+  }
+  .edu-back-title {
+    padding-top: 15%;
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: 700;
   }
   .edu-quotation {
     color: skyblue;
-    position: absolute;
-    left: 16%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    width: 90%;
   }
   .edu-content {
-    position: absolute;
-    left: 2.5%;
-    bottom: 2%;
-    right: 2.5%;
-    top: 380px;
+    position: relative;
+    width: 90%;
+    padding: 3rem 0 3rem 0;
+    left: 52.5%;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    transform: translate(-50%);
   }
-  .edu-back-title {
-    padding-top: 10%;
-    color: #000;
-  }
+  /* Educational Background End */
+
+  /* My Work and Experience Start */
   .my-work {
     text-align: center;
     padding: 3% 4% 1% 3%;
@@ -2565,16 +2577,38 @@ hr {
     -moz-box-shadow: 1px 1px 4px 5px white;
     border-radius: 0%;
   }
+
+  /* General Info Start */
   .general-info {
     background-color: #fff;
     text-align: center;
-    padding: 8% 3% 4%;
+    padding: 15% 7% 10%;
+  }
+  .general-info h1 {
+    width: 90%;
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin: auto;
+    padding-bottom: 0.5rem;
+  }
+  .general-info p {
+    width: 90%;
+    font-size: 1.1rem;
+    margin: auto;
+    padding-bottom: 2rem;
+  }
+
+  .general-info .my-expertise-heading {
+    font-weight: 600;
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
   }
   .my-expertise-card {
     border: none;
   }
   .my-expertise-image {
-    border-radius: 8px;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
   }
   .my-expertise-title {
     text-align: left;
@@ -2585,8 +2619,7 @@ hr {
     padding-top: 7%;
   }
   .card-title {
-    border-bottom: 1px solid #aaa492;
-    padding: 8px 0;
+    padding: 1px 0;
   }
   .menu-link {
     color: #fff;
@@ -2598,6 +2631,7 @@ hr {
     color: #fff;
     font-weight: 600;
   }
+  /* General Info End */
 
   /* Footer Start */
   .footer-container {
