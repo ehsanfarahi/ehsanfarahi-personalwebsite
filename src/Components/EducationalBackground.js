@@ -2,19 +2,23 @@ import "../styles/index.css";
 
 // Import Images
 import auafImg from "../images/auaf.png";
-import udemyImg from "../images/udemy.png";
-// Kardan image is imported inline
+
+// React Icons
+import { BiSolidQuoteAltLeft, BiSolidQuoteAltRight } from "react-icons/bi";
 
 const EducationalBackground = () => {
   return (
     <div className="educational-background">
       <h1 className="edu-back-title">My Educational Background</h1>
       <div className="edu-quotation">
-        <span style={{ color: "#ffb72b", fontSize: "5rem" }}>“</span>
+        <span style={{ color: "#ffb72b", fontSize: "3rem" }}>
+          <BiSolidQuoteAltLeft />
+        </span>
         <h3>
           <span style={{ display: "block" }}>What we know matters,</span>
           <span style={{ display: "block" }}>
-            but who we are matters more.”
+            but who we are matters more.
+            <BiSolidQuoteAltRight />
           </span>
         </h3>
         <br />

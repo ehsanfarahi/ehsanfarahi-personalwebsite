@@ -5,6 +5,8 @@ import logoImg from "../images/logo-black.png";
 import { IoIosArrowForward } from "react-icons/io";
 import { FaViber } from "react-icons/fa";
 import { BsWhatsapp } from "react-icons/bs";
+import { FaFacebookF } from "react-icons/fa";
+
 import { useEffect } from "react";
 
 const Footer = () => {
@@ -124,7 +126,7 @@ const Footer = () => {
           </p>
         </div>
         <div className="terms-and-conditions">
-          <span>Privacy Policy</span> <span>Terms and Conditions</span>
+          <span>Terms and Conditions</span> <span>Privacy Policy</span>
         </div>
       </div>
       {/* <button className="top-arrow" type="button">

@@ -980,11 +980,13 @@ hr {
 }
 
 /* My CV Start */
-.cv-close-btn {
-  font-size: 2rem;
+.form-close-btn {
+  font-size: 2.4rem;
   cursor: pointer;
   position: absolute;
-  top: -2rem;
+  right: -2.2rem;
+  top: -2.2rem;
+  color: #fff;
 }
 
 .my-cv-container {
@@ -2115,6 +2117,7 @@ hr {
   .header .top-menu .menu-navigation .menu-list ul {
     font-size: 18px;
     font-weight: 700;
+    padding: 0;
   }
   .header .top-menu .menu-navigation .menu-list ul li {
     display: block;
@@ -2455,6 +2458,28 @@ hr {
     border: 0.1rem solid #6a64f1;
     border-radius: 0.55rem;
   }
+
+  .formbold-mb-5 {
+    margin-bottom: 10px;
+  }
+
+  .formbold-form-label {
+    margin-bottom: 4px;
+  }
+
+  .formbold-form-input {
+    padding: 10px;
+  }
+
+  .formbold-btn {
+    padding: 10px 32px;
+  }
+  .formbold-form-header {
+    padding: 10px 36px;
+  }
+  .formbold-chatbox-form {
+    padding: 20px;
+  }
   /* Contact End */
 
   /* My Journey Start */
@@ -2489,12 +2514,12 @@ hr {
   .first-p {
     float: none;
     font-size: 1.5rem;
-    text-align: justify;
+    text-align: left;
   }
   .second-p {
     float: none;
     font-size: 1.5rem;
-    text-align: justify;
+    text-align: right;
   }
   .know-more {
     padding: 8% 0 5%;
@@ -2774,6 +2799,11 @@ hr {
     text-align: center;
     font-size: 1rem;
     padding-bottom: 1rem;
+  }
+
+  .rights-reserved .terms-and-conditions span:first-child {
+    padding-right: 0;
+    display: block;
   }
 
   .dark-mode {

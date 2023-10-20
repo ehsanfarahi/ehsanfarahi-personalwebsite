@@ -1,5 +1,8 @@
 import { useEffect } from "react";
 
+// React Icons
+import { AiOutlineCloseCircle } from "react-icons/ai";
+
 const Contact = () => {
   useEffect(() => {
     document.querySelector(".contact-container").classList.add("displayNone");
@@ -11,10 +14,7 @@ const Contact = () => {
 
   return (
     <div className="contact-container">
-      <i
-        onClick={closeContact}
-        className="fa-solid fa-circle-xmark contact-close-btn"
-      ></i>
+      <AiOutlineCloseCircle onClick={closeContact} className="form-close-btn" />
       <div className="contact-container-content">
         <div className="formbold-main-wrapper">
           <div className="w-full">

@@ -3,10 +3,11 @@ import { useEffect } from "react";
 import { FcHome, FcCellPhone, FcGlobe } from "react-icons/fc";
 import { MdAttachEmail } from "react-icons/md";
 import { FaMinus, FaPlus } from "react-icons/fa";
+import { AiOutlineCloseCircle } from "react-icons/ai";
 
 const MyCv = () => {
   useEffect(() => {
-    document.querySelector(".my-cv-container").classList.add("displayNone");
+    // document.querySelector(".my-cv-container").classList.add("displayNone");
     document.querySelector(".minus").classList.add("displayNone");
     document.querySelector(".minus-skills").classList.add("displayNone");
     document.querySelector(".minus-education").classList.add("displayNone");
@@ -51,10 +52,7 @@ const MyCv = () => {
 
   return (
     <div className="my-cv-container">
-      <i
-        onClick={closeMyCv}
-        className="fa-solid fa-circle-xmark cv-close-btn"
-      ></i>
+      <AiOutlineCloseCircle onClick={closeMyCv} className="form-close-btn" />
       <div className="cv-container-header">
         <p>Ehsan Farahi</p>
         <p>Front End Web Developer</p>

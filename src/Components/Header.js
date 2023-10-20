@@ -1,100 +1,24 @@
-import "../styles/index.css";
+import { useState } from "react";
 
+// React Routers
 import { Link } from "react-router-dom";
 
 // Import Components
-import UserSignup from "./UserSignup";
-import UserLogin from "./UserLogin";
-import ForgotPassword from "./ForgotPassword";
 import MyCv from "./MyCv";
 import CreateCv from "./CreateCv";
 import Contact from "./Contact";
+import UserSignup from "./UserSignup";
+import UserLogin from "./UserLogin";
+import ForgotPassword from "./ForgotPassword";
 
+// Images
 import ehsanCartoon from "../images/ehsan-farahi-img1.png";
 import ehsanCartoon2 from "../images/ehsan-farahi-img2.png";
-
-import { useState } from "react";
 
 // React-icons
 import { BiUser } from "react-icons/bi";
 
 export default function Header() {
-  function openLoginForm() {
-    document.querySelector(".userLoginForm").classList.remove("displayNone");
-
-    document.querySelector(".my-cv-container").classList.add("displayNone");
-    document
-      .querySelector(".my-cv-container")
-      .classList.remove("display-flex-wrap");
-
-    document.querySelector(".create-cv-container").classList.add("displayNone");
-
-    document.querySelector(".contact-container").classList.add("displayNone");
-    document
-      .querySelector(".contact-container")
-      .classList.remove("display-flex-wrap");
-
-    document.querySelector(".menu-icon").classList.toggle("is-active");
-    document.querySelector(".menu-list").classList.toggle("is-active");
-
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  }
-
-  function openHomePage() {
-    document.querySelector(".my-cv-container").classList.add("displayNone");
-    document
-      .querySelector(".my-cv-container")
-      .classList.remove("display-flex-wrap");
-
-    document.querySelector(".create-cv-container").classList.add("displayNone");
-
-    document.querySelector(".contact-container").classList.add("displayNone");
-    document
-      .querySelector(".contact-container")
-      .classList.remove("display-flex-wrap");
-
-    document.querySelector(".userLoginForm").classList.add("displayNone");
-
-    document.querySelector(".userSignupForm").classList.add("displayNone");
-
-    document.querySelector(".menu-icon").classList.toggle("is-active");
-    document.querySelector(".menu-list").classList.toggle("is-active");
-
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  }
-
-  function openMyCv() {
-    document.querySelector(".my-cv-container").classList.remove("displayNone");
-    document
-      .querySelector(".my-cv-container")
-      .classList.add("display-flex-wrap");
-
-    document.querySelector(".create-cv-container").classList.add("displayNone");
-
-    document.querySelector(".contact-container").classList.add("displayNone");
-    document
-      .querySelector(".contact-container")
-      .classList.remove("display-flex-wrap");
-
-    document.querySelector(".userLoginForm").classList.add("displayNone");
-
-    document.querySelector(".userSignupForm").classList.add("displayNone");
-
-    document.querySelector(".menu-icon").classList.toggle("is-active");
-    document.querySelector(".menu-list").classList.toggle("is-active");
-
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  }
-
   const auth = localStorage.getItem("pWebUserData");
   const authLogin = localStorage.getItem("pWebLogData");
 
@@ -102,65 +26,122 @@ export default function Header() {
     localStorage.removeItem("pWebLogData");
   };
 
-  function openMyAccount() {
-    document.querySelector(".my-account").classList.remove("displayNone");
-  }
+  const [openCV, setOpenCV] = useState(false);
 
-  function openContact() {
+  // Functions
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
+  const openHomePage = () => {
+    // document.querySelector(".my-cv-container").classList.add("displayNone");
+    // document
+    //   .querySelector(".my-cv-container")
+    //   .classList.remove("display-flex-wrap");
+    setOpenCV(false);
+    document.querySelector(".create-cv-container").classList.add("displayNone");
+    document.querySelector(".contact-container").classList.add("displayNone");
+    document
+      .querySelector(".contact-container")
+      .classList.remove("display-flex-wrap");
+    document.querySelector(".userLoginForm").classList.add("displayNone");
+    document.querySelector(".userSignupForm").classList.add("displayNone");
+
+    document.querySelector(".menu-icon").classList.toggle("is-active");
+    document.querySelector(".menu-list").classList.toggle("is-active");
+
+    scrollToTop();
+  };
+
+  const openMyCv = () => {
+    // document.querySelector(".my-cv-container").classList.remove("displayNone");
+    setOpenCV(true);
+    // document
+    //   .querySelector(".my-cv-container")
+    //   .classList.add("display-flex-wrap");
+    document.querySelector(".create-cv-container").classList.add("displayNone");
+    document.querySelector(".contact-container").classList.add("displayNone");
+    document
+      .querySelector(".contact-container")
+      .classList.remove("display-flex-wrap");
+    document.querySelector(".userLoginForm").classList.add("displayNone");
+    document.querySelector(".userSignupForm").classList.add("displayNone");
+
+    document.querySelector(".menu-icon").classList.toggle("is-active");
+    document.querySelector(".menu-list").classList.toggle("is-active");
+
+    scrollToTop();
+  };
+
+  const openCreateCv = () => {
+    // document.querySelector(".my-cv-container").classList.add("displayNone");
+    // document
+    //   .querySelector(".my-cv-container")
+    //   .classList.remove("display-flex-wrap");
+    setOpenCV(false);
+    document
+      .querySelector(".create-cv-container")
+      .classList.remove("displayNone");
+    document.querySelector(".contact-container").classList.add("displayNone");
+    document
+      .querySelector(".contact-container")
+      .classList.remove("display-flex-wrap");
+    document.querySelector(".userLoginForm").classList.add("displayNone");
+    document.querySelector(".userSignupForm").classList.add("displayNone");
+
+    document.querySelector(".menu-icon").classList.toggle("is-active");
+    document.querySelector(".menu-list").classList.toggle("is-active");
+
+    scrollToTop();
+  };
+
+  const openMyAccount = () => {
+    document.querySelector(".my-account").classList.remove("displayNone");
+  };
+
+  const openContact = () => {
+    // document.querySelector(".my-cv-container").classList.add("displayNone");
+    // document
+    //   .querySelector(".my-cv-container")
+    //   .classList.remove("display-flex-wrap");
+    setOpenCV(false);
+    document.querySelector(".create-cv-container").classList.add("displayNone");
     document
       .querySelector(".contact-container")
       .classList.remove("displayNone");
     document
       .querySelector(".contact-container")
       .classList.add("display-flex-wrap");
-
-    document.querySelector(".my-cv-container").classList.add("displayNone");
-    document
-      .querySelector(".my-cv-container")
-      .classList.remove("display-flex-wrap");
-
-    document.querySelector(".create-cv-container").classList.add("displayNone");
-
     document.querySelector(".userLoginForm").classList.add("displayNone");
-
     document.querySelector(".userSignupForm").classList.add("displayNone");
 
     document.querySelector(".menu-icon").classList.toggle("is-active");
     document.querySelector(".menu-list").classList.toggle("is-active");
 
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  }
+    scrollToTop();
+  };
 
-  function openCreateCv() {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-
-    document
-      .querySelector(".create-cv-container")
-      .classList.remove("displayNone");
-
-    document.querySelector(".userLoginForm").classList.add("displayNone");
-
-    document.querySelector(".userSignupForm").classList.add("displayNone");
-
-    document.querySelector(".my-cv-container").classList.add("displayNone");
-    document
-      .querySelector(".my-cv-container")
-      .classList.remove("display-flex-wrap");
-
+  const openLoginForm = () => {
+    // document.querySelector(".my-cv-container").classList.add("displayNone");
+    // document
+    //   .querySelector(".my-cv-container")
+    //   .classList.remove("display-flex-wrap");
+    setOpenCV(false);
+    document.querySelector(".create-cv-container").classList.add("displayNone");
     document.querySelector(".contact-container").classList.add("displayNone");
     document
       .querySelector(".contact-container")
       .classList.remove("display-flex-wrap");
+    document.querySelector(".userLoginForm").classList.remove("displayNone");
 
     document.querySelector(".menu-icon").classList.toggle("is-active");
     document.querySelector(".menu-list").classList.toggle("is-active");
-  }
+
+    scrollToTop();
+  };
 
   function scrollToProjects() {
     const goToWork = document.querySelector(".my-work").getBoundingClientRect();
@@ -177,25 +158,11 @@ export default function Header() {
     setCartoon(false);
   }
 
-  // useEffect(() => {
-  //   const menuIcon = document.getElementById("menu-icon");
-  //   const hideShowMenu = document.getElementById("menu-list");
-
-  //   // Toggle Navbar Menu on Menu-icon Click
-  //   menuIcon.addEventListener("click", () => {
-  //     menuIcon.classList.toggle("is-active");
-  //     hideShowMenu.classList.toggle("is-active");
-  //     setCartoon(false);
-  //   });
-  // }, []);
-
   const [cartoon, setCartoon] = useState(true);
 
   window.addEventListener("scroll", () => {
     if (window.scrollY > 50) {
       setCartoon(false);
-    } else {
-      setCartoon(true);
     }
   });
 
@@ -204,7 +171,7 @@ export default function Header() {
       <UserSignup />
       <UserLogin />
       <ForgotPassword />
-      <MyCv />
+      {openCV && <MyCv />}
       <CreateCv />
       <Contact />
       <header className="header">
