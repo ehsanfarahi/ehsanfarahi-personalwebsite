@@ -1413,6 +1413,11 @@ hr {
   padding-bottom: 5%;
 }
 
+.project-card-animation-url {
+  text-decoration: none;
+  color: inherit;
+}
+
 .project-card-animation {
   cursor: pointer;
   perspective: 100rem;
