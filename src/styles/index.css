@@ -926,17 +926,18 @@ body {
 }
 
 .script-second-part {
-  color: skyblue;
+  color: rgb(9, 179, 247);
   font-weight: 300;
   font-size: 25px;
-  border-bottom: 1px solid skyblue;
+  border-bottom: 1px solid rgb(9, 179, 247);
 }
 
 .fa-solid {
-  color: skyblue;
+  color: rgb(9, 179, 247);
   position: absolute;
-  left: -4%;
-  padding-top: 8px;
+  left: -5.5%;
+  margin-top: 6px;
+  font-size: 1.5rem;
 }
 
 .myName {
@@ -1352,10 +1353,22 @@ hr {
 }
 
 .know-more {
-  padding: 5% 0 3%;
+  padding-top: 5%;
   text-align: left;
-  display: block;
+  display: inline-flex;
   font-size: 1.2rem;
+  line-height: 1rem;
+  cursor: pointer;
+  border-bottom: 0.2rem solid transparent;
+}
+
+.know-more span {
+  font-size: 2.5rem;
+  padding-left: 0.8rem;
+}
+
+.know-more:hover {
+  border-bottom: 0.2rem solid #000;
 }
 
 .educational-background {
@@ -1400,9 +1413,43 @@ hr {
   padding-bottom: 5%;
 }
 
+.project-card-animation {
+  cursor: pointer;
+  perspective: 100rem;
+}
+
 .my-work-card-template {
   border: none;
   background-color: #eeeeee;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.project-card-animation:hover .my-work-card-template {
+  transform: rotateY(180deg);
+}
+
+.my-work-card-template-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+.my-work-card-template-front {
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+.my-work-card-template-back {
+  background-color: #74787e;
+  color: white;
+  font-size: 1.2rem;
+  padding: 1rem;
+  transform: rotateY(180deg);
 }
 
 .my-work-card-template-canvas {
@@ -1740,15 +1787,14 @@ hr {
 
 .top-arrow {
   border: none;
-  background-color: transparent;
+  background-color: rgba(65, 63, 66, 0.199);
+  color: rgb(33, 31, 34);
   border-radius: 4px;
   position: fixed;
   right: 20px;
   bottom: 20px;
-  background-image: linear-gradient(
-    rgba(65, 63, 66, 0.199),
-    rgba(65, 63, 66, 0.199)
-  );
+  font-size: 1.8rem;
+  padding: 0 0.7rem 0.5rem;
 }
 
 .dark-mode {
@@ -2271,8 +2317,9 @@ hr {
   .fa-solid {
     color: skyblue;
     position: absolute;
-    left: -4%;
-    padding-top: 8px;
+    left: -7%;
+    margin-top: 4px;
+    font-size: 1.8rem;
   }
   .myName {
     color: #ff9f29;
@@ -2522,12 +2569,10 @@ hr {
     text-align: right;
   }
   .know-more {
-    padding: 8% 0 5%;
-    text-align: left;
-    display: block;
-    font-size: 1.2rem;
+    padding-top: 8%;
     margin-left: 2%;
   }
+
   .finance-img {
     width: 140px;
     height: 140px;
@@ -2652,6 +2697,21 @@ hr {
     text-align: center;
     margin-top: 15px;
   }
+
+  .menu-li-animation {
+    animation: menu-link-animation 0.5s ease-in-out;
+  }
+  @keyframes menu-link-animation {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(1.5rem);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
   .menu-link:hover {
     color: #fff;
     font-weight: 600;
@@ -2739,13 +2799,9 @@ hr {
   }
 
   .footer-container-middle {
-    width: 90%;
+    max-width: 90%;
     text-align: center;
     margin: auto;
-  }
-
-  .footer-container-middle .newsletter {
-    width: 100%;
   }
 
   .footer-container-middle .newsletter .subs-text span:nth-child(1) {
@@ -2760,17 +2816,25 @@ hr {
   .footer-container-middle .newsletter {
     border-bottom: 0.15rem solid #06283d;
     padding-top: 10%;
+    width: 100%;
+  }
+
+  .footer-container-middle .newsletter .form {
+    position: relative;
+    width: 100%;
   }
 
   .footer-container-middle .newsletter .form .subs-email {
     height: 2.5rem;
     font-size: 1.1rem;
-    width: 100%;
     margin: 0 auto;
+    position: relative;
+    width: 100%;
   }
 
   .footer-container-middle .newsletter .sub-btn {
-    position: relative;
+    position: absolute;
+    right: 5rem;
   }
 
   .footer-container-middle .newsletter .subs-submit {
@@ -2829,6 +2893,13 @@ hr {
     border-radius: 5px;
     color: #fff;
     background-color: #000;
+  }
+
+  .top-arrow {
+    right: 20px;
+    bottom: 40px;
+    font-size: 1.5rem;
+    padding: 0 0.7rem 0.5rem;
   }
 }
 

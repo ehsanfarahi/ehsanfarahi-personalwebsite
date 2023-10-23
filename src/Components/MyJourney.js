@@ -54,7 +54,9 @@ const MyJourney = () => {
         </p>
       </div>
 
-      <i className="know-more">Want to know more? --{">"}</i>
+      <i className="know-more">
+        <p>Want to know more?</p> <span>&rarr;</span>
+      </i>
     </div>
   );
 };

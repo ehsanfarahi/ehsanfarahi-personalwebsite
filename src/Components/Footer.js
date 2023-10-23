@@ -45,14 +45,14 @@ const Footer = () => {
               <span>Subscribe For New Stories</span>{" "}
               <span>And Personal Offers</span>
             </p>
-            {/* <div className="form">
+            <div className="form">
               <input
                 className="subs-email"
                 type="text"
                 placeholder="Enter your email"
               />
               <IoIosArrowForward onClick={handleSubmit} className="sub-btn" />
-            </div> */}
+            </div>
           </div>
         </div>
         <div className="footer-container-right">

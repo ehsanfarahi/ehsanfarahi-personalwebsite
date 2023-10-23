@@ -17,6 +17,7 @@ import ehsanCartoon2 from "../images/ehsan-farahi-img2.png";
 
 // React-icons
 import { BiUser } from "react-icons/bi";
+import { MdKeyboardArrowRight } from "react-icons/md";
 
 export default function Header() {
   const auth = localStorage.getItem("pWebUserData");
@@ -156,6 +157,12 @@ export default function Header() {
     document.querySelector(".menu-icon").classList.toggle("is-active");
     document.querySelector(".menu-list").classList.toggle("is-active");
     setCartoon(false);
+
+    setTimeout(() => {
+      document
+        .querySelector(".menu-li-container")
+        .classList.toggle("menu-li-animation");
+    }, 300);
   }
 
   const [cartoon, setCartoon] = useState(true);
@@ -192,7 +199,7 @@ export default function Header() {
               <span className="menu-icon-line"></span>
             </div>
             <div className="menu-list" id="menu-list">
-              <ul>
+              <ul className="menu-li-container">
                 <li className="menu-li">
                   <Link onClick={openHomePage} className="menu-link">
                     HOME
@@ -327,14 +334,7 @@ export default function Header() {
             <span className="script-second-part">script.js:13</span>
           </h2>
           {/* <i className="fa-solid fa-angle-right"></i> */}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="1em"
-            viewBox="0 0 320 512"
-            className="fa-solid"
-          >
-            <path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
-          </svg>
+          <MdKeyboardArrowRight className="fa-solid" />
           <h2 className="full-stack">Front End Web Developer.</h2>
         </div>
       </header>

@@ -16,6 +16,9 @@ import { useEffect, useState } from "react";
 
 import "react-toastify/dist/ReactToastify.css";
 
+// React Icons
+import { HiArrowUp } from "react-icons/hi";
+
 function App() {
   const [arrowUp, setArrowUp] = useState(false);
 
@@ -65,19 +68,7 @@ function App() {
       {arrowUp ? (
         <div onClick={goToTop}>
           <button className="top-arrow" type="button">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="43"
-              height="35"
-              fill="currentColor"
-              className="bi bi-arrow-up"
-              viewBox="0 -2 16 22"
-            >
-              <path
-                fillRule="evenodd"
-                d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"
-              />
-            </svg>
+            <HiArrowUp />
           </button>
         </div>
       ) : (
