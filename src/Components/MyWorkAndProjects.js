@@ -1,13 +1,9 @@
-import secondHandMarketPhoto from "../images/second-hand-shopping.JPG";
-import vehicleCardSysPhoto from "../images/vehicle-card.JPG";
-import myPersonalWebPhoto from "../images/my-personal-website-img.JPG";
-import partrytortenMunchenImg from "../images/partytorten-img.JPG";
-
 const projectsData = [
   {
     comingSoon: false,
     heading: "Partrytorten München",
     url: "https://partytorten-munchen.vercel.app/",
+    imageAddress: "images/partytorten-img.JPG",
     aboutProject:
       "Partrytorten München is pastry online ordering website. Where customers can place an order for their desired products.",
     frontEnd: ["Javascript", "React", "CSS", "React Icons"],
@@ -17,15 +13,30 @@ const projectsData = [
     comingSoon: false,
     heading: "Second Hand Shopping",
     url: "https://second-hand-online-shopping.vercel.app/",
+    imageAddress: "images/second-hand-shopping.JPG",
     aboutProject:
       "Second Hand Shopping Website lets the users sell or buy second hand objects.",
-    frontEnd: ["Javascript", "React", "Tailwind CSS", "React Icons"],
+    frontEnd: [
+      "Javascript",
+      "React",
+      "Tailwind CSS",
+      "React Icons",
+      "Javascript",
+      "React",
+      "Tailwind CSS",
+      "React Icons",
+      "Javascript",
+      "React",
+      "Tailwind CSS",
+      "React Icons",
+    ],
     backEnd: ["Node.js", "Express.js", "MongoDB"],
   },
   {
     comingSoon: true,
     heading: "Vehicles' Cards Printing System",
     url: "#",
+    imageAddress: "images/vehicle-card.JPG",
     aboutProject: "A system for printing vehicle cards.",
     frontEnd: ["Javascript", "React", "CSS", "React Icons"],
     backEnd: ["Node.js", "Express.js", "MongoDB"],
@@ -34,6 +45,7 @@ const projectsData = [
     comingSoon: false,
     heading: "My Personal Website",
     url: "#",
+    imageAddress: "images/my-personal-website-img.JPG",
     aboutProject:
       "This is my personal website, where you can find out about my educational background, studies, work experience, projects and many more...",
     frontEnd: [
@@ -53,19 +65,9 @@ const MyWorkAndProjects = () => {
     <div className="my-work">
       <h1 className="my-work-title">My Work and Projects</h1>
       <div className="row row-cols-1 row-cols-md-2 g-5">
-        <MyProjectsCards
-          pData={projectsData[0]}
-          picture={partrytortenMunchenImg}
-        />
-        <MyProjectsCards
-          pData={projectsData[1]}
-          picture={secondHandMarketPhoto}
-        />
-        <MyProjectsCards
-          pData={projectsData[2]}
-          picture={vehicleCardSysPhoto}
-        />
-        <MyProjectsCards pData={projectsData[3]} picture={myPersonalWebPhoto} />
+        {projectsData.map((card) => (
+          <MyProjectsCards cardData={card} />
+        ))}
       </div>
     </div>
   );
@@ -73,18 +75,18 @@ const MyWorkAndProjects = () => {
 
 export default MyWorkAndProjects;
 
-function MyProjectsCards(props) {
+function MyProjectsCards({ cardData }) {
   return (
     <a
-      href={props.pData.url}
+      href={cardData.url}
       target="_blank"
       rel="noreferrer"
       className="project-card-animation-url"
     >
       <div className="col project-card-animation">
-        <h5 className="project-card-title card-title">{props.pData.heading}</h5>
+        <h5 className="project-card-title card-title">{cardData.heading}</h5>
         <div className="my-work-card-template card">
-          {props.pData.comingSoon && (
+          {cardData.comingSoon && (
             <div className="my-work-card-template-canvas">
               <p className="my-work-card-template-canvas-text">
                 Coming soon...
@@ -93,9 +95,9 @@ function MyProjectsCards(props) {
           )}
           <div className="my-work-card-template-front">
             <img
-              src={props.picture}
+              src={cardData.imageAddress}
               className="my-work-img card-img-top"
-              alt={props.pData.heading}
+              alt={cardData.heading}
             />
             <div className="card-body">
               <p className="card-text">
@@ -104,24 +106,30 @@ function MyProjectsCards(props) {
             </div>
           </div>
           <div className="my-work-card-template-back">
-            <p>{props.pData.aboutProject}</p>
-            <p>The technologies I have used building this website are:</p>
-            <div style={{ display: "flex" }}>
-              <div className="tech-frontend">
-                <h4>Fron End</h4>
-                <ul>
-                  {props.pData.frontEnd.map((t) => (
-                    <li>{t}</li>
-                  ))}
-                </ul>
+            <p className="projects-details">{cardData.aboutProject}</p>
+            <p className="techs-used">
+              Technologies used building this website;
+            </p>
+            <div className="techs-used-container">
+              <div className="techs-frontend">
+                <h4>Front End</h4>
+                <div className="techs-frontend-list">
+                  <ul>
+                    {cardData.frontEnd.map((t) => (
+                      <li>{t}</li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-              <div className="tech-frontend">
+              <div className="techs-backend">
                 <h4>Back End</h4>
-                <ul>
-                  {props.pData.backEnd.map((t) => (
-                    <li>{t}</li>
-                  ))}
-                </ul>
+                <div className="techs-backend-list">
+                  <ul>
+                    {cardData.backEnd.map((t) => (
+                      <li>{t}</li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
           </div>

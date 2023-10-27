@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
 
 *,
 *::before,
@@ -1003,7 +1004,7 @@ hr {
 .my-cv-container .cv-container-header {
   background-color: rgb(196, 193, 193);
   text-align: center;
-  padding-bottom: 2rem;
+  padding-bottom: 1.5rem;
   position: absolute;
   width: 100%;
   top: 5rem;
@@ -1012,14 +1013,14 @@ hr {
 .my-cv-container .cv-container-header p:nth-child(1) {
   font-weight: 500;
   text-transform: uppercase;
-  padding-top: 2rem;
-  font-size: 3rem;
+  padding-top: 1.5rem;
+  font-size: 2.5rem;
 }
 
 .my-cv-container .cv-container-header p:nth-child(2) {
   font-weight: 400;
   text-transform: uppercase;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 .my-cv-container .cv-container-header hr {
@@ -1036,6 +1037,10 @@ hr {
 .my-cv-container .cv-container-left-side .content {
   margin-top: 18rem;
   text-align: center;
+}
+
+.my-cv-container .cv-container-left-side .content .content-data:last-child {
+  padding: 0 0.5rem;
 }
 
 .my-cv-container .cv-container-left-side .content h3 {
@@ -1406,6 +1411,7 @@ hr {
   text-align: left;
   width: 90%;
   margin: auto;
+  font-family: sans-serif;
 }
 
 .my-work-title {
@@ -1440,6 +1446,7 @@ hr {
   height: 100%;
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
+  overflow-y: scroll;
 }
 
 .my-work-card-template-front {
@@ -1455,6 +1462,55 @@ hr {
   font-size: 1.2rem;
   padding: 1rem;
   transform: rotateY(180deg);
+  font-family: "Roboto Mono";
+}
+
+.my-work-card-template-back .techs-used {
+  font-weight: 700;
+  padding-top: 1rem;
+  letter-spacing: 0.05rem;
+  font-size: 1.2rem;
+}
+
+.my-work-card-template-back .techs-used-container {
+  display: flex;
+  max-width: 100%;
+}
+
+.my-work-card-template-back .techs-used-container .techs-frontend ul {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  list-style-type: circle;
+  font-size: 1rem;
+  margin-left: -0.5rem;
+}
+
+.my-work-card-template-back .techs-used-container .techs-frontend {
+  width: 50%;
+}
+
+.my-work-card-template-back .techs-used-container .techs-frontend-list {
+  column-count: 2;
+  white-space: nowrap;
+}
+
+.my-work-card-template-back .techs-used-container .techs-backend ul {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  list-style-type: circle;
+  font-size: 1rem;
+  margin-left: -0.5rem;
+}
+
+.my-work-card-template-back .techs-used-container .techs-backend {
+  width: 50%;
+}
+
+.my-work-card-template-back .techs-used-container .techs-backend-list {
+  column-count: 2;
+  white-space: nowrap;
 }
 
 .my-work-card-template-canvas {
@@ -1481,8 +1537,8 @@ hr {
 }
 
 .my-work-img {
-  border-radius: 0%;
-  border-bottom: 1px solid rgb(214, 212, 212);
+  border-radius: 0;
+  border-bottom: 2px solid rgb(214, 212, 212);
 }
 
 .general-info {
@@ -1564,12 +1620,12 @@ hr {
 
 .footer-container-left .hire-me button::before {
   content: "";
-  box-shadow: 0.01rem 0.2rem 2.2rem 0.9rem rgb(99, 97, 97);
+  box-shadow: 0.05rem 0.1rem 2.2rem 0.6rem rgb(99, 97, 97);
 }
 
 .footer-container-left .hire-me button::after {
   content: "";
-  box-shadow: 0.01rem 0.2rem 2.2rem 0.9rem rgb(99, 97, 97);
+  box-shadow: 0.05rem 0.1rem 2.2rem 0.6rem rgb(99, 97, 97);
 }
 
 .footer-container-left p:nth-child(1) {
@@ -1910,6 +1966,29 @@ hr {
   }
   .menu-account {
     display: inline-block;
+  }
+
+  .my-work-card-template-back {
+    font-size: 0.9rem;
+  }
+
+  .my-work-card-template-back .techs-used {
+    padding-top: 0;
+    font-size: 0.8rem;
+  }
+
+  .my-work-card-template-back .techs-used-container h4 {
+    font-size: 1rem;
+  }
+
+  .my-work-card-template-back .techs-used-container .techs-frontend ul {
+    font-size: 0.7rem;
+    margin-left: -1rem;
+  }
+
+  .my-work-card-template-back .techs-used-container .techs-backend ul {
+    font-size: 0.7rem;
+    margin-left: -1rem;
   }
 }
 
@@ -2651,6 +2730,41 @@ hr {
     -webkit-box-shadow: 1px 1px 4px 5px white;
     -moz-box-shadow: 1px 1px 4px 5px white;
     border-radius: 0%;
+  }
+
+  .my-work-card-template-back {
+    font-size: 0.95rem;
+  }
+
+  .my-work-card-template-back .techs-used {
+    padding-top: 0;
+    font-size: 0.9rem;
+  }
+
+  .my-work-card-template-back .techs-used-container h4 {
+    font-size: 1.1rem;
+  }
+
+  .my-work-card-template-back
+    .techs-used-container
+    .techs-frontend
+    .techs-frontend-list {
+    column-count: 1;
+  }
+
+  .my-work-card-template-back
+    .techs-used-container
+    .techs-backend
+    .techs-backend-list {
+    column-count: 1;
+  }
+
+  .my-work-card-template-back .techs-used-container .techs-frontend ul {
+    font-size: 0.9rem;
+  }
+
+  .my-work-card-template-back .techs-used-container .techs-backend ul {
+    font-size: 0.9rem;
   }
 
   /* General Info Start */

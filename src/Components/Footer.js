@@ -5,7 +5,6 @@ import logoImg from "../images/logo-black.png";
 import { IoIosArrowForward } from "react-icons/io";
 import { FaViber } from "react-icons/fa";
 import { BsWhatsapp } from "react-icons/bs";
-import { FaFacebookF } from "react-icons/fa";
 
 import { useEffect } from "react";
 

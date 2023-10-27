@@ -81,7 +81,7 @@ const MyCv = () => {
           <h3>Career Objective</h3>
           <div className="content-data">
             <p>
-              To obtain a full-stack web development position and to contribute
+              To obtain a front end web development position and to contribute
               to the success and advancement of the company.
             </p>
           </div>
