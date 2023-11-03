@@ -114,6 +114,11 @@ const UserLogin = () => {
           </p>
         </div>
       </div>
+      <div className="small-glassmorphism-1"></div>
+      <div className="small-glassmorphism-2"></div>
+      <div className="small-glassmorphism-3"></div>
+      <div className="small-glassmorphism-4"></div>
+      <div className="small-glassmorphism-5"></div>
     </div>
   );
 };
