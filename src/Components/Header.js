@@ -20,16 +20,24 @@ import { BiUser } from "react-icons/bi";
 import { MdKeyboardArrowRight } from "react-icons/md";
 
 export default function Header() {
+  // Local Storage
   const auth = localStorage.getItem("pWebUserData");
   const authLogin = localStorage.getItem("pWebLogData");
-
   const userLogout = () => {
     localStorage.removeItem("pWebLogData");
   };
 
+  // Hooks
   const [openCV, setOpenCV] = useState(false);
+  const [cartoon, setCartoon] = useState(true);
 
-  // Functions
+  // Event Listeners
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      setCartoon(false);
+    }
+  });
+
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -37,65 +45,31 @@ export default function Header() {
     });
   };
 
+  // Functions
   const openHomePage = () => {
-    // document.querySelector(".my-cv-container").classList.add("displayNone");
-    // document
-    //   .querySelector(".my-cv-container")
-    //   .classList.remove("display-flex-wrap");
     setOpenCV(false);
-    document.querySelector(".create-cv-container").classList.add("displayNone");
-    document.querySelector(".contact-container").classList.add("displayNone");
-    document
-      .querySelector(".contact-container")
-      .classList.remove("display-flex-wrap");
-    document.querySelector(".userLoginForm").classList.add("displayNone");
-    document.querySelector(".userSignupForm").classList.add("displayNone");
-
-    document.querySelector(".menu-icon").classList.toggle("is-active");
-    document.querySelector(".menu-list").classList.toggle("is-active");
-
+    commonFunctionsOne();
+    commonFunctionsThree();
+    commonFunctionsFive();
     scrollToTop();
   };
 
   const openMyCv = () => {
-    // document.querySelector(".my-cv-container").classList.remove("displayNone");
     setOpenCV(true);
-    // document
-    //   .querySelector(".my-cv-container")
-    //   .classList.add("display-flex-wrap");
-    document.querySelector(".create-cv-container").classList.add("displayNone");
-    document.querySelector(".contact-container").classList.add("displayNone");
-    document
-      .querySelector(".contact-container")
-      .classList.remove("display-flex-wrap");
-    document.querySelector(".userLoginForm").classList.add("displayNone");
-    document.querySelector(".userSignupForm").classList.add("displayNone");
-
-    document.querySelector(".menu-icon").classList.toggle("is-active");
-    document.querySelector(".menu-list").classList.toggle("is-active");
-
+    commonFunctionsOne();
+    commonFunctionsThree();
+    commonFunctionsFive();
     scrollToTop();
   };
 
   const openCreateCv = () => {
-    // document.querySelector(".my-cv-container").classList.add("displayNone");
-    // document
-    //   .querySelector(".my-cv-container")
-    //   .classList.remove("display-flex-wrap");
-    setOpenCV(false);
     document
       .querySelector(".create-cv-container")
       .classList.remove("displayNone");
-    document.querySelector(".contact-container").classList.add("displayNone");
-    document
-      .querySelector(".contact-container")
-      .classList.remove("display-flex-wrap");
-    document.querySelector(".userLoginForm").classList.add("displayNone");
-    document.querySelector(".userSignupForm").classList.add("displayNone");
-
-    document.querySelector(".menu-icon").classList.toggle("is-active");
-    document.querySelector(".menu-list").classList.toggle("is-active");
-
+    setOpenCV(false);
+    commonFunctionsTwo();
+    commonFunctionsThree();
+    commonFunctionsFive();
     scrollToTop();
   };
 
@@ -104,58 +78,34 @@ export default function Header() {
   };
 
   const openContact = () => {
-    // document.querySelector(".my-cv-container").classList.add("displayNone");
-    // document
-    //   .querySelector(".my-cv-container")
-    //   .classList.remove("display-flex-wrap");
-    setOpenCV(false);
-    document.querySelector(".create-cv-container").classList.add("displayNone");
     document
       .querySelector(".contact-container")
       .classList.remove("displayNone");
     document
       .querySelector(".contact-container")
       .classList.add("display-flex-wrap");
-    document.querySelector(".userLoginForm").classList.add("displayNone");
-    document.querySelector(".userSignupForm").classList.add("displayNone");
-
-    document.querySelector(".menu-icon").classList.toggle("is-active");
-    document.querySelector(".menu-list").classList.toggle("is-active");
-
+    setOpenCV(false);
+    commonFunctionsFive();
+    commonFunctionsOne();
     scrollToTop();
   };
 
   const openLoginForm = () => {
-    // document.querySelector(".my-cv-container").classList.add("displayNone");
-    // document
-    //   .querySelector(".my-cv-container")
-    //   .classList.remove("display-flex-wrap");
-    setOpenCV(false);
-    document.querySelector(".create-cv-container").classList.add("displayNone");
-    document.querySelector(".contact-container").classList.add("displayNone");
-    document
-      .querySelector(".contact-container")
-      .classList.remove("display-flex-wrap");
     document.querySelector(".userLoginForm").classList.remove("displayNone");
-
-    document.querySelector(".menu-icon").classList.toggle("is-active");
-    document.querySelector(".menu-list").classList.toggle("is-active");
-
+    setOpenCV(false);
+    commonFunctionsOne();
+    commonFunctionsThree();
     scrollToTop();
   };
 
   function scrollToProjects() {
     const goToWork = document.querySelector(".my-work").getBoundingClientRect();
-
     window.scrollTo({ top: goToWork.top, behavior: "smooth" });
-
-    document.querySelector(".menu-icon").classList.toggle("is-active");
-    document.querySelector(".menu-list").classList.toggle("is-active");
+    commonFunctionsTwo();
   }
 
   function showHideMenu() {
-    document.querySelector(".menu-icon").classList.toggle("is-active");
-    document.querySelector(".menu-list").classList.toggle("is-active");
+    commonFunctionsTwo();
     setCartoon(false);
 
     setTimeout(() => {
@@ -165,13 +115,27 @@ export default function Header() {
     }, 300);
   }
 
-  const [cartoon, setCartoon] = useState(true);
+  const commonFunctionsOne = () => {
+    commonFunctionsTwo();
+    document.querySelector(".create-cv-container").classList.add("displayNone");
+  };
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 50) {
-      setCartoon(false);
-    }
-  });
+  const commonFunctionsTwo = () => {
+    document.querySelector(".menu-icon").classList.toggle("is-active");
+    document.querySelector(".menu-list").classList.toggle("is-active");
+  };
+
+  const commonFunctionsThree = () => {
+    document.querySelector(".contact-container").classList.add("displayNone");
+    document
+      .querySelector(".contact-container")
+      .classList.remove("display-flex-wrap");
+  };
+
+  const commonFunctionsFive = () => {
+    document.querySelector(".userLoginForm").classList.add("displayNone");
+    document.querySelector(".userSignupForm").classList.add("displayNone");
+  };
 
   return (
     <div>
@@ -272,12 +236,6 @@ export default function Header() {
                     <span>
                       <BiUser className="login-icon" />
                     </span>
-                    {/* <span
-                      onClick={openSignupForm}
-                      className="menu-account-mobile--signup"
-                    >
-                      Sign up
-                    </span> */}
                   </div>
                 )}
               </div>
@@ -307,9 +265,6 @@ export default function Header() {
                   <span>
                     <BiUser className="login-icon" />
                   </span>
-                  {/* <span onClick={openSignupForm} className="signup">
-                    Sign up
-                  </span> */}
                 </div>
               )}
             </div>
@@ -333,7 +288,6 @@ export default function Header() {
             <span className="script-first-part">Ehsan Farahi,</span>
             <span className="script-second-part">script.js:13</span>
           </h2>
-          {/* <i className="fa-solid fa-angle-right"></i> */}
           <MdKeyboardArrowRight className="fa-solid" />
           <h2 className="full-stack">Front End Web Developer.</h2>
         </div>
