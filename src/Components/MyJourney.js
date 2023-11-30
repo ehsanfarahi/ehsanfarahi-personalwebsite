@@ -1,10 +1,26 @@
 import "../styles/index.css";
+import { useRef } from "react";
 
 // Import Images
 import accountantsImg from "../images/accountants.png";
 // Web img is imported inline
 
 const MyJourney = () => {
+  const refP1 = useRef(1);
+  const refP2 = useRef(1);
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > refP1.current.offsetTop * 2) {
+      document.querySelector(".journey-one").classList.add("journey-one-anim");
+    }
+  });
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > refP2.current.offsetTop * 2) {
+      document.querySelector(".journey-two").classList.add("journey-two-anim");
+    }
+  });
+
   return (
     <div className="my-journey">
       <h1>
@@ -21,7 +37,7 @@ const MyJourney = () => {
           width="20%"
           alt="Financial Management"
         />
-        <p className="first-p">
+        <p ref={refP1} className="first-p">
           I don't hold a Computer Science or IT degree, rather I'm a Business
           Administration's (BBA) graduate with specialization in finance. My
           journey, to the world of technologies, started in 2016, when I first
@@ -40,7 +56,7 @@ const MyJourney = () => {
           width="20%"
           alt="Web Delopment"
         />
-        <p className="second-p">
+        <p ref={refP2} className="second-p">
           In continuation, to further enhance my skills & knowledge of
           programming, and to learn web development in a professional manner, I
           started Computer Science at Kardan University in early 2021. I

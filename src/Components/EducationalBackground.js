@@ -7,6 +7,16 @@ import auafImg from "../images/auaf.png";
 import { BiSolidQuoteAltLeft, BiSolidQuoteAltRight } from "react-icons/bi";
 
 const EducationalBackground = () => {
+  window.addEventListener("scroll", () => {
+    const topDistance = document
+      .querySelector(".edu-content")
+      .getBoundingClientRect();
+
+    if (window.scrollY > topDistance.top * 3) {
+      document.querySelector(".edu-content").classList.add("edu-content-anim");
+    }
+  });
+
   return (
     <div className="educational-background">
       <h1 className="edu-back-title">My Educational Background</h1>

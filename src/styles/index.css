@@ -1158,6 +1158,15 @@ hr {
 .minus-skills {
   cursor: pointer;
 }
+.my-cv-container
+  .cv-container-right-side
+  .content
+  .content-data
+  .content-data-wrapper
+  .content-data-wrapper-body,
+.section:not(:first-child) {
+  padding-top: 1.5rem;
+}
 
 .my-cv-container
   .cv-container-right-side
@@ -1171,6 +1180,24 @@ hr {
   color: #fff;
   padding: 1rem 0.5rem;
   height: auto;
+}
+.my-cv-container
+  .cv-container-right-side
+  .content
+  .content-data
+  .content-data-wrapper
+  .content-data-wrapper-body,
+.content-data-wrapper-body-education .section:not(:first-child) {
+  padding-top: 1.5rem;
+}
+.my-cv-container
+  .cv-container-right-side
+  .content
+  .content-data
+  .content-data-wrapper
+  .content-data-wrapper-body,
+.content-data-wrapper-body-education .section p:not(:first-child) {
+  padding-left: 1rem;
 }
 /* My CV End */
 
@@ -1375,6 +1402,14 @@ hr {
   padding-top: 3%;
   font-size: 1.5rem;
   text-align: center;
+  opacity: 0;
+  transform: scale(0.4);
+}
+
+.journey-one-anim {
+  opacity: 1;
+  transform: scale(1);
+  transition: all 1s ease-in;
 }
 
 .first-p {
@@ -1393,6 +1428,14 @@ hr {
   padding-top: 5%;
   font-size: 1.5rem;
   text-align: center;
+  opacity: 0;
+  transform: scale(0.4);
+}
+
+.journey-two-anim {
+  opacity: 1;
+  transform: scale(1);
+  transition: all 1s ease-in;
 }
 
 .second-p {
@@ -1439,9 +1482,14 @@ hr {
 
 .edu-content {
   position: absolute;
-  left: 2.5%;
+  left: -100%;
   bottom: 2%;
   right: 2.5%;
+  transition: 1s ease-in;
+}
+
+.edu-content-anim {
+  left: 2.5%;
 }
 
 .edu-back-title {
@@ -2210,7 +2258,7 @@ hr {
   }
   .userLoginForm .small-glassmorphism-5 {
     width: 2.2rem;
-    left: 10rem;
+    left: 8.5rem;
     top: 31.5rem;
   }
   .userLoginForm .loginForm .login-with-google .login-with-google--or::before,

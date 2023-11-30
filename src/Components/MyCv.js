@@ -113,21 +113,55 @@ const MyCv = () => {
               </div>
               <div className="content-data-wrapper-body">
                 <div className="section">
-                  <p>Software Developer - Ministry of Finance</p>
-                  <p>July 2019 - August 2021</p>
+                  <p>Front End Developer - Ministry of Finance {"(MoF)"}</p>
+                  <p>October 2019 - August 2021</p>
                   <ul>
-                    <li>Design Websites</li>
-                    <li>Test Websites</li>
-                    <li>Develop Websites</li>
+                    <li>
+                      Write well-structured code that is easy to maintain and
+                      understand.
+                    </li>
+                    <li>
+                      Provide pre-built components and efficient ways to manage
+                      the state of an application.
+                    </li>
+                    <li>
+                      Debug errors, troubleshoot issues, and perform routine
+                      performance optimizations.
+                    </li>
+                    <li>On-site search engine optimization {"(SEO)"}.</li>
                   </ul>
                 </div>
                 <div className="section">
-                  <p>Frontend Developer - IDLG</p>
-                  <p>October 2018 - May 2019</p>
+                  <p>
+                    Front End Developer - Citizens' Charter National Priority
+                    Program {"CCNPP"}
+                  </p>
+                  <p>November 2018 - October 2019</p>
                   <ul>
-                    <li>Design Websites</li>
-                    <li>Test Websites</li>
-                    <li>Develop Websites</li>
+                    <li>Write high-quality, scalable, and reusable code.</li>
+                    <li>
+                      Gather and refine specifications and requirements based on
+                      technical requirements or UX design.
+                    </li>
+                    <li>
+                      Collaborate with designers, product managers and backend
+                      engineers.
+                    </li>
+                  </ul>
+                </div>
+                <div className="section">
+                  <p>Assistant Front End Developer - Hope Tech Ltd</p>
+                  <p>February 2018 - September 2018</p>
+                  <ul>
+                    <li>
+                      Build applications that adapt and work well across
+                      different devices and screen sizes.
+                    </li>
+                    <li>
+                      Transform app designs into front-end code with HTML, CSS,
+                      and JavaScript.
+                    </li>
+                    <li>Translate UI/UX design wireframes to actual code.</li>
                   </ul>
                 </div>
               </div>
@@ -150,22 +184,28 @@ const MyCv = () => {
               </div>
               <div className="content-data-wrapper-body-education">
                 <div className="section">
-                  <p>Bachelor of Computer Science</p>
+                  <p>Bachelor in Computer Science {"(BCS)"}</p>
                   <p>2021 - 2021</p>
                   <p>Kardan University - Kabul</p>
-                  <p>About the degree</p>
+                  <p>
+                    Discontinued in 2nd semester due to polital changes in the
+                    country, and then continued online courses.
+                  </p>
                 </div>
                 <div className="section">
-                  <p>Bachelor of Business Administration</p>
+                  <p>Bachelor in Business Administration {"(BBA)"}</p>
                   <p>2013 - 2018</p>
                   <p>Kardan University - Kabul</p>
-                  <p>About the degree</p>
+                  <p>
+                    Bachelor in Business Administration with specialization in
+                    Finance {"(BBA)"}
+                  </p>
                 </div>
                 <div className="section">
-                  <p>Professional Development Institute</p>
+                  <p>Professional Development Institute {"(PDI)"}</p>
                   <p>2011 - 2012</p>
                   <p>American University of Afghanistan - Kabul</p>
-                  <p>About the degree</p>
+                  <p>Professional Development Program</p>
                 </div>
               </div>
             </div>
@@ -183,12 +223,19 @@ const MyCv = () => {
                 <div className="section">
                   <ul>
                     <li>HTML / CSS / Tailwind CSS</li>
-                    <li>Javascript</li>
+                    <li>SASS / Bootstrap</li>
+                    <li>Material UI / Figma</li>
+                    <li>JavaScript</li>
+                    <li>TypeScript</li>
                     <li>jQuery</li>
                     <li>React.js</li>
+                    <li>Next.js</li>
                     <li>Node.js</li>
                     <li>Express.js</li>
                     <li>MongoDB</li>
+                    <li>MySQL</li>
+                    <li>PHP</li>
+                    <li>.Net Core</li>
                   </ul>
                 </div>
               </div>
