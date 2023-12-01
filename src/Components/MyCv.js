@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useState } from "react";
 
 import { FcHome, FcCellPhone, FcGlobe } from "react-icons/fc";
 import { MdAttachEmail } from "react-icons/md";
@@ -6,48 +6,12 @@ import { FaMinus, FaPlus } from "react-icons/fa";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 
 const MyCv = () => {
-  useEffect(() => {
-    // document.querySelector(".my-cv-container").classList.add("displayNone");
-    document.querySelector(".minus").classList.add("displayNone");
-    document.querySelector(".minus-skills").classList.add("displayNone");
-    document.querySelector(".minus-education").classList.add("displayNone");
-    document
-      .querySelector(".content-data-wrapper-body")
-      .classList.add("displayNone");
-    document
-      .querySelector(".content-data-wrapper-body-skills")
-      .classList.add("displayNone");
-    document
-      .querySelector(".content-data-wrapper-body-education")
-      .classList.add("displayNone");
-  });
+  const [showHideEmp, setShowHideEmp] = useState(false);
+  const [showHideEdu, setShowHideEdu] = useState(false);
+  const [showHideSkill, setShowHideSkill] = useState(false);
 
   function closeMyCv() {
     document.querySelector(".my-cv-container").classList.add("displayNone");
-  }
-
-  function handleAction() {
-    document.querySelector(".plus").classList.toggle("displayNone");
-    document.querySelector(".minus").classList.toggle("displayNone");
-    document
-      .querySelector(".content-data-wrapper-body")
-      .classList.toggle("displayNone");
-  }
-
-  function handleEducation() {
-    document.querySelector(".plus-education").classList.toggle("displayNone");
-    document.querySelector(".minus-education").classList.toggle("displayNone");
-    document
-      .querySelector(".content-data-wrapper-body-education")
-      .classList.toggle("displayNone");
-  }
-
-  function handleSkills() {
-    document.querySelector(".plus-skills").classList.toggle("displayNone");
-    document.querySelector(".minus-skills").classList.toggle("displayNone");
-    document
-      .querySelector(".content-data-wrapper-body-skills")
-      .classList.toggle("displayNone");
   }
 
   return (
@@ -91,7 +55,7 @@ const MyCv = () => {
         <div className="content">
           <p className="head">Introduction</p>
           <div className="content-data">
-            <p>
+            <p className="intro-text">
               Hi, I'm Ehsan Farahi, and I am pasionate about helping
               organizations reach their goals and contributing towards their
               development and advancement. As an organized and highly creative
@@ -107,11 +71,24 @@ const MyCv = () => {
               <div className="content-data-wrapper-header">
                 <p className="headline">Employment</p>
                 <div className="action">
-                  <FaPlus onClick={handleAction} className="plus" />
-                  <FaMinus onClick={handleAction} className="minus" />
+                  {showHideEmp ? (
+                    <FaMinus
+                      onClick={() => setShowHideEmp((e) => !e)}
+                      className="minus"
+                    />
+                  ) : (
+                    <FaPlus
+                      onClick={() => setShowHideEmp((e) => !e)}
+                      className="plus"
+                    />
+                  )}
                 </div>
               </div>
-              <div className="content-data-wrapper-body">
+              <div
+                className={`content-data-wrapper-body ${
+                  !showHideEmp && "displayNone"
+                }`}
+              >
                 <div className="section">
                   <p>Front End Developer - Ministry of Finance {"(MoF)"}</p>
                   <p>October 2019 - August 2021</p>
@@ -172,17 +149,24 @@ const MyCv = () => {
               <div className="content-data-wrapper-header">
                 <p className="headline">Education</p>
                 <div className="action">
-                  <FaPlus
-                    onClick={handleEducation}
-                    className="plus-education"
-                  />
-                  <FaMinus
-                    onClick={handleEducation}
-                    className="minus-education"
-                  />
+                  {showHideEdu ? (
+                    <FaMinus
+                      onClick={() => setShowHideEdu((e) => !e)}
+                      className="minus-education"
+                    />
+                  ) : (
+                    <FaPlus
+                      onClick={() => setShowHideEdu((e) => !e)}
+                      className="plus-education"
+                    />
+                  )}
                 </div>
               </div>
-              <div className="content-data-wrapper-body-education">
+              <div
+                className={`content-data-wrapper-body-education ${
+                  !showHideEdu && "displayNone"
+                }`}
+              >
                 <div className="section">
                   <p>Bachelor in Computer Science {"(BCS)"}</p>
                   <p>2021 - 2021</p>
@@ -215,11 +199,24 @@ const MyCv = () => {
               <div className="content-data-wrapper-header">
                 <p className="headline">Skills</p>
                 <div className="action">
-                  <FaPlus onClick={handleSkills} className="plus-skills" />
-                  <FaMinus onClick={handleSkills} className="minus-skills" />
+                  {showHideSkill ? (
+                    <FaMinus
+                      onClick={() => setShowHideSkill((e) => !e)}
+                      className="minus-skills"
+                    />
+                  ) : (
+                    <FaPlus
+                      onClick={() => setShowHideSkill((e) => !e)}
+                      className="plus-skills"
+                    />
+                  )}
                 </div>
               </div>
-              <div className="content-data-wrapper-body-skills">
+              <div
+                className={`content-data-wrapper-body-skills ${
+                  !showHideSkill && "displayNone"
+                }`}
+              >
                 <div className="section">
                   <ul>
                     <li>HTML / CSS / Tailwind CSS</li>

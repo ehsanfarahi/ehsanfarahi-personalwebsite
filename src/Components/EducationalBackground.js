@@ -1,4 +1,4 @@
-import "../styles/index.css";
+// import "../styles/index.css";
 
 // Import Images
 import auafImg from "../images/auaf.png";

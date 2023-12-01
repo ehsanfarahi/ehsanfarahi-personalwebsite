@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-import "../styles/index.css";
+// import "../styles/index.css";
 
 const EhsanFarahiStarterName = () => {
   useEffect(() => {

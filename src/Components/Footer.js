@@ -1,4 +1,4 @@
-import "../styles/index.css";
+// import "../styles/index.css";
 
 import logoImg from "../images/logo-black.png";
 
@@ -32,7 +32,7 @@ const Footer = () => {
         <div className="footer-container-left">
           <div className="name">
             <p>Ehsan Farahi</p>
-            <p>Self-taught Front End Web Developer.</p>
+            <p>Front End Web Developer</p>
           </div>
           <div className="hire-me">
             <button>Hire me</button>

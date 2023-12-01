@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One&family=Parisienne&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans+Inline+One&family=Parisienne&display=swap"); */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap"); */
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
 
 *,
@@ -1107,6 +1107,13 @@ hr {
 .my-cv-container .cv-container-right-side .content {
   margin: 18rem 0.5rem 1rem 0.5rem;
 }
+.my-cv-container .cv-container-right-side .content .head {
+  padding-left: 0.5rem;
+}
+
+.my-cv-container .cv-container-right-side .content .content-data p {
+  padding: 0 0.5rem;
+}
 
 .my-cv-container
   .cv-container-right-side
@@ -2193,6 +2200,7 @@ hr {
 
   .fade-out .ehsan-farahi {
     position: relative;
+    border-right: none;
   }
 
   /* Ehsan Farahi Rotating Name End */
@@ -2365,7 +2373,8 @@ hr {
 
   /* Header Start */
   .header {
-    height: 85vh;
+    /* height: 85vh; */
+    height: 100vh;
     background-image: none;
     width: 100%;
     background-color: #fff;
@@ -2619,6 +2628,7 @@ hr {
     border: 0.5px dotted #fff;
   } */
   .full-stack {
+    padding-top: 10rem;
     text-align: center;
     font-size: 1.3rem;
   }
@@ -2630,6 +2640,9 @@ hr {
   }
 
   /* My CV Start */
+  .form-close-btn {
+    display: none;
+  }
   .my-cv-container {
     left: 0;
     transform: translate(0);
@@ -2696,6 +2709,8 @@ hr {
 
   .my-cv-container .cv-container-right-side .content .content-data {
     font-size: 1.2rem;
+  }
+  .my-cv-container .cv-container-right-side .content .content-data .intro-text {
     text-align: justify;
   }
   /* My CV End */

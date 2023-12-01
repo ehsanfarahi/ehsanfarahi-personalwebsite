@@ -1,4 +1,4 @@
-import "../styles/index.css";
+// import "../styles/index.css";
 
 import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";

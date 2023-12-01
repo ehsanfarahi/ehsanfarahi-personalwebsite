@@ -33,7 +33,7 @@ export default function Header() {
 
   // Event Listeners
   window.addEventListener("scroll", () => {
-    if (window.scrollY > 50) {
+    if (window.scrollY > 30) {
       setCartoon(false);
     }
   });
