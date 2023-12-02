@@ -1623,6 +1623,10 @@ hr {
   position: absolute;
   width: 100%;
   height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   background-color: #302f2fd5;
   display: flex;
   justify-content: center;
@@ -1640,6 +1644,16 @@ hr {
 .project-card-title {
   padding-bottom: 2%;
   font-weight: 800;
+  width: fit-content;
+  background-image: linear-gradient(
+    to right,
+    orange,
+    rgb(223, 138, 69),
+    rgb(223, 69, 69),
+    rgb(160, 17, 17)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .my-work-img {
@@ -2891,13 +2905,14 @@ hr {
 
   .my-work-flex {
     overflow-x: auto;
-
+    overflow-y: hidden;
     flex-wrap: nowrap !important;
   }
 
   .project-card-title {
     padding-bottom: 2%;
     font-weight: 800;
+    margin-bottom: 5px !important;
   }
   .my-work-img {
     border-radius: 0%;
