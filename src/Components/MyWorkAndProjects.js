@@ -64,7 +64,7 @@ const MyWorkAndProjects = () => {
   return (
     <div className="my-work">
       <h1 className="my-work-title">My Work and Projects</h1>
-      <div className="row row-cols-1 row-cols-md-2 g-5">
+      <div className="row row-cols-1 row-cols-md-2 g-5  my-work-flex">
         {projectsData.map((card) => (
           <MyProjectsCards cardData={card} />
         ))}
@@ -85,6 +85,7 @@ function MyProjectsCards({ cardData }) {
     >
       <div className="col project-card-animation">
         <h5 className="project-card-title card-title">{cardData.heading}</h5>
+
         <div className="my-work-card-template card">
           {cardData.comingSoon && (
             <div className="my-work-card-template-canvas">

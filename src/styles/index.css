@@ -1510,6 +1510,7 @@ hr {
   left: 16%;
 }
 
+/* My Work and Projects Start */
 .my-work {
   text-align: center;
   padding: 3% 4% 1% 3%;
@@ -1644,8 +1645,10 @@ hr {
 .my-work-img {
   border-radius: 0;
   border-bottom: 2px solid rgb(214, 212, 212);
+  width: 100%;
+  aspect-ratio: 2;
 }
-
+/* My Work and Projects End */
 .general-info {
   background-color: #fff;
   text-align: center;
@@ -1668,8 +1671,24 @@ hr {
 
 .my-skills-title {
   text-align: left;
+  font-weight: 700;
+  font-size: 2.5rem;
   padding-top: 7%;
   padding-bottom: 1%;
+  width: fit-content;
+  background-image: linear-gradient(
+    to right,
+    orange,
+    rgb(223, 138, 69),
+    rgb(223, 69, 69),
+    rgb(160, 17, 17)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.my-skills-mobile {
+  display: none;
 }
 
 /* Footer Start */
@@ -2628,7 +2647,7 @@ hr {
     border: 0.5px dotted #fff;
   } */
   .full-stack {
-    padding-top: 10rem;
+    padding-top: 9rem;
     text-align: center;
     font-size: 1.3rem;
   }
@@ -2855,7 +2874,7 @@ hr {
   /* My Work and Experience Start */
   .my-work {
     text-align: center;
-    padding: 3% 4% 1% 3%;
+    padding: 3% 4% 10% 3%;
     text-align: left;
     width: 90%;
     margin: auto;
@@ -2869,14 +2888,18 @@ hr {
     border: none;
     background-color: #eeeeee;
   }
+
+  .my-work-flex {
+    overflow-x: auto;
+
+    flex-wrap: nowrap !important;
+  }
+
   .project-card-title {
     padding-bottom: 2%;
     font-weight: 800;
   }
   .my-work-img {
-    box-shadow: 1px 1px 4px 5px white;
-    -webkit-box-shadow: 1px 1px 4px 5px white;
-    -moz-box-shadow: 1px 1px 4px 5px white;
     border-radius: 0%;
   }
 
@@ -2954,7 +2977,39 @@ hr {
   .my-skills-title {
     text-align: left;
     padding-top: 7%;
+    width: fit-content;
+    font-weight: 700;
+    font-size: 1.8rem;
+    background-image: linear-gradient(
+      to right,
+      orange,
+      rgb(223, 138, 69),
+      rgb(223, 69, 69),
+      rgb(160, 17, 17)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
+
+  .my-skills-laptop {
+    display: none !important;
+  }
+
+  .my-skills-mobile {
+    border: 3px solid #eeeeee;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+  .my-skills-mobile img {
+    width: 100%;
+    aspect-ratio: 1;
+    margin: 1.5rem 0 1.5rem;
+  }
+
   .card-title {
     padding: 1px 0;
   }

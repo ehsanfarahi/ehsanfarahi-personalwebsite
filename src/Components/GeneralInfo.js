@@ -1,5 +1,23 @@
 // import "../styles/index.css";
 
+const logos = [
+  { id: 1, logo: "html-logo.png", alt: "html-logo" },
+  { id: 2, logo: "css-logo.png", alt: "css-logo" },
+  { id: 3, logo: "tailwind-logo.png", alt: "tailwind" },
+  { id: 4, logo: "sass-logo.png", alt: "sass-logo" },
+  { id: 5, logo: "bootstrap-logo.png", alt: "botstrap" },
+  { id: 6, logo: "figma-logo.png", alt: "figma-logo" },
+  { id: 7, logo: "js-logo.png", alt: "js-logo" },
+  { id: 8, logo: "ts-logo.png", alt: "ts-logo" },
+  { id: 9, logo: "jquery-logo.png", alt: "jquery-logo" },
+  { id: 10, logo: "react-logo.png", alt: "react-logo" },
+  { id: 11, logo: "nextjs-logo.png", alt: "nextjs" },
+  { id: 12, logo: "node-logo.png", alt: "nodejs-logo" },
+  { id: 13, logo: "express-logo.png", alt: "express" },
+  { id: 14, logo: "mongodb-logo.png", alt: "mongodb" },
+  { id: 15, logo: "mysql-logo.png", alt: "mysql-logo" },
+  { id: 16, logo: "php-logo.png", alt: "php-logo" },
+];
 const GeneralInfo = () => {
   return (
     <div className="general-info">
@@ -94,7 +112,7 @@ const GeneralInfo = () => {
       </div>
       <h3 className="my-skills-title">My Skills</h3>
 
-      <div className="row row-cols-2 justify-content-left row-cols-lg-6 row-cols-md-4 row-cols-sm-2 g-4">
+      <div className="row row-cols-2 justify-content-left row-cols-lg-6 row-cols-md-4 row-cols-sm-2 g-4 my-skills-laptop">
         <div className="col">
           <div className="card">
             <h5 className="card-title">HTML 5</h5>
@@ -165,6 +183,18 @@ const GeneralInfo = () => {
             />
           </div>
         </div>
+      </div>
+      <div className="my-skills-mobile">
+        {logos.map((logo) => {
+          return (
+            <span>
+              <img
+                src={require(`./../images/${logo.logo}`)}
+                alt={`${logo.alt}`}
+              />
+            </span>
+          );
+        })}
       </div>
     </div>
   );
