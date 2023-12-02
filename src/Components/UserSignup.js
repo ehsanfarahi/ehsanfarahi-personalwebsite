@@ -1,6 +1,10 @@
 // import "../styles/index.css";
 
-import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
+import {
+  AiFillEyeInvisible,
+  AiFillEye,
+  AiOutlineCloseCircle,
+} from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
 
 import { useEffect, useState } from "react";
@@ -58,9 +62,10 @@ const UserSignup = () => {
 
   return (
     <div className="userSignupForm">
-      <p onClick={closeSignuoForm} className="signup-close-btn">
-        <i className="fa-solid fa-circle-xmark cv-close-btn"></i>
-      </p>
+      <AiOutlineCloseCircle
+        onClick={closeSignuoForm}
+        className="form-close-btn"
+      />
       <div className="signupForm">
         <h2>User Registration Form</h2>
         <div className="form-controll">
@@ -157,6 +162,11 @@ const UserSignup = () => {
           </p>
         </div>
       </div>
+      <div className="small-glassmorphism-1"></div>
+      <div className="small-glassmorphism-2"></div>
+      <div className="small-glassmorphism-3"></div>
+      <div className="small-glassmorphism-4"></div>
+      <div className="small-glassmorphism-5"></div>
     </div>
   );
 };

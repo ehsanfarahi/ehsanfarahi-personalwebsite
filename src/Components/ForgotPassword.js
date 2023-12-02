@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react";
 
+// React Icons
+import { AiOutlineCloseCircle } from "react-icons/ai";
+
 const ForgotPassword = () => {
   const [email, setEmail] = useState("");
 
@@ -21,11 +24,19 @@ const ForgotPassword = () => {
       .classList.toggle("displayNone");
   }
 
+  function toggleForms() {
+    document
+      .querySelector(".userForgotpasswordForm")
+      .classList.toggle("displayNone");
+    document.querySelector(".userSignupForm").classList.toggle("displayNone");
+  }
+
   return (
     <div className="userForgotpasswordForm">
-      <p onClick={closeForgotpasswordForm} className="forgotpassword-close-btn">
-        <i className="fa-solid fa-circle-xmark cv-close-btn"></i>
-      </p>
+      <AiOutlineCloseCircle
+        onClick={closeForgotpasswordForm}
+        className="form-close-btn"
+      />
       <div className="forgotpasswordForm">
         <h2>Re-set Password Form</h2>
         <div className="form-controll">
@@ -45,7 +56,9 @@ const ForgotPassword = () => {
           <button onClick={handleSubmit} className="forgotpassword-btn">
             Reset password
           </button>
-          <p>Sign up instead!</p>
+          <p>
+            <span onClick={toggleForms}>Sign up</span> instead!
+          </p>
         </div>
       </div>
     </div>

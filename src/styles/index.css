@@ -357,33 +357,27 @@ body {
   box-shadow: 0.01rem 0.01rem 0.1rem 0.1rem rgb(182, 179, 179);
   background-color: rgba(255, 255, 255, 0.07);
 }
-
 .userLoginForm .loginForm .form-controll input:focus {
   border: 0.15rem solid rgba(255, 255, 255, 0.47);
   color: #000;
   box-shadow: none;
 }
-
 .userLoginForm .loginForm .form-controll .user-login-email.error {
   border: 0.1rem solid rgb(238, 75, 75);
   box-shadow: none;
 }
-
 .userLoginForm .loginForm .form-controll .user-login-password.error {
   border: 0.1rem solid rgb(238, 75, 75);
   box-shadow: none;
 }
-
 .userLoginForm .loginForm .form-controll .user-login-error {
   color: rgb(238, 75, 75);
   display: none;
 }
-
 .userLoginForm .loginForm .form-controll .user-password-error {
   color: rgb(238, 75, 75);
   display: none;
 }
-
 .userLoginForm .loginForm .form-controll .showHidePasswordIcon {
   position: absolute;
   right: 1rem;
@@ -391,20 +385,16 @@ body {
   font-size: 1.5rem;
   cursor: pointer;
 }
-
 .display-block {
   display: block;
 }
-
 .userLoginForm .loginForm .login-form-bottom {
   display: flex;
   justify-content: space-between;
 }
-
 .userLoginForm .loginForm .login-form-bottom--btn {
   margin-left: 1.5rem;
 }
-
 .userLoginForm .loginForm .login-form-bottom--btn .login-btn {
   text-align: center;
   border: none;
@@ -417,7 +407,6 @@ body {
   border-radius: 0.2rem;
   background-color: rgba(255, 255, 255, 0.27);
 }
-
 .userLoginForm .loginForm .login-form-bottom--btn .login-btn:hover {
   cursor: pointer;
   /* background-color: #3259af; */
@@ -506,6 +495,7 @@ body {
   top: 40%;
   transform: translate(-50%, -60%);
   z-index: 1;
+  color: #fff;
 }
 .userForgotpasswordForm .forgotpassword-close-btn {
   position: relative;
@@ -515,14 +505,16 @@ body {
   margin-left: 45%;
 }
 .userForgotpasswordForm .forgotpasswordForm {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.13);
   border-radius: 0.2rem;
   border: none;
   outline: none;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
 }
 .userForgotpasswordForm .forgotpasswordForm h2 {
   padding: 1rem 2.5rem;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #fff;
 }
 .userForgotpasswordForm .forgotpasswordForm .form-controll {
   margin: 1.5rem;
@@ -541,28 +533,26 @@ body {
   outline: none;
   border: none;
   border-radius: 0.2rem;
-  color: rgb(182, 179, 179);
+  /* color: rgb(182, 179, 179); */
   box-shadow: 0.01rem 0.01rem 0.1rem 0.1rem rgb(182, 179, 179);
+  background-color: rgba(255, 255, 255, 0.07);
 }
-
 .userForgotpasswordForm .forgotpasswordForm .form-controll input:focus {
-  border: 0.15rem solid rgb(75, 192, 238);
+  border: 0.15rem solid rgba(255, 255, 255, 0.47);
   color: #000;
   box-shadow: none;
 }
-
 .userForgotpasswordForm
   .forgotpasswordForm
   .form-controll
-  .user-login-email.error {
+  .user-forgotpassword-error {
   border: 0.1rem solid rgb(238, 75, 75);
   box-shadow: none;
+  display: none;
 }
-
 .userForgotpasswordForm .forgotpasswordForm .forgotpassword-form-bottom {
   margin: 2rem 1.5rem 1.5rem 1.5rem;
 }
-
 .userForgotpasswordForm
   .forgotpasswordForm
   .forgotpassword-form-bottom
@@ -574,17 +564,27 @@ body {
   padding: 0.4rem 1rem;
   font-weight: 700;
   font-size: 1rem;
-  background-color: #527fe0;
   border-radius: 0.2rem;
   width: 100%;
+  /* background-color: #527fe0; */
+  background-color: rgba(255, 255, 255, 0.27);
 }
-
 .userForgotpasswordForm
   .forgotpasswordForm
-  .forgotpassword-form-bottom--btn
+  .forgotpassword-form-bottom
   .forgotpassword-btn:hover {
   cursor: pointer;
-  background-color: #3259af;
+  /* background-color: #3259af; */
+  background-color: rgba(255, 255, 255, 0.47);
+}
+.userForgotpasswordForm .forgotpasswordForm .forgotpassword-form-bottom p {
+  padding: 0.7rem 0 1rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+.userForgotpasswordForm .forgotpasswordForm .forgotpassword-form-bottom p span {
+  text-decoration: underline;
+  color: rgb(35, 152, 199);
 }
 /* User Forgot Password Form End */
 
@@ -1642,6 +1642,7 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1;
 }
 
 .my-work-card-template-canvas-text {
@@ -2344,25 +2345,69 @@ hr {
   /* User Sign up form start */
   .userSignupForm {
     position: absolute;
-    top: 11%;
+    top: 13%;
     transform: translate(-50%, 0);
     background-color: #fff;
     width: 100%;
-    height: 100vh;
+    height: 90%;
+    color: #000;
   }
   .userSignupForm .signup-close-btn {
     display: none;
   }
   .userSignupForm .signupForm {
     border-radius: 0.6rem;
-    border: 0.1rem solid rgb(63, 106, 247);
-    width: 90%;
+    border: 0.1rem solid rgba(255, 255, 255, 0.27);
+    width: 75%;
     position: absolute;
     left: 50%;
     transform: translate(-50%);
+    background-color: rgba(203, 213, 225, 0.3);
+    backdrop-filter: blur(1px);
+    box-shadow: none;
+    margin-top: 1.5rem;
+  }
+  .userSignupForm .small-glassmorphism-1,
+  .small-glassmorphism-2,
+  .small-glassmorphism-3,
+  .small-glassmorphism-4,
+  .small-glassmorphism-5 {
+    border-radius: 0.6rem;
+    aspect-ratio: 1;
+    position: absolute;
+    background-color: rgba(203, 213, 225, 0.3);
+    backdrop-filter: blur(10px);
+  }
+  .userSignupForm .small-glassmorphism-1 {
+    width: 2.5rem;
+    left: 60%;
+    top: -1.7rem;
+  }
+  .userSignupForm .small-glassmorphism-2 {
+    width: 3.5rem;
+    left: 6%;
+    top: -0.5rem;
+    z-index: -1;
+    /* background-color: rgba(203, 213, 225, 0.3); */
+  }
+  .userSignupForm .small-glassmorphism-3 {
+    width: 4rem;
+    left: 1%;
+    top: 16rem;
+    z-index: -1;
+  }
+  .userSignupForm .small-glassmorphism-4 {
+    width: 5rem;
+    right: 0.5rem;
+    top: 29.5rem;
+  }
+  .userSignupForm .small-glassmorphism-5 {
+    width: 2.6rem;
+    left: 16.5rem;
+    top: 42.5rem;
   }
   .userSignupForm .signupForm h2 {
-    padding: 0.5rem 0;
+    padding: 0.7rem 0;
     border-bottom: 1px solid rgb(63, 106, 247);
     text-align: center;
     font-size: 1.5rem;
@@ -2376,13 +2421,31 @@ hr {
   .userSignupForm .signupForm .form-controll input {
     height: 2.2rem;
   }
-
   .userSignupForm .signupForm .form-controll input:focus {
     border: 0.15rem solid rgb(63, 106, 247);
   }
-
   .userSignupForm .signupForm .form-controll .showHidePasswordIcon {
     top: 2.2rem;
+  }
+  .userSignupForm .signupForm .signup-form-bottom--btn .signup-btn {
+    background-color: rgba(177, 173, 173, 0.3);
+    color: #000;
+  }
+  .userSignupForm .signupForm .signup-form-bottom--btn .signup-btn:hover {
+    background-color: rgba(177, 173, 173, 0.5);
+  }
+  .userSignupForm
+    .signupForm
+    .signup-with-google
+    .signup-with-google--or::before,
+  .signup-with-google--or::after {
+    background-color: rgba(177, 173, 173, 0.87);
+  }
+  .userSignupForm
+    .signupForm
+    .signup-with-google
+    .signup-with-google--or::after {
+    background-color: rgba(177, 173, 173, 0.87);
   }
 
   /* User sign up form End */
@@ -2394,24 +2457,55 @@ hr {
     transform: translate(-50%, 0);
     background-color: #fff;
     width: 100%;
-    height: 100vh;
+    height: 90%;
+    color: #000;
   }
   .userForgotpasswordForm .forgotpassword-close-btn {
     display: none;
   }
   .userForgotpasswordForm .forgotpasswordForm {
     border-radius: 0.6rem;
-    border: 0.1rem solid rgb(63, 106, 247);
-    width: 90%;
+    border: 0.1rem solid rgba(255, 255, 255, 0.27);
+    width: 75%;
     position: absolute;
     left: 50%;
     transform: translate(-50%);
+    background-color: rgba(203, 213, 225, 0.3);
+    backdrop-filter: blur(1px);
+    box-shadow: none;
+    margin-top: 1.5rem;
   }
   .userForgotpasswordForm .forgotpasswordForm h2 {
     padding: 0.7rem 0;
     border-bottom: 1px solid rgb(63, 106, 247);
     text-align: center;
     font-size: 1.5rem;
+  }
+  .userForgotpasswordForm .forgotpasswordForm .forgotpassword-form-bottom p {
+    margin-top: 5px;
+  }
+  .userForgotpasswordForm
+    .forgotpasswordForm
+    .forgotpassword-form-bottom
+    p
+    span {
+    cursor: pointer;
+    color: rgb(71, 71, 214);
+    text-decoration: underline;
+  }
+  .userForgotpasswordForm
+    .forgotpasswordForm
+    .forgotpassword-form-bottom
+    .forgotpassword-btn {
+    background-color: rgba(177, 173, 173, 0.3);
+    color: #000;
+  }
+
+  .userForgotpasswordForm
+    .forgotpasswordForm
+    .forgotpassword-form-bottom
+    .forgotpassword-btn:hover {
+    background-color: rgba(177, 173, 173, 0.5);
   }
   /* User Forgot Password Form End */
 

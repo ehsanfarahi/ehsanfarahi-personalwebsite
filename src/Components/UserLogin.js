@@ -4,7 +4,11 @@ import { useNavigate } from "react-router-dom";
 
 import { useEffect, useState } from "react";
 
-import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
+import {
+  AiFillEyeInvisible,
+  AiFillEye,
+  AiOutlineCloseCircle,
+} from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
 
 const UserLogin = () => {
@@ -57,9 +61,10 @@ const UserLogin = () => {
 
   return (
     <div className="userLoginForm">
-      <p onClick={closeLoginForm} className="login-close-btn">
-        <i className="fa-solid fa-circle-xmark cv-close-btn"></i>
-      </p>
+      <AiOutlineCloseCircle
+        onClick={closeLoginForm}
+        className="form-close-btn"
+      />
       <div className="loginForm">
         <h2>User Sign In Form</h2>
         <div className="form-controll">
