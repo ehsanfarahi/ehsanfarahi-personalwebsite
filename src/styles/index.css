@@ -1502,6 +1502,17 @@ hr {
 .edu-back-title {
   padding-top: 2%;
   color: #fff;
+  width: fit-content;
+  margin: auto;
+  background-image: linear-gradient(
+    to right,
+    orange,
+    rgb(223, 138, 69),
+    rgb(223, 69, 69),
+    rgb(160, 17, 17)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .edu-quotation {
@@ -2916,6 +2927,7 @@ hr {
   }
   .my-work-img {
     border-radius: 0%;
+    z-index: -1;
   }
 
   .my-work-card-template-back {
