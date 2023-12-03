@@ -42,9 +42,9 @@ const MyCv = () => {
             <FcGlobe className="icon" />
             <p>www.ehsanfarahi.com</p>
           </div>
-          <h3>Career Objective</h3>
+          <h3 className="career-obj-heading">Career Objective</h3>
           <div className="content-data">
-            <p>
+            <p className="career-obj-text">
               To obtain a front end web development position and to contribute
               to the success and advancement of the company.
             </p>

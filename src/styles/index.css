@@ -1910,12 +1910,15 @@ hr {
 @keyframes barcodeFlip {
   0% {
     transform: scaleX(1);
+    opacity: 0;
   }
   50% {
     transform: scaleX(-1);
+    opacity: 0.5;
   }
   100% {
     transform: scaleX(1);
+    opacity: 1;
   }
 }
 
@@ -2493,7 +2496,7 @@ hr {
   /* User Sign up form start */
   .userSignupForm {
     position: absolute;
-    top: 13%;
+    top: 8%;
     transform: translate(-50%, 0);
     background-color: #fff;
     width: 100%;
@@ -2506,7 +2509,7 @@ hr {
   .userSignupForm .signupForm {
     border-radius: 0.6rem;
     border: 0.1rem solid rgba(255, 255, 255, 0.27);
-    width: 75%;
+    width: 85%;
     position: absolute;
     left: 50%;
     transform: translate(-50%);
@@ -2514,45 +2517,6 @@ hr {
     backdrop-filter: blur(1px);
     box-shadow: none;
     margin-top: 1.5rem;
-  }
-  .userSignupForm .small-glassmorphism-1,
-  .small-glassmorphism-2,
-  .small-glassmorphism-3,
-  .small-glassmorphism-4,
-  .small-glassmorphism-5 {
-    border-radius: 0.6rem;
-    aspect-ratio: 1;
-    position: absolute;
-    background-color: rgba(203, 213, 225, 0.3);
-    backdrop-filter: blur(10px);
-  }
-  .userSignupForm .small-glassmorphism-1 {
-    width: 2.5rem;
-    left: 60%;
-    top: -1.7rem;
-  }
-  .userSignupForm .small-glassmorphism-2 {
-    width: 3.5rem;
-    left: 6%;
-    top: -0.5rem;
-    z-index: -1;
-    /* background-color: rgba(203, 213, 225, 0.3); */
-  }
-  .userSignupForm .small-glassmorphism-3 {
-    width: 4rem;
-    left: 1%;
-    top: 16rem;
-    z-index: -1;
-  }
-  .userSignupForm .small-glassmorphism-4 {
-    width: 5rem;
-    right: 0.5rem;
-    top: 29.5rem;
-  }
-  .userSignupForm .small-glassmorphism-5 {
-    width: 2.6rem;
-    left: 16.5rem;
-    top: 42.5rem;
   }
   .userSignupForm .signupForm h2 {
     padding: 0.7rem 0;
@@ -2568,6 +2532,8 @@ hr {
   }
   .userSignupForm .signupForm .form-controll input {
     height: 2.2rem;
+    border: 0.1rem solid rgb(31, 115, 224);
+    box-shadow: none;
   }
   .userSignupForm .signupForm .form-controll input:focus {
     border: 0.15rem solid rgb(63, 106, 247);
@@ -2614,7 +2580,7 @@ hr {
   .userForgotpasswordForm .forgotpasswordForm {
     border-radius: 0.6rem;
     border: 0.1rem solid rgba(255, 255, 255, 0.27);
-    width: 75%;
+    width: 85%;
     position: absolute;
     left: 50%;
     transform: translate(-50%);
@@ -2628,6 +2594,10 @@ hr {
     border-bottom: 1px solid rgb(63, 106, 247);
     text-align: center;
     font-size: 1.5rem;
+  }
+  .userForgotpasswordForm .forgotpasswordForm .form-controll input {
+    border: 0.1rem solid rgb(31, 115, 224);
+    box-shadow: none;
   }
   .userForgotpasswordForm .forgotpasswordForm .forgotpassword-form-bottom p {
     margin-top: 5px;
@@ -2655,6 +2625,7 @@ hr {
     .forgotpassword-btn:hover {
     background-color: rgba(177, 173, 173, 0.5);
   }
+
   /* User Forgot Password Form End */
 
   /* Header Start */
@@ -2672,6 +2643,7 @@ hr {
     top: 18rem;
     left: 8rem;
     border: 0.2rem solid #eeeeee;
+    animation: headerGlasses 8s infinite ease-in-out;
   }
   .header .glassTwo {
     width: 1rem;
@@ -2681,6 +2653,7 @@ hr {
     right: 4rem;
     border: 0.2rem solid #eeeeee;
     border-radius: 50%;
+    animation: headerGlasses 8s infinite ease-in-out;
   }
   .header .glassThree {
     position: absolute;
@@ -2691,6 +2664,7 @@ hr {
     border-top: 11px solid transparent;
     border-bottom: 8px solid transparent;
     border-right: 16px solid #eeeeee;
+    animation: headerGlasses 8s infinite ease-in-out;
   }
   .header .glassThree .inner-triangleThree {
     position: relative;
@@ -2713,7 +2687,9 @@ hr {
     border-bottom: 8px solid transparent;
     border-right: 16px solid #fff;
     transform: translateX(30deg);
+    animation: headerGlasses 8s infinite ease-in-out;
   }
+
   .header .glassFour .inner-triangleFour {
     position: relative;
     top: -6px;
@@ -2734,6 +2710,24 @@ hr {
     border: 0.2rem solid #eeeeee;
     transform: rotate(45deg);
     border-bottom: 0.2rem solid #eeeeee !important;
+    animation: headerGlasses 8s infinite ease-in-out;
+  }
+  @keyframes headerGlasses {
+    0% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 1;
+    }
+    75% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 0;
+    }
   }
 
   .header .top-menu {
@@ -3053,6 +3047,10 @@ hr {
     font-size: 1.2rem;
   }
 
+  .my-cv-container .cv-container-left-side .content .career-obj-heading {
+    margin-top: 3rem;
+  }
+
   .my-cv-container .cv-container-left-side .content .content-data .icon {
     font-size: 1.5rem;
   }
@@ -3061,6 +3059,7 @@ hr {
     width: 100%;
     float: none;
     border-bottom: 0.2rem solid gray;
+    padding-top: 2rem;
   }
 
   .my-cv-container .cv-container-right-side .content {
@@ -3238,7 +3237,7 @@ hr {
   /* My Work and Experience Start */
   .my-work {
     text-align: center;
-    padding: 3% 4% 10% 3%;
+    padding: 4% 4% 10% 3%;
     text-align: left;
     width: 90%;
     margin: auto;
@@ -3488,7 +3487,7 @@ hr {
 
   .footer-container-right .contact-num .socialmedia-barcode-container {
     /* position: absolute; */
-    top: -27.5rem;
+    top: -24rem;
     width: 70%;
     left: 50%;
     transform: translate(-50%);
@@ -3503,15 +3502,18 @@ hr {
   @keyframes barcodeFlip {
     0% {
       left: 50%;
-      transform: scaleX(1) translate(-50%);
+      transform: scaleX(1) scale(0) translate(-50%);
+      opacity: 0;
     }
     50% {
       left: -25%;
-      transform: scaleX(-1) translate(-50%);
+      transform: scaleX(-1) scale(0.5) translate(-50%);
+      opacity: 0.5;
     }
     100% {
       left: 50%;
-      transform: scaleX(1) translate(-50%);
+      transform: scaleX(1) scale(1) translate(-50%);
+      opacity: 1;
     }
   }
 
