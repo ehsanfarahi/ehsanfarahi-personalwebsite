@@ -3,12 +3,31 @@
 import logoImg from "../images/logo-black.png";
 
 import { IoIosArrowForward } from "react-icons/io";
+import { IoClose } from "react-icons/io5";
 import { FaViber } from "react-icons/fa";
 import { BsWhatsapp } from "react-icons/bs";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+
+const socialMediaBarcodes = {
+  whatsapp: {
+    platform: "WhatsApp",
+    bg: "linear-gradient(to right, #2dd14a, #5bf87c)",
+    barcode: "whatsapp-barcode.jpeg",
+    alt: "Whatsapp barcode",
+  },
+  viber: {
+    platform: "Viber",
+    bg: "linear-gradient(to right, #59267c, #8f5db7)",
+    barcode: "viber-barcode.jpeg",
+    alt: "Viber barcode",
+  },
+};
 
 const Footer = () => {
+  const [displayWhatsappBarcode, setDisplayWhatsappBarcode] = useState(false);
+  const [displayViberBarcode, setDisplayViberBarcode] = useState(false);
+
   useEffect(() => {
     document
       .querySelector(".subscription-message")
@@ -107,9 +126,38 @@ const Footer = () => {
           <div className="contact-num">
             <p>Get in touch</p>
             <p>
-              +49 176 46294780 - <FaViber className="contact-icons" />{" "}
-              <BsWhatsapp className="contact-icons" />
+              +49 176 46294780 -{" "}
+              <FaViber
+                onClick={() => {
+                  return (
+                    setDisplayViberBarcode(true),
+                    setDisplayWhatsappBarcode(false)
+                  );
+                }}
+                className="contact-icons"
+              />{" "}
+              <BsWhatsapp
+                onClick={() => {
+                  return (
+                    setDisplayWhatsappBarcode(true),
+                    setDisplayViberBarcode(false)
+                  );
+                }}
+                className="contact-icons"
+              />
             </p>
+            {displayWhatsappBarcode && (
+              <SocialMediaBarcode
+                data={socialMediaBarcodes.whatsapp}
+                dispBarcode={setDisplayWhatsappBarcode}
+              />
+            )}
+            {displayViberBarcode && (
+              <SocialMediaBarcode
+                data={socialMediaBarcodes.viber}
+                dispBarcode={setDisplayViberBarcode}
+              />
+            )}
           </div>
         </div>
       </div>
@@ -128,21 +176,7 @@ const Footer = () => {
           <span>Terms and Conditions</span> <span>Privacy Policy</span>
         </div>
       </div>
-      {/* <button className="top-arrow" type="button">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="43"
-            height="35"
-            fill="currentColor"
-            className="bi bi-arrow-up"
-            viewBox="0 -2 16 22"
-          >
-            <path
-              fillRule="evenodd"
-              d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"
-            />
-          </svg>
-        </button> */}
+
       {/* <button className="dark-mode">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -163,3 +197,41 @@ const Footer = () => {
 };
 
 export default Footer;
+
+function SocialMediaBarcode({ data, dispBarcode }) {
+  return (
+    <div
+      className={`socialmedia-barcode-container ${
+        dispBarcode && "flipBarcode"
+      }`}
+    >
+      <div className="barcode-container">
+        <div
+          style={{ backgroundImage: `${data.bg}` }}
+          className="barcode-container-header"
+        >
+          <div>
+            <h4>{data.platform}</h4>
+            <p>Scan & chat</p>
+          </div>
+          <div>
+            <IoClose onClick={() => dispBarcode(false)} className="close-btn" />
+          </div>
+        </div>
+        <div className="barcode-container-body">
+          <p>Ehsan Farahi</p>
+
+          <div className="barcode">
+            <img
+              src={require(`../images/${data.barcode}`)}
+              alt={`${data.alt}`}
+            />
+          </div>
+        </div>
+        <div className="barcode-container-footer">
+          <p>Scan the code with your mobile phone to get in touch</p>
+        </div>
+      </div>
+    </div>
+  );
+}

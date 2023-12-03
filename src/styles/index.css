@@ -1368,8 +1368,18 @@ hr {
   left: 50%;
   transform: translate(-50%);
   top: 15%;
-  background-color: #fff;
+  background-color: #ffffff3f;
   width: 50%;
+  border-radius: 1rem;
+  height: 50%;
+  color: #fff;
+  backdrop-filter: blur(6px);
+}
+.create-cv-container .create-cv-container-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 /* Create CV End */
 
@@ -1465,6 +1475,9 @@ hr {
   line-height: 1rem;
   cursor: pointer;
   border-bottom: 0.2rem solid transparent;
+  border-image: transparent;
+  border-image-slice: 1;
+  height: 3.8rem;
 }
 
 .know-more span {
@@ -1473,7 +1486,16 @@ hr {
 }
 
 .know-more:hover {
-  border-bottom: 0.2rem solid #000;
+  border-bottom: 0.2rem solid transparent;
+  border-image: linear-gradient(
+    to right,
+    orange,
+    rgb(223, 138, 69),
+    rgb(223, 69, 69),
+    rgb(160, 17, 17)
+  );
+  border-image-slice: 1;
+  height: 3.8rem;
 }
 
 .educational-background {
@@ -1524,7 +1546,7 @@ hr {
 /* My Work and Projects Start */
 .my-work {
   text-align: center;
-  padding: 3% 4% 1% 3%;
+  padding: 3% 4% 4% 3%;
   text-align: left;
   width: 90%;
   margin: auto;
@@ -1675,12 +1697,32 @@ hr {
   aspect-ratio: 2;
 }
 /* My Work and Projects End */
+
+/* General Info Start */
 .general-info {
   background-color: #fff;
   text-align: center;
   padding: 4% 3% 4%;
 }
 
+.general-info-heading {
+  font-weight: 700;
+  font-size: 2.2rem;
+  margin: auto;
+  width: fit-content;
+  background-image: linear-gradient(
+    to right,
+    rgb(66, 5, 66),
+    rgb(89, 89, 224),
+    rgb(23, 204, 165)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.general-info-heading2 {
+  font-size: 1.1rem;
+  padding-top: 0.5rem;
+}
 .general-info h3 {
   margin-top: 3%;
   padding-bottom: 1%;
@@ -1716,6 +1758,7 @@ hr {
 .my-skills-mobile {
   display: none;
 }
+/* General Info End */
 
 /* Footer Start */
 .footer {
@@ -1836,6 +1879,7 @@ hr {
 
 .footer-container-right .contact-num {
   margin-top: 5rem;
+  position: relative;
 }
 
 .footer-container-right .contact-num p:nth-child(1) {
@@ -1849,6 +1893,110 @@ hr {
   font-weight: 700;
   letter-spacing: 0.05rem;
   font-size: 1rem;
+}
+
+.footer-container-right .contact-num .socialmedia-barcode-container {
+  position: absolute;
+  top: -24rem;
+  width: 17rem;
+  border-radius: 0.4rem;
+  border: 0.2rem solid #fff;
+  background-color: #eeeeee;
+}
+
+.flipBarcode {
+  animation: barcodeFlip 1s 1 ease-in-out;
+}
+@keyframes barcodeFlip {
+  0% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(-1);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.footer-container-right
+  .contact-num
+  .socialmedia-barcode-container
+  .barcode-container
+  .barcode-container-header {
+  /* background-image: linear-gradient(to right, #2dd14a, #5bf87c); */
+  padding: 0.5rem;
+  border-top-right-radius: 0.4rem;
+  border-top-left-radius: 0.4rem;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.footer-container-right
+  .contact-num
+  .socialmedia-barcode-container
+  .barcode-container
+  .barcode-container-header
+  .close-btn {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.footer-container-right
+  .contact-num
+  .socialmedia-barcode-container
+  .barcode-container
+  .barcode-container-body {
+  width: 100%;
+  position: relative;
+}
+.footer-container-right
+  .contact-num
+  .socialmedia-barcode-container
+  .barcode-container
+  .barcode-container-body
+  p {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  white-space: nowrap;
+  top: -3rem;
+  font-size: 1rem;
+  border: 0.3rem solid #fff;
+  border-radius: 1rem;
+  padding: 0 0.4rem;
+  background-color: #eeeeee;
+}
+.footer-container-right
+  .contact-num
+  .socialmedia-barcode-container
+  .barcode-container
+  .barcode-container-body
+  .barcode {
+  width: 80%;
+  margin: 2rem auto 0.5rem;
+}
+.footer-container-right
+  .contact-num
+  .socialmedia-barcode-container
+  .barcode-container
+  .barcode-container-body
+  .barcode
+  img {
+  width: 100%;
+  aspect-ratio: 1;
+}
+
+.footer-container-right
+  .contact-num
+  .socialmedia-barcode-container
+  .barcode-container
+  .barcode-container-footer
+  p {
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  text-align: center;
 }
 
 .footer-container-right .contact-icons {
@@ -2517,6 +2665,77 @@ hr {
     width: 100%;
     background-color: #fff;
   }
+  .header .glassOne {
+    width: 1rem;
+    aspect-ratio: 1;
+    position: absolute;
+    top: 18rem;
+    left: 8rem;
+    border: 0.2rem solid #eeeeee;
+  }
+  .header .glassTwo {
+    width: 1rem;
+    aspect-ratio: 1;
+    position: absolute;
+    top: 12rem;
+    right: 4rem;
+    border: 0.2rem solid #eeeeee;
+    border-radius: 50%;
+  }
+  .header .glassThree {
+    position: absolute;
+    top: 8rem;
+    left: 4rem;
+    width: 0;
+    height: 0;
+    border-top: 11px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 16px solid #eeeeee;
+  }
+  .header .glassThree .inner-triangleThree {
+    position: relative;
+    top: -6px;
+    left: 3.5px;
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-right: 10px solid #fff;
+  }
+
+  .header .glassFour {
+    position: absolute;
+    top: 31rem;
+    right: 9rem;
+    width: 0;
+    height: 0;
+    border-top: 11px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 16px solid #fff;
+    transform: translateX(30deg);
+  }
+  .header .glassFour .inner-triangleFour {
+    position: relative;
+    top: -6px;
+    left: 3.5px;
+    width: 0;
+    height: 0;
+    border-top: 11px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-right: 18px solid #eeeeee;
+    transform: rotate(70deg);
+  }
+  .header .glassFive {
+    width: 1rem;
+    aspect-ratio: 1;
+    position: absolute;
+    top: 41rem;
+    left: 14rem;
+    border: 0.2rem solid #eeeeee;
+    transform: rotate(45deg);
+    border-bottom: 0.2rem solid #eeeeee !important;
+  }
+
   .header .top-menu {
     background-color: #fff;
     background-image: linear-gradient(white, white);
@@ -2524,7 +2743,7 @@ hr {
     width: 100%;
     height: 55px;
     line-height: 55px;
-    z-index: 1;
+    z-index: 2;
   }
   .header .top-menu .menu-navigation .menu-icon {
     top: 20px;
@@ -2797,6 +3016,7 @@ hr {
 
   .my-cv-container .cv-container-header {
     padding-bottom: 1rem;
+    margin-top: 2rem;
   }
 
   .my-cv-container .cv-container-header p:nth-child(1) {
@@ -2821,12 +3041,20 @@ hr {
   }
 
   .my-cv-container .cv-container-left-side .content {
-    margin-top: 13rem;
+    margin-top: 15rem;
     /* text-align: center; */
   }
 
   .my-cv-container .cv-container-left-side .content h3 {
     padding: 1rem 0.5rem 0;
+  }
+
+  .my-cv-container .cv-container-left-side .content .content-data {
+    font-size: 1.2rem;
+  }
+
+  .my-cv-container .cv-container-left-side .content .content-data .icon {
+    font-size: 1.5rem;
   }
 
   .my-cv-container .cv-container-right-side {
@@ -2898,6 +3126,23 @@ hr {
     padding: 20px;
   }
   /* Contact End */
+
+  /* Create CV Start */
+
+  .create-cv-container {
+    background-color: #0000003f;
+    width: 80%;
+    height: 30%;
+    color: #000;
+  }
+  .create-cv-container .form-close-btn {
+    color: #000;
+    display: block;
+  }
+  .create-cv-container .create-cv-container-content h2 {
+    font-size: 1.8rem;
+  }
+  /* Create CV End */
 
   /* My Journey Start */
   .my-journey {
@@ -3149,7 +3394,7 @@ hr {
       transform: translateX(0);
     }
     50% {
-      transform: translateX(1.5rem);
+      transform: translateX(2.5rem);
     }
     100% {
       transform: translateX(0);
@@ -3239,6 +3484,124 @@ hr {
 
   .footer-container-right .contact-num p:nth-child(1) {
     font-size: 1.1rem;
+  }
+
+  .footer-container-right .contact-num .socialmedia-barcode-container {
+    /* position: absolute; */
+    top: -27.5rem;
+    width: 70%;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 0.4rem;
+    border: 0.2rem solid #fff;
+    background-color: #eeeeee;
+  }
+
+  .flipBarcode {
+    animation: barcodeFlip 1s 1 ease-in-out;
+  }
+  @keyframes barcodeFlip {
+    0% {
+      left: 50%;
+      transform: scaleX(1) translate(-50%);
+    }
+    50% {
+      left: -25%;
+      transform: scaleX(-1) translate(-50%);
+    }
+    100% {
+      left: 50%;
+      transform: scaleX(1) translate(-50%);
+    }
+  }
+
+  .footer-container-right
+    .contact-num
+    .socialmedia-barcode-container
+    .barcode-container
+    .barcode-container-header {
+    /* background-image: linear-gradient(to right, #2dd14a, #5bf87c); */
+    padding: 0.5rem;
+    border-top-right-radius: 0.4rem;
+    border-top-left-radius: 0.4rem;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+  }
+
+  .footer-container-right
+    .contact-num
+    .socialmedia-barcode-container
+    .barcode-container
+    .barcode-container-header
+    h4 {
+    text-align: left;
+  }
+
+  .footer-container-right
+    .contact-num
+    .socialmedia-barcode-container
+    .barcode-container
+    .barcode-container-header
+    .close-btn {
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  .footer-container-right
+    .contact-num
+    .socialmedia-barcode-container
+    .barcode-container
+    .barcode-container-body {
+    width: 100%;
+    position: relative;
+  }
+  .footer-container-right
+    .contact-num
+    .socialmedia-barcode-container
+    .barcode-container
+    .barcode-container-body
+    p {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    white-space: nowrap;
+    top: -3rem;
+    font-size: 1rem;
+    border: 0.3rem solid #fff;
+    border-radius: 1rem;
+    padding: 0 0.4rem;
+    background-color: #eeeeee;
+  }
+  .footer-container-right
+    .contact-num
+    .socialmedia-barcode-container
+    .barcode-container
+    .barcode-container-body
+    .barcode {
+    width: 80%;
+    margin: 2rem auto 0.5rem;
+  }
+  .footer-container-right
+    .contact-num
+    .socialmedia-barcode-container
+    .barcode-container
+    .barcode-container-body
+    .barcode
+    img {
+    width: 100%;
+    aspect-ratio: 1;
+  }
+
+  .footer-container-right
+    .contact-num
+    .socialmedia-barcode-container
+    .barcode-container
+    .barcode-container-footer
+    p {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    text-align: center;
   }
 
   .footer-container-middle {

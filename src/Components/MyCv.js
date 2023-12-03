@@ -26,20 +26,20 @@ const MyCv = () => {
         <div className="content">
           <h3>Contacts</h3>
           <div className="content-data">
-            <FcHome />
+            <FcHome className="icon" />
             <p>Burgauerstr. 41</p>
             <p>81929 Munich, Germany</p>
           </div>
           <div className="content-data">
-            <FcCellPhone />
+            <FcCellPhone className="icon" />
             <p>+49 176 46294780</p>
           </div>
           <div className="content-data">
-            <MdAttachEmail />
+            <MdAttachEmail className="icon" />
             <p>ehsanullah.farahi@yahoo.com</p>
           </div>
           <div className="content-data">
-            <FcGlobe />
+            <FcGlobe className="icon" />
             <p>www.ehsanfarahi.com</p>
           </div>
           <h3>Career Objective</h3>

@@ -21,8 +21,10 @@ const logos = [
 const GeneralInfo = () => {
   return (
     <div className="general-info">
-      <h1>About Programming World</h1>
-      <p>For me, programming is what makes me feel proud.</p>
+      <h1 className="general-info-heading">About Programming World</h1>
+      <p className="general-info-heading2">
+        For me, programming is what makes me feel proud.
+      </p>
       <h3 className="my-expertise-heading">My Expertise</h3>
       <div className="row row-cols-1 justify-content-center row-cols-lg-6 row-cols-md-3 g-4">
         <div className="col">

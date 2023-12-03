@@ -1,11 +1,11 @@
 const projectsData = [
   {
     comingSoon: false,
-    heading: "Partrytorten München",
+    heading: "Partytorten München",
     url: "https://partytorten-munchen.vercel.app/",
     imageAddress: "images/partytorten-img.JPG",
     aboutProject:
-      "Partrytorten München is pastry online ordering website. Where customers can place an order for their desired products.",
+      "Partytorten München is pastry online ordering website. Where customers can place an order for their desired products.",
     frontEnd: ["Javascript", "React", "CSS", "React Icons"],
     backEnd: ["Node.js", "Express.js", "MongoDB"],
   },
@@ -32,15 +32,7 @@ const projectsData = [
     ],
     backEnd: ["Node.js", "Express.js", "MongoDB"],
   },
-  {
-    comingSoon: true,
-    heading: "Vehicles' Cards Printing System",
-    url: "#",
-    imageAddress: "images/vehicle-card.JPG",
-    aboutProject: "A system for printing vehicle cards.",
-    frontEnd: ["Javascript", "React", "CSS", "React Icons"],
-    backEnd: ["Node.js", "Express.js", "MongoDB"],
-  },
+
   {
     comingSoon: false,
     heading: "My Personal Website",
@@ -57,6 +49,15 @@ const projectsData = [
       "React Icons",
     ],
     backEnd: ["JSON Server", "Restful API", "Firebase"],
+  },
+  {
+    comingSoon: true,
+    heading: "Vehicles' Cards Printing System",
+    url: "#",
+    imageAddress: "images/vehicle-card.JPG",
+    aboutProject: "A system for printing vehicle cards.",
+    frontEnd: ["Javascript", "React", "CSS", "React Icons"],
+    backEnd: ["Node.js", "Express.js", "MongoDB"],
   },
 ];
 

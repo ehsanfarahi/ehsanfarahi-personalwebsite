@@ -146,6 +146,17 @@ export default function Header() {
       <CreateCv />
       <Contact />
       <header className="header">
+        <div className="glassOne"></div>
+
+        <div className="glassTwo"></div>
+        <div className="glassThree">
+          <div className="inner-triangleThree"></div>
+        </div>
+        <div className="glassFive"></div>
+        <div className="glassFour">
+          <div className="inner-triangleFour"></div>
+        </div>
+
         <div className="top-menu">
           <img
             src={cartoon ? ehsanCartoon : ehsanCartoon2}
