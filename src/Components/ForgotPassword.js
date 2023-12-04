@@ -1,9 +1,14 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 // React Icons
 import { AiOutlineCloseCircle } from "react-icons/ai";
 
-const ForgotPassword = () => {
+const ForgotPassword = ({
+  openForgotpassword,
+  setForgotpassword,
+  openSignup,
+  setSignup,
+}) => {
   const [email, setEmail] = useState("");
 
   function handleSubmit() {
@@ -12,27 +17,21 @@ const ForgotPassword = () => {
       .classList.toggle("displayNone");
   }
 
-  useEffect(() => {
-    document
-      .querySelector(".userForgotpasswordForm")
-      .classList.add("displayNone");
-  }, []);
-
   function closeForgotpasswordForm() {
-    document
-      .querySelector(".userForgotpasswordForm")
-      .classList.toggle("displayNone");
+    setForgotpassword(!openForgotpassword);
   }
 
   function toggleForms() {
-    document
-      .querySelector(".userForgotpasswordForm")
-      .classList.toggle("displayNone");
-    document.querySelector(".userSignupForm").classList.toggle("displayNone");
+    setForgotpassword(!openForgotpassword);
+    setSignup(!openSignup);
   }
 
   return (
-    <div className="userForgotpasswordForm">
+    <div
+      className={`userForgotpasswordForm ${
+        openForgotpassword && "displayNone"
+      }`}
+    >
       <AiOutlineCloseCircle
         onClick={closeForgotpasswordForm}
         className="form-close-btn"

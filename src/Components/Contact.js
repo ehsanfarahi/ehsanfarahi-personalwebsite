@@ -1,19 +1,13 @@
-import { useEffect } from "react";
-
 // React Icons
 import { AiOutlineCloseCircle } from "react-icons/ai";
 
-const Contact = () => {
-  useEffect(() => {
-    document.querySelector(".contact-container").classList.add("displayNone");
-  });
-
+const Contact = ({ openContact, setContact }) => {
   function closeContact() {
-    document.querySelector(".contact-container").classList.add("displayNone");
+    setContact(!openContact);
   }
 
   return (
-    <div className="contact-container">
+    <div className={`contact-container ${openContact && "displayNone"}`}>
       <AiOutlineCloseCircle onClick={closeContact} className="form-close-btn" />
       <div className="contact-container-content">
         <div className="formbold-main-wrapper">

@@ -1,19 +1,13 @@
-import { useEffect } from "react";
-
 // React Icons
 import { AiOutlineCloseCircle } from "react-icons/ai";
 
-const CreateCv = () => {
-  useEffect(() => {
-    document.querySelector(".create-cv-container").classList.add("displayNone");
-  });
-
+const CreateCv = ({ openCreateCV, setCreateCV }) => {
   function closeCreateCv() {
-    document.querySelector(".create-cv-container").classList.add("displayNone");
+    setCreateCV(!openCreateCV);
   }
 
   return (
-    <div className="create-cv-container">
+    <div className={`create-cv-container ${openCreateCV && "displayNone"} `}>
       <AiOutlineCloseCircle
         onClick={closeCreateCv}
         className="form-close-btn"

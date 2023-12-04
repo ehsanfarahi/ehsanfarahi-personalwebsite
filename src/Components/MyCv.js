@@ -5,17 +5,17 @@ import { MdAttachEmail } from "react-icons/md";
 import { FaMinus, FaPlus } from "react-icons/fa";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 
-const MyCv = () => {
+const MyCv = ({ openCV, setOpenCV }) => {
   const [showHideEmp, setShowHideEmp] = useState(false);
   const [showHideEdu, setShowHideEdu] = useState(false);
   const [showHideSkill, setShowHideSkill] = useState(false);
 
   function closeMyCv() {
-    document.querySelector(".my-cv-container").classList.add("displayNone");
+    setOpenCV(!openCV);
   }
 
   return (
-    <div className="my-cv-container">
+    <div className={`my-cv-container ${openCV && "displayNone"}`}>
       <AiOutlineCloseCircle onClick={closeMyCv} className="form-close-btn" />
       <div className="cv-container-header">
         <p>Ehsan Farahi</p>

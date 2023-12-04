@@ -2,7 +2,7 @@
 
 import { useNavigate } from "react-router-dom";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import {
   AiFillEyeInvisible,
@@ -11,7 +11,14 @@ import {
 } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
 
-const UserLogin = () => {
+const UserLogin = ({
+  openSignin,
+  setSignin,
+  openSignup,
+  setSignup,
+  openForgotpassword,
+  setForgotpassword,
+}) => {
   const [showPassword, setShowPassword] = useState(false);
 
   const [email, setEmail] = useState("");
@@ -36,31 +43,25 @@ const UserLogin = () => {
 
     alert("Logged In");
 
-    document.querySelector(".userLoginForm").classList.toggle("displayNone");
+    setSignin(!openSignin);
   }
 
-  useEffect(() => {
-    document.querySelector(".userLoginForm").classList.add("displayNone");
-  }, []);
-
   function closeLoginForm() {
-    document.querySelector(".userLoginForm").classList.toggle("displayNone");
+    setSignin(!openSignin);
   }
 
   function toggleForms() {
-    document.querySelector(".userLoginForm").classList.toggle("displayNone");
-    document.querySelector(".userSignupForm").classList.toggle("displayNone");
+    setSignin(!openSignin);
+    setSignup(!openSignup);
   }
 
   function openForgotPasswordForm() {
-    document.querySelector(".userLoginForm").classList.toggle("displayNone");
-    document
-      .querySelector(".userForgotpasswordForm")
-      .classList.toggle("displayNone");
+    setSignin(!openSignin);
+    setForgotpassword(!openForgotpassword);
   }
 
   return (
-    <div className="userLoginForm">
+    <div className={`userLoginForm ${openSignin && "displayNone"}`}>
       <AiOutlineCloseCircle
         onClick={closeLoginForm}
         className="form-close-btn"

@@ -28,8 +28,17 @@ export default function Header() {
   };
 
   // Hooks
-  const [openCV, setOpenCV] = useState(false);
+
   const [cartoon, setCartoon] = useState(true);
+
+  const [menuIcon, setMenuIcon] = useState(false);
+  const [openCV, setOpenCV] = useState(true);
+  const [openCreateCV, setOpenCreateCV] = useState(true);
+  const [openContactForm, setOpenContactForm] = useState(true);
+  const [openSignin, setOpenSignin] = useState(true);
+  const [openSignup, setOpenSignup] = useState(true);
+  const [openForgotpassword, setOpenForgotpassword] = useState(true);
+  const [menuAnim, setMenuAnim] = useState(false);
 
   // Event Listeners
   window.addEventListener("scroll", () => {
@@ -47,30 +56,44 @@ export default function Header() {
 
   // Functions
   const openHomePage = () => {
-    setOpenCV(false);
-    commonFunctionsOne();
-    commonFunctionsThree();
-    commonFunctionsFive();
+    setMenuIcon(!menuIcon);
+    setOpenCV(true);
+    setOpenCreateCV(true);
+    setOpenContactForm(true);
+    setOpenSignin(true);
+    setOpenSignup(true);
+    setOpenForgotpassword(true);
     scrollToTop();
+    setTimeout(() => {
+      setMenuAnim(!menuAnim);
+    }, 300);
   };
 
   const openMyCv = () => {
-    setOpenCV(true);
-    commonFunctionsOne();
-    commonFunctionsThree();
-    commonFunctionsFive();
+    setMenuIcon(!menuIcon);
+    setOpenCV(false);
+    setOpenCreateCV(true);
+    setOpenContactForm(true);
+    setOpenSignin(true);
+    setOpenSignup(true);
+    setOpenForgotpassword(true);
     scrollToTop();
+    setTimeout(() => {
+      setMenuAnim(!menuAnim);
+    }, 300);
   };
 
   const openCreateCv = () => {
-    document
-      .querySelector(".create-cv-container")
-      .classList.remove("displayNone");
-    setOpenCV(false);
-    commonFunctionsTwo();
-    commonFunctionsThree();
-    commonFunctionsFive();
+    setMenuIcon(!menuIcon);
+    setOpenCV(true);
+    setOpenCreateCV(false);
+    setOpenContactForm(true);
+    setOpenSignup(true);
+    setOpenForgotpassword(true);
     scrollToTop();
+    setTimeout(() => {
+      setMenuAnim(!menuAnim);
+    }, 300);
   };
 
   const openMyAccount = () => {
@@ -78,73 +101,74 @@ export default function Header() {
   };
 
   const openContact = () => {
-    document
-      .querySelector(".contact-container")
-      .classList.remove("displayNone");
-    document
-      .querySelector(".contact-container")
-      .classList.add("display-flex-wrap");
-    setOpenCV(false);
-    commonFunctionsFive();
-    commonFunctionsOne();
+    setOpenCV(true);
+    setOpenContactForm(false);
+    setOpenSignin(true);
+    setOpenSignup(true);
+    setOpenForgotpassword(true);
+    setOpenCreateCV(true);
+    setMenuIcon(!menuIcon);
     scrollToTop();
+    setTimeout(() => {
+      setMenuAnim(!menuAnim);
+    }, 300);
   };
 
   const openLoginForm = () => {
-    document.querySelector(".userLoginForm").classList.remove("displayNone");
-    setOpenCV(false);
-    commonFunctionsOne();
-    commonFunctionsThree();
+    setOpenSignin(false);
+    setOpenCV(true);
+    setOpenCreateCV(true);
+    setMenuIcon(!menuIcon);
+    setOpenContactForm(true);
     scrollToTop();
+    setTimeout(() => {
+      setMenuAnim(!menuAnim);
+    }, 300);
   };
 
   function scrollToProjects() {
     const goToWork = document.querySelector(".my-work").getBoundingClientRect();
     window.scrollTo({ top: goToWork.top, behavior: "smooth" });
-    commonFunctionsTwo();
-  }
-
-  function showHideMenu() {
-    commonFunctionsTwo();
-    setCartoon(false);
-
+    setMenuIcon(!menuIcon);
     setTimeout(() => {
-      document
-        .querySelector(".menu-li-container")
-        .classList.toggle("menu-li-animation");
+      setMenuAnim(!menuAnim);
     }, 300);
   }
 
-  const commonFunctionsOne = () => {
-    commonFunctionsTwo();
-    document.querySelector(".create-cv-container").classList.add("displayNone");
-  };
+  function showHideMenu() {
+    setMenuIcon(!menuIcon);
+    setCartoon(false);
 
-  const commonFunctionsTwo = () => {
-    document.querySelector(".menu-icon").classList.toggle("is-active");
-    document.querySelector(".menu-list").classList.toggle("is-active");
-  };
-
-  const commonFunctionsThree = () => {
-    document.querySelector(".contact-container").classList.add("displayNone");
-    document
-      .querySelector(".contact-container")
-      .classList.remove("display-flex-wrap");
-  };
-
-  const commonFunctionsFive = () => {
-    document.querySelector(".userLoginForm").classList.add("displayNone");
-    document.querySelector(".userSignupForm").classList.add("displayNone");
-  };
+    setTimeout(() => {
+      setMenuAnim(!menuAnim);
+    }, 300);
+  }
 
   return (
     <div>
-      <UserSignup />
-      <UserLogin />
-      <ForgotPassword />
-      {openCV && <MyCv />}
-      <CreateCv />
-      <Contact />
+      <UserSignup
+        openSignin={openSignin}
+        setSignin={setOpenSignin}
+        openSignup={openSignup}
+        setSignup={setOpenSignup}
+      />
+      <UserLogin
+        openSignin={openSignin}
+        setSignin={setOpenSignin}
+        openSignup={openSignup}
+        setSignup={setOpenSignup}
+        openForgotpassword={openForgotpassword}
+        setForgotpassword={setOpenForgotpassword}
+      />
+      <ForgotPassword
+        openForgotpassword={openForgotpassword}
+        setForgotpassword={setOpenForgotpassword}
+        openSignup={openSignup}
+        setSignup={setOpenSignup}
+      />
+      <MyCv openCV={openCV} setOpenCV={setOpenCV} />
+      <CreateCv openCreateCV={openCreateCV} setCreateCV={setOpenCreateCV} />
+      <Contact openContact={openContactForm} setContact={setOpenContactForm} />
       <header className="header">
         <div className="glassOne"></div>
 
@@ -168,13 +192,24 @@ export default function Header() {
           </div>
 
           <nav className="menu-navigation">
-            <div onClick={showHideMenu} className="menu-icon" id="menu-icon">
+            <div
+              onClick={showHideMenu}
+              className={`menu-icon ${menuIcon && "is-active"}`}
+              id="menu-icon"
+            >
               <span className="menu-icon-line"></span>
               <span className="menu-icon-line"></span>
               <span className="menu-icon-line"></span>
             </div>
-            <div className="menu-list" id="menu-list">
-              <ul className="menu-li-container">
+            <div
+              className={`menu-list ${menuIcon && "is-active"}`}
+              id="menu-list"
+            >
+              <ul
+                className={`menu-li-container ${
+                  menuAnim && "menu-li-animation"
+                }`}
+              >
                 <li className="menu-li">
                   <Link onClick={openHomePage} className="menu-link">
                     HOME
@@ -205,20 +240,7 @@ export default function Header() {
                   </Link>
                 </li>
               </ul>
-              <div className="social-media-menu">
-                <a href="http://www.facebook.com">
-                  <i className="fa-brands social fa-facebook-f"></i>
-                </a>
-                <a href="http://www.instagram.com">
-                  <i className="fa-brands social fa-instagram"></i>
-                </a>
-                <a href="http://www.twitter.com">
-                  <i className="fa-brands social fa-twitter"></i>
-                </a>
-                <a href="http://www.linkedin.com">
-                  <i className="fa-brands social fa-linkedin-in"></i>
-                </a>
-              </div>
+
               <div className="menu-account-mobile">
                 {auth || authLogin ? (
                   <div>

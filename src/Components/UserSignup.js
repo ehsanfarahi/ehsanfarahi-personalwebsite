@@ -1,5 +1,4 @@
-// import "../styles/index.css";
-
+// React Icons
 import {
   AiFillEyeInvisible,
   AiFillEye,
@@ -7,9 +6,9 @@ import {
 } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
-const UserSignup = () => {
+const UserSignup = ({ openSignin, setSignin, openSignup, setSignup }) => {
   const [fullname, setFullname] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -47,21 +46,17 @@ const UserSignup = () => {
     }
   }
 
-  useEffect(() => {
-    document.querySelector(".userSignupForm").classList.add("displayNone");
-  }, []);
-
   function closeSignuoForm() {
-    document.querySelector(".userSignupForm").classList.toggle("displayNone");
+    setSignup(!openSignup);
   }
 
   function toggleForms() {
-    document.querySelector(".userSignupForm").classList.toggle("displayNone");
-    document.querySelector(".userLoginForm").classList.toggle("displayNone");
+    setSignup(!openSignup);
+    setSignin(!openSignin);
   }
 
   return (
-    <div className="userSignupForm">
+    <div className={`userSignupForm ${openSignup && "displayNone"}`}>
       <AiOutlineCloseCircle
         onClick={closeSignuoForm}
         className="form-close-btn"
