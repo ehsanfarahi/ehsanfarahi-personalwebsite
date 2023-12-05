@@ -1,24 +1,59 @@
-// import "../styles/index.css";
+// React Icons
+import { FaArrowRight } from "react-icons/fa";
+import { FaArrowLeft } from "react-icons/fa";
 
 const logos = [
-  { id: 1, logo: "html-logo.png", alt: "html-logo" },
-  { id: 2, logo: "css-logo.png", alt: "css-logo" },
-  { id: 3, logo: "tailwind-logo.png", alt: "tailwind" },
-  { id: 4, logo: "sass-logo.png", alt: "sass-logo" },
-  { id: 5, logo: "bootstrap-logo.png", alt: "botstrap" },
-  { id: 6, logo: "figma-logo.png", alt: "figma-logo" },
-  { id: 7, logo: "js-logo.png", alt: "js-logo" },
-  { id: 8, logo: "ts-logo.png", alt: "ts-logo" },
-  { id: 9, logo: "jquery-logo.png", alt: "jquery-logo" },
-  { id: 10, logo: "react-logo.png", alt: "react-logo" },
-  { id: 11, logo: "nextjs-logo.png", alt: "nextjs" },
-  { id: 12, logo: "node-logo.png", alt: "nodejs-logo" },
-  { id: 13, logo: "express-logo.png", alt: "express" },
-  { id: 14, logo: "mongodb-logo.png", alt: "mongodb" },
-  { id: 15, logo: "mysql-logo.png", alt: "mysql-logo" },
-  { id: 16, logo: "php-logo.png", alt: "php-logo" },
+  { id: 1, title: "HTML 5", logo: "html-logo.png", alt: "html-logo" },
+  { id: 2, title: "CSS", logo: "css-logo.png", alt: "css-logo" },
+  { id: 3, title: "Tailwind CSS", logo: "tailwind-logo.png", alt: "tailwind" },
+  { id: 4, title: "SASS", logo: "sass-logo.png", alt: "sass-logo" },
+  { id: 5, title: "Bootstrap", logo: "bootstrap-logo.png", alt: "botstrap" },
+  { id: 6, title: "Figma", logo: "figma-logo.png", alt: "figma-logo" },
+  { id: 7, title: "JavaScript", logo: "js-logo.png", alt: "js-logo" },
+  { id: 8, title: "TypeScript", logo: "ts-logo.png", alt: "ts-logo" },
+  { id: 9, title: "jQuery", logo: "jquery-logo.png", alt: "jquery-logo" },
+  { id: 10, title: "React", logo: "react-logo.png", alt: "react-logo" },
+  { id: 11, title: "Next.js", logo: "nextjs-logo.png", alt: "nextjs" },
+  { id: 12, title: "Node.js", logo: "node-logo.png", alt: "nodejs-logo" },
+  { id: 13, title: "Express", logo: "express-logo.png", alt: "express" },
+  { id: 14, title: "MongoDB", logo: "mongodb-logo.png", alt: "mongodb" },
+  { id: 15, title: "MySQL", logo: "mysql-logo.png", alt: "mysql-logo" },
+  { id: 16, title: "PHP", logo: "php-logo.png", alt: "php-logo" },
 ];
 const GeneralInfo = () => {
+  const wrapper = document.querySelector(".wrapper");
+  const carousel = document.querySelector(".card-carousel");
+  const cards = document.querySelectorAll(".card-box");
+  const btn = document.querySelectorAll("button");
+  const previous = document.querySelector("#prev");
+  const nxt = document.querySelector("#next");
+
+  cards.forEach((slide, index) => {
+    slide.style.left = `${index * 100}%`;
+  });
+
+  let counter = 0;
+
+  const slideCard = () => {
+    cards.forEach((e) => {
+      e.style.transform = `translateX(-${counter * 100}%)`;
+    });
+  };
+
+  const prev = () => {
+    if (counter > 0) {
+      counter--;
+      slideCard();
+    }
+  };
+
+  const next = () => {
+    if (counter <= cards.length - 6) {
+      counter++;
+      slideCard();
+    }
+  };
+
   return (
     <div className="general-info">
       <h1 className="general-info-heading">About Programming World</h1>
@@ -114,76 +149,34 @@ const GeneralInfo = () => {
       </div>
       <h3 className="my-skills-title">My Skills</h3>
 
-      <div className="row row-cols-2 justify-content-left row-cols-lg-6 row-cols-md-4 row-cols-sm-2 g-4 my-skills-laptop">
-        <div className="col">
-          <div className="card">
-            <h5 className="card-title">HTML 5</h5>
-            <img
-              src={require("../images/html.png")}
-              className="card-img-top"
-              alt="..."
-            />
+      <div className="my-skills-card-container my-skills-laptop">
+        <div>
+          <button className="active" id="prev" onClick={prev}>
+            <FaArrowLeft className="slide-btn" />
+          </button>
+        </div>
+        <div className="card-container">
+          <div className="card-carousel">
+            {logos.map((logo) => {
+              return (
+                <div className="col card-box">
+                  <div className="card">
+                    <h5 className="card-title">{logo.title}</h5>
+                    <img
+                      src={require(`../images/${logo.logo}`)}
+                      className="card-img-top"
+                      alt={logo.alt}
+                    />
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
-        <div className="col">
-          <div className="card">
-            <h5 className="card-title">Javascript</h5>
-            <img
-              src={require("../images/css.png")}
-              className="card-img-top"
-              alt="..."
-            />
-          </div>
-        </div>
-        <div className="col">
-          <div className="card">
-            <h5 className="card-title">CSS 5</h5>
-            <img
-              src={require("../images/js.png")}
-              className="card-img-top"
-              alt="..."
-            />
-          </div>
-        </div>
-        <div className="col">
-          <div className="card">
-            <h5 className="card-title">jQuery</h5>
-            <img
-              src={require("../images/jquery.png")}
-              className="card-img-top"
-              alt="..."
-            />
-          </div>
-        </div>
-        <div className="col">
-          <div className="card">
-            <h5 className="card-title">React.js</h5>
-            <img
-              src={require("../images/react.png")}
-              className="card-img-top"
-              alt="..."
-            />
-          </div>
-        </div>
-        <div className="col">
-          <div className="card">
-            <h5 className="card-title">Node.js</h5>
-            <img
-              src={require("../images/nodejs.png")}
-              className="card-img-top"
-              alt="..."
-            />
-          </div>
-        </div>
-        <div className="col">
-          <div className="card">
-            <h5 className="card-title">Express.js</h5>
-            <img
-              src={require("../images/expressjs.png")}
-              className="card-img-top"
-              alt="..."
-            />
-          </div>
+        <div>
+          <button className="active" id="next" onClick={next}>
+            <FaArrowRight className="slide-btn" />
+          </button>
         </div>
       </div>
       <div className="my-skills-mobile">
