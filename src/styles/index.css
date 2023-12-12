@@ -1452,7 +1452,8 @@ hr {
 
 .first-p {
   text-align: justify;
-  font-family: "Playfair Display", serif;
+  /* font-family: "Playfair Display", serif; */
+  font-family: Verdana, serif;
   font-size: 1.8rem;
 }
 
@@ -1478,7 +1479,8 @@ hr {
 
 .second-p {
   text-align: justify;
-  font-family: "Playfair Display", serif;
+  /* font-family: "Playfair Display", serif; */
+  font-family: Helvetica;
   font-size: 1.8rem;
 }
 
@@ -2809,7 +2811,7 @@ hr {
     aspect-ratio: 1;
     position: absolute;
     top: 41rem;
-    left: 14rem;
+    left: 45%;
     border: 0.2rem solid #eeeeee;
     transform: rotate(45deg);
     border-bottom: 0.2rem solid #eeeeee !important;
@@ -3135,6 +3137,7 @@ hr {
   .my-cv-container .cv-container-left-side {
     width: 100%;
     float: none;
+    background-color: rgb(230, 226, 226);
   }
 
   .my-cv-container .cv-container-left-side .content {
@@ -3254,11 +3257,13 @@ hr {
   .journey-started {
     display: block;
     padding-top: 7%;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+    font-weight: 700;
     text-align: center;
   }
   .ups-downs {
-    font-size: 1.7rem;
+    font-size: 1.4rem;
+    font-weight: 700;
     display: block;
     text-align: center;
     padding-top: 2%;
@@ -3276,18 +3281,21 @@ hr {
     margin: 0 2%;
   }
   .first-p {
+    font-family: Verdana, sans-serif;
     float: none;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-align: left;
   }
   .second-p {
+    font-family: Helvetica, sans-serif;
     float: none;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     text-align: right;
   }
   .know-more {
     padding-top: 8%;
     margin-left: 2%;
+    font-size: 1.1rem;
   }
 
   .finance-img {
@@ -3418,7 +3426,7 @@ hr {
   .general-info h1 {
     width: 90%;
     font-weight: 700;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     margin: auto;
     padding-bottom: 0.5rem;
   }
@@ -3433,6 +3441,13 @@ hr {
     font-weight: 600;
     font-size: 1.5rem;
     padding-bottom: 1rem;
+    background-image: linear-gradient(
+      to right,
+      rgb(49, 3, 49),
+      rgb(197, 103, 197)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   .my-expertise-card {
     border: none;
@@ -3444,13 +3459,14 @@ hr {
   .my-expertise-title {
     text-align: left;
     margin-left: -10px;
+    font-size: 1.1rem;
   }
   .my-skills-title {
     text-align: left;
     padding-top: 7%;
     width: fit-content;
     font-weight: 700;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     background-image: linear-gradient(
       to right,
       orange,
@@ -3593,7 +3609,8 @@ hr {
 
   .footer-container-right .contact-num .socialmedia-barcode-container {
     /* position: absolute; */
-    top: -25.5rem;
+    /* top: -25.5rem; */
+    bottom: 2.5rem;
     width: 70%;
     left: 50%;
     transform: translate(-50%);
@@ -3719,11 +3736,11 @@ hr {
   }
 
   .footer-container-middle .newsletter .subs-text span:nth-child(1) {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 
   .footer-container-middle .newsletter .subs-text span:nth-child(2) {
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding-bottom: 1.5%;
   }
 
@@ -3769,13 +3786,13 @@ hr {
   .rights-reserved .current-year {
     width: 100%;
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 0.8rem;
   }
 
   .rights-reserved .terms-and-conditions {
     width: 100%;
     text-align: center;
-    font-size: 1rem;
+    font-size: 0.7rem;
     padding-bottom: 1rem;
   }
 

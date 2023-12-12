@@ -21,16 +21,16 @@ const EducationalBackground = () => {
     <div className="educational-background">
       <h1 className="edu-back-title">My Educational Background</h1>
       <div className="edu-quotation">
-        <span style={{ color: "#ffb72b", fontSize: "3rem" }}>
+        <span style={{ color: "#ffb72b", fontSize: "2.8rem" }}>
           <BiSolidQuoteAltLeft />
         </span>
-        <h3>
+        <h4>
           <span style={{ display: "block" }}>What we know matters,</span>
           <span style={{ display: "block" }}>
             but who we are matters more.
             <BiSolidQuoteAltRight />
           </span>
-        </h3>
+        </h4>
         <br />
         <hr
           style={{
