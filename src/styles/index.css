@@ -1175,7 +1175,24 @@ hr {
 .section:not(:first-child) {
   padding-top: 1.5rem;
 }
-
+.my-cv-container
+  .cv-container-right-side
+  .content
+  .content-data
+  .content-data-wrapper
+  .content-data-wrapper-body,
+.section:not(:first-child) {
+  padding-top: 1.5rem;
+}
+.my-cv-container
+  .cv-container-right-side
+  .content
+  .content-data
+  .content-data-wrapper
+  .content-data-wrapper-body,
+.section ul {
+  list-style-type: circle;
+}
 .my-cv-container
   .cv-container-right-side
   .content
@@ -1203,9 +1220,20 @@ hr {
   .content
   .content-data
   .content-data-wrapper
-  .content-data-wrapper-body,
-.content-data-wrapper-body-education .section p:not(:first-child) {
-  padding-left: 1rem;
+  .content-data-wrapper-body-education
+  .section
+  p:not(:first-child) {
+  margin-left: 0.6rem;
+}
+.my-cv-container
+  .cv-container-right-side
+  .content
+  .content-data
+  .content-data-wrapper
+  .content-data-wrapper-body-education
+  .section
+  p:first-child {
+  font-weight: 700;
 }
 /* My CV End */
 
@@ -1397,7 +1425,7 @@ hr {
   font-size: 2.5rem;
   text-align: center;
   font-weight: bold;
-  font-family: "Playfair Display", serif;
+  /* font-family: "Playfair Display", serif; */
   width: fit-content;
   background-image: linear-gradient(
     to right,
@@ -1414,7 +1442,7 @@ hr {
   font-size: 2.2rem;
   display: block;
   text-align: center;
-  font-family: "Playfair Display", serif;
+  /* font-family: "Playfair Display", serif; */
   font-weight: bold;
   width: fit-content;
   background-image: linear-gradient(
@@ -1431,8 +1459,8 @@ hr {
 .profession {
   text-align: center;
   padding-top: 5%;
-  font-family: "Playfair Display", serif;
-  font-size: 1.2rem;
+  /* font-family: "Playfair Display", serif; */
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
@@ -1453,8 +1481,8 @@ hr {
 .first-p {
   text-align: justify;
   /* font-family: "Playfair Display", serif; */
-  font-family: Verdana, serif;
-  font-size: 1.8rem;
+  /* font-family: Verdana, serif; */
+  font-size: 1.5rem;
 }
 
 .finance-img {
@@ -1480,8 +1508,8 @@ hr {
 .second-p {
   text-align: justify;
   /* font-family: "Playfair Display", serif; */
-  font-family: Helvetica;
-  font-size: 1.8rem;
+  /* font-family: Helvetica; */
+  font-size: 1.5rem;
 }
 
 .programming-img {
@@ -3138,6 +3166,7 @@ hr {
     width: 100%;
     float: none;
     background-color: rgb(230, 226, 226);
+    padding-bottom: 1rem;
   }
 
   .my-cv-container .cv-container-left-side .content {
@@ -3169,7 +3198,7 @@ hr {
   }
 
   .my-cv-container .cv-container-right-side .content {
-    margin: 3rem 0.5rem 1rem 0.5rem;
+    margin: 2rem 0.5rem 1rem 0.5rem;
   }
 
   .my-cv-container .cv-container-right-side .content .head {
@@ -3256,10 +3285,13 @@ hr {
   }
   .journey-started {
     display: block;
-    padding-top: 7%;
+    padding-top: 15%;
     font-size: 1.5rem;
     font-weight: 700;
     text-align: center;
+  }
+  .profession {
+    font-size: 1.2rem;
   }
   .ups-downs {
     font-size: 1.4rem;
@@ -3281,21 +3313,21 @@ hr {
     margin: 0 2%;
   }
   .first-p {
-    font-family: Verdana, sans-serif;
+    /* font-family: Verdana, sans-serif; */
     float: none;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     text-align: left;
   }
   .second-p {
-    font-family: Helvetica, sans-serif;
+    /* font-family: Helvetica, sans-serif; */
     float: none;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     text-align: right;
   }
   .know-more {
     padding-top: 8%;
     margin-left: 2%;
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .finance-img {
@@ -3538,11 +3570,11 @@ hr {
   }
 
   .footer-container-left p:nth-child(1) {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 
   .footer-container-left p:nth-child(2) {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   .footer-container-left .hire-me {
@@ -3551,8 +3583,9 @@ hr {
 
   .footer-container-left .hire-me button {
     padding: 0.2rem 1rem;
-    font-size: 1.1rem;
+    font-size: 1rem;
     animation: hire-me-anim infinite 1s linear;
+    color: rgb(46, 42, 65);
   }
 
   @keyframes hire-me-anim {
@@ -3591,11 +3624,11 @@ hr {
   }
 
   .footer-container-right span {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .social {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     padding: 0 1.5rem;
   }
 
@@ -3604,7 +3637,7 @@ hr {
   }
 
   .footer-container-right .contact-num p:nth-child(1) {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .footer-container-right .contact-num .socialmedia-barcode-container {
@@ -3736,11 +3769,11 @@ hr {
   }
 
   .footer-container-middle .newsletter .subs-text span:nth-child(1) {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .footer-container-middle .newsletter .subs-text span:nth-child(2) {
-    font-size: 1rem;
+    font-size: 0.9rem;
     padding-bottom: 1.5%;
   }
 
@@ -3757,7 +3790,7 @@ hr {
 
   .footer-container-middle .newsletter .form .subs-email {
     height: 2.5rem;
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin: 0 auto;
     position: relative;
     width: 100%;
