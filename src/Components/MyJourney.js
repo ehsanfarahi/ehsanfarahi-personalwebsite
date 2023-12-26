@@ -1,5 +1,5 @@
 // import "../styles/index.css";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 
 // Import Images
 import accountantsImg from "../images/accountants.png";
@@ -8,8 +8,8 @@ import accountantsImg from "../images/accountants.png";
 // Import Compunents
 import MyCv from "./MyCv";
 
-const MyJourney = () => {
-  const [displayMyCv, setDisplayMyCv] = useState(false);
+const MyJourney = ({ displayMyCv, setDisplayMyCv }) => {
+  // const [displayMyCv, setDisplayMyCv] = useState(false);
 
   // Refs
   const refP1 = useRef(1);

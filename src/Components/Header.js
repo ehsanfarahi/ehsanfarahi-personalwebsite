@@ -19,7 +19,7 @@ import ehsanCartoon2 from "../images/ehsan-farahi-img2.png";
 import { BiUser } from "react-icons/bi";
 import { MdKeyboardArrowRight } from "react-icons/md";
 
-export default function Header() {
+export default function Header({ displayMyCv, setDisplayMyCv }) {
   // Local Storage
   const auth = localStorage.getItem("pWebUserData");
   const authLogin = localStorage.getItem("pWebLogData");
@@ -32,7 +32,7 @@ export default function Header() {
   const [cartoon, setCartoon] = useState(true);
 
   const [menuIcon, setMenuIcon] = useState(false);
-  const [openCV, setOpenCV] = useState(true);
+  // const [openCV, setOpenCV] = useState(true);
   const [openCreateCV, setOpenCreateCV] = useState(true);
   const [openContactForm, setOpenContactForm] = useState(true);
   const [openSignin, setOpenSignin] = useState(true);
@@ -57,7 +57,7 @@ export default function Header() {
   // Functions
   const openHomePage = () => {
     setMenuIcon(!menuIcon);
-    setOpenCV(true);
+    setDisplayMyCv(false);
     setOpenCreateCV(true);
     setOpenContactForm(true);
     setOpenSignin(true);
@@ -71,7 +71,7 @@ export default function Header() {
 
   const openMyCv = () => {
     setMenuIcon(!menuIcon);
-    setOpenCV(false);
+    setDisplayMyCv(true);
     setOpenCreateCV(true);
     setOpenContactForm(true);
     setOpenSignin(true);
@@ -85,7 +85,7 @@ export default function Header() {
 
   const openCreateCv = () => {
     setMenuIcon(!menuIcon);
-    setOpenCV(true);
+    setDisplayMyCv(false);
     setOpenCreateCV(false);
     setOpenContactForm(true);
     setOpenSignup(true);
@@ -101,7 +101,7 @@ export default function Header() {
   };
 
   const openContact = () => {
-    setOpenCV(true);
+    setDisplayMyCv(false);
     setOpenContactForm(false);
     setOpenSignin(true);
     setOpenSignup(true);
@@ -116,7 +116,7 @@ export default function Header() {
 
   const openLoginForm = () => {
     setOpenSignin(false);
-    setOpenCV(true);
+    setDisplayMyCv(false);
     setOpenCreateCV(true);
     setMenuIcon(!menuIcon);
     setOpenContactForm(true);
@@ -166,7 +166,9 @@ export default function Header() {
         openSignup={openSignup}
         setSignup={setOpenSignup}
       />
-      <MyCv openCV={openCV} setOpenCV={setOpenCV} />
+
+      <MyCv displayMyCv={displayMyCv} setDisplayMyCv={setDisplayMyCv} />
+
       <CreateCv openCreateCV={openCreateCV} setCreateCV={setOpenCreateCV} />
       <Contact openContact={openContactForm} setContact={setOpenContactForm} />
       <header className="header">

@@ -21,6 +21,7 @@ import { HiArrowUp } from "react-icons/hi";
 
 function App() {
   const [arrowUp, setArrowUp] = useState(false);
+  const [displayMyCv, setDisplayMyCv] = useState(false);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -51,14 +52,14 @@ function App() {
       <EhsanFarahiStarterName />
       <div className="main-wrapper">
         <BrowserRouter>
-          <Header />
+          <Header displayMyCv={displayMyCv} setDisplayMyCv={setDisplayMyCv} />
           <Routes>
             <Route path="/my-account/:id" element={<MyAccount />} />
             <Route path="/update-user/:id" element={<UpdateUser />} />
           </Routes>
         </BrowserRouter>
 
-        <MyJourney />
+        <MyJourney displayMyCv={displayMyCv} setDisplayMyCv={setDisplayMyCv} />
         <EducationalBackground />
         <MyWorkAndProjects />
         <GeneralInfo />

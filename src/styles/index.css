@@ -1519,7 +1519,7 @@ hr {
 }
 
 .know-more {
-  padding-top: 5%;
+  padding-top: 2.7%;
   text-align: left;
   display: inline-flex;
   font-size: 1.2rem;
@@ -2012,7 +2012,7 @@ hr {
 
 .footer-container-right .contact-num .socialmedia-barcode-container {
   position: absolute;
-  top: -24rem;
+  bottom: 2rem;
   width: 17rem;
   border-radius: 0.4rem;
   border: 0.2rem solid #fff;
@@ -3148,11 +3148,11 @@ hr {
 
   .my-cv-container .cv-container-header p:nth-child(1) {
     padding-top: 1rem;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 
   .my-cv-container .cv-container-header p:nth-child(2) {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     line-height: 0;
   }
 
@@ -3179,7 +3179,7 @@ hr {
   }
 
   .my-cv-container .cv-container-left-side .content .content-data {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .my-cv-container .cv-container-left-side .content .career-obj-heading {
@@ -3187,7 +3187,7 @@ hr {
   }
 
   .my-cv-container .cv-container-left-side .content .content-data .icon {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
   }
 
   .my-cv-container .cv-container-right-side {
@@ -3208,7 +3208,7 @@ hr {
   }
 
   .my-cv-container .cv-container-right-side .content .content-data {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
   .my-cv-container .cv-container-right-side .content .content-data .intro-text {
     text-align: justify;
@@ -3291,7 +3291,7 @@ hr {
     text-align: center;
   }
   .profession {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   .ups-downs {
     font-size: 1.4rem;
@@ -3328,6 +3328,10 @@ hr {
     padding-top: 8%;
     margin-left: 2%;
     font-size: 1rem;
+  }
+
+  .know-more span {
+    font-size: 2rem;
   }
 
   .finance-img {
