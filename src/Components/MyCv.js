@@ -27,8 +27,9 @@ const MyCv = ({ displayMyCv, setDisplayMyCv }) => {
           <h3>Contacts</h3>
           <div className="content-data">
             <FcHome className="icon" />
-            <p>Burgauerstr. 41</p>
-            <p>81929 Munich, Germany</p>
+            {/* <p>Burgauerstr. 41</p>
+            <p>81929 Munich, Germany</p> */}
+            <p>Munich, Germany</p>
           </div>
           <div className="content-data">
             <FcCellPhone className="icon" />
