@@ -57,7 +57,7 @@ const MyJourney = ({ displayMyCv, setDisplayMyCv }) => {
             width="20%"
             alt="Financial Management"
           />
-          <p ref={refP1} className="first-p">
+          {/* <p ref={refP1} className="first-p">
             I don't hold a Computer Science or IT degree, rather I'm a Business
             Administration's (BBA) graduate with specialization in finance. My
             journey to the world of technologies started in 2016, when I first
@@ -68,6 +68,9 @@ const MyJourney = ({ displayMyCv, setDisplayMyCv }) => {
             passion and number one learning priority. So far, I have built
             various websites. Scroll down to know more about my work and
             projects.
+          </p> */}
+          <p ref={refP1} className="first-p">
+          My journey into the world of technology began in 2016 when I started learning computer science basics. Through YouTube, I taught myself how to design and develop websites, culminating in my first project, a second-hand online shopping website, in 2017. Since then, programming and web development have become my passion and top learning priority. I have built various websites and continue to expand my skills. Please scroll down to learn more about my work and projects.
           </p>
         </div>
         <div className="journey-two">
@@ -77,7 +80,7 @@ const MyJourney = ({ displayMyCv, setDisplayMyCv }) => {
             width="20%"
             alt="Web Delopment"
           />
-          <p ref={refP2} className="second-p">
+          {/* <p ref={refP2} className="second-p">
             In continuation, I started Computer Science at Kardan University in
             early 2021 to further enhance my skills & knowledge of programming,
             and to learn web development in a professional manner. I completed
@@ -87,6 +90,9 @@ const MyJourney = ({ displayMyCv, setDisplayMyCv }) => {
             development as a substitute to the University degree for supporting
             my programming and web development skills. The major part of my
             learning comes from the Udemy courses.
+          </p> */}
+          <p ref={refP2} className="second-p">
+          To further enhance my programming skills, I began studying Computer Science at Kardan University in early 2021. After completing the first semester, I immigrated to Europe and continued my education through various online courses. These courses covered topics from web development and design to web and mobile application development. These courses, primarily from Udemy, served as a valuable substitute for a university degree, significantly advancing my programming and web development skills.
           </p>
         </div>
 

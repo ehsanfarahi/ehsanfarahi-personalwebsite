@@ -50,7 +50,7 @@ const EducationalBackground = () => {
             <div className="card-body">
               <h5 className="card-title">Professional Development Programs</h5>
               <p className="card-text">
-                I have pursued some Professional Development Programs at AUAF
+                Professional Development Programs at AUAF
                 for self development.
               </p>
             </div>
@@ -86,7 +86,7 @@ const EducationalBackground = () => {
                 Bachelor of Business Administration
               </h5>
               <p className="card-text">
-                I have studied Business Administration (BBA) with specialization
+                Bachelor of Business Administration (BBA) degree with specialization
                 in finance.
               </p>
             </div>
@@ -106,7 +106,7 @@ const EducationalBackground = () => {
               <h5 className="card-title">Bachelor of Computer Science</h5>
               <p className="card-text">
                 I studied two semesters of Computer Science (BCS) before I
-                migrated and discontinued my studies.
+                migrated and continued my studies online.
               </p>
             </div>
             <div className="card-footer">

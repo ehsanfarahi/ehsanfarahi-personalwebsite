@@ -6,8 +6,8 @@ const projectsData = [
     imageAddress: "images/partytorten-img.JPG",
     aboutProject:
       "Partytorten München is pastry online ordering website. Where customers can place an order for their desired products.",
-    frontEnd: ["Javascript", "React", "CSS", "React Icons"],
-    backEnd: ["Node.js", "Express.js", "MongoDB"],
+    frontEnd: ["Javascript", "React", "CSS", "React Icons", "HTML 5"],
+    backEnd: ["Node.js", "Express.js", "MongoDB", "Restful API"],
   },
   {
     comingSoon: false,
@@ -21,16 +21,8 @@ const projectsData = [
       "React",
       "Tailwind CSS",
       "React Icons",
-      "Javascript",
-      "React",
-      "Tailwind CSS",
-      "React Icons",
-      "Javascript",
-      "React",
-      "Tailwind CSS",
-      "React Icons",
     ],
-    backEnd: ["Node.js", "Express.js", "MongoDB"],
+    backEnd: ["json-server", "Node.js", "Express.js", "MongoDB", "Restful API"],
   },
 
   {
@@ -57,7 +49,7 @@ const projectsData = [
     imageAddress: "images/vehicle-card.JPG",
     aboutProject: "A system for printing vehicle cards.",
     frontEnd: ["Javascript", "React", "CSS", "React Icons"],
-    backEnd: ["Node.js", "Express.js", "MongoDB"],
+    backEnd: ["Node.js", "Express.js", "MongoDB", "Restful API"],
   },
 ];
 
