@@ -126,7 +126,7 @@ const Footer = () => {
           <div className="contact-num">
             <p>Get in touch</p>
             <p>
-              +49 176 46294780 -{" "}
+              +49 176 ******** -{" "}
               <FaViber
                 onClick={() => {
                   return (

@@ -1529,6 +1529,14 @@ hr {
   border-image: transparent;
   border-image-slice: 1;
   height: 3.8rem;
+  opacity: 0;
+  transform: scale(0.4);
+}
+
+.know-more-anim {
+  opacity: 1;
+  transform: scale(1);
+  transition: all 1s ease-in;
 }
 
 .know-more span {

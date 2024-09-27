@@ -1,5 +1,5 @@
 // import "../styles/index.css";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 
 // Import Images
 import accountantsImg from "../images/accountants.png";
@@ -12,20 +12,33 @@ const MyJourney = ({ displayMyCv, setDisplayMyCv }) => {
   // const [displayMyCv, setDisplayMyCv] = useState(false);
 
   // Refs
-  const refP1 = useRef(1);
-  const refP2 = useRef(1);
+  const refP1 = useRef();
+  const refP2 = useRef();
+  const refP3 = useRef();
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > refP1.current.offsetTop * 2) {
-      document.querySelector(".journey-one").classList.add("journey-one-anim");
-    }
-  });
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > refP1.current.offsetTop * 6) {
+        document
+          .querySelector(".journey-one")
+          .classList.add("journey-one-anim");
+      }
+    });
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > refP2.current.offsetTop * 2) {
-      document.querySelector(".journey-two").classList.add("journey-two-anim");
-    }
-  });
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > refP2.current.offsetTop * 16) {
+        document
+          .querySelector(".journey-two")
+          .classList.add("journey-two-anim");
+      }
+    });
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > refP3.current.offsetTop * 38) {
+        document.querySelector(".know-more").classList.add("know-more-anim");
+      }
+    });
+  }, []);
 
   // Functions
   const scrollToTop = () => {
@@ -70,7 +83,14 @@ const MyJourney = ({ displayMyCv, setDisplayMyCv }) => {
             projects.
           </p> */}
           <p ref={refP1} className="first-p">
-          My journey into the world of technology began in 2016 when I started learning computer science basics. Through YouTube, I taught myself how to design and develop websites, culminating in my first project, a second-hand online shopping website, in 2017. Since then, programming and web development have become my passion and top learning priority. I have built various websites and continue to expand my skills. Please scroll down to learn more about my work and projects.
+            My journey into the world of technology began in 2016 when I started
+            learning computer science basics. Through YouTube, I taught myself
+            how to design and develop websites, culminating in my first project,
+            a second-hand online shopping website, in 2017. Since then,
+            programming and web development have become my passion and top
+            learning priority. I have built various websites and continue to
+            expand my skills. Please scroll down to learn more about my work and
+            projects.
           </p>
         </div>
         <div className="journey-two">
@@ -92,12 +112,19 @@ const MyJourney = ({ displayMyCv, setDisplayMyCv }) => {
             learning comes from the Udemy courses.
           </p> */}
           <p ref={refP2} className="second-p">
-          To further enhance my programming skills, I began studying Computer Science at Kardan University in early 2021. After completing the first semester, I immigrated to Europe and continued my education through various online courses. These courses covered topics from web development and design to web and mobile application development. These courses, primarily from Udemy, served as a valuable substitute for a university degree, significantly advancing my programming and web development skills.
+            To further enhance my programming skills, I began studying Computer
+            Science at Kardan University in early 2021. After completing the
+            first semester, I immigrated to Europe and continued my education
+            through various online courses. These courses covered topics from
+            web development and design to web and mobile application
+            development. These courses, primarily from Udemy, served as a
+            valuable substitute for a university degree, significantly advancing
+            my programming and web development skills.
           </p>
         </div>
 
         <i className="know-more">
-          <p onClick={openMyCv}>Want to know more?</p> <span>&rarr;</span>
+          <p ref={refP3} onClick={openMyCv}>Want to know more?</p> <span>&rarr;</span>
         </i>
       </div>
       {displayMyCv && <MyCv />}
